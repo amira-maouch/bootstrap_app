@@ -1,0 +1,46 @@
+{
+  "name": "bootstrap-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && egret-build-app",
+    "build:shell": "vite build",
+    "build:app": "egret-build-app",
+    "build:app:steps": "egret-build-plugins && egret-build-components && egret-build-middleware && egret-build-widgets",
+    "clean:artifacts": "egret-clean-artifacts",
+    "dev:api": "API_PORT=3002 egret-dev-api",
+    "dev:vite": "vite",
+    "dev:watch": "egret-watch-widgets --no-initial-build",
+    "dev": "pnpm build:app && concurrently -k -n api,vite,watch -c blue,green,yellow \"pnpm dev:api\" \"pnpm dev:vite\" \"pnpm dev:watch\"",
+    "start": "egret-prod-server",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
+    "@heron-ws/component-api": "file:../heron/packages/component-api",
+    "bootstrap": "^5.3.8",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "concurrently": "^9.2.3",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
+      "@heron-ws/app-runtime-core": "file:../heron/packages/app-runtime-core",
+      "@heron-ws/app-runtime-server": "file:../heron/packages/app-runtime-server",
+      "@heron-ws/component-api": "file:../heron/packages/component-api",
+      "@heron-ws/component-registry": "file:../heron/packages/component-registry",
+      "@heron-ws/i18n": "file:../heron/packages/i18n",
+      "@heron-ws/page-engine": "file:../heron/packages/page-engine",
+      "@heron-ws/page-engine-components": "file:../heron/packages/page-engine-components",
+      "@heron-ws/utils": "file:../heron/packages/utils"
+    }
+  }
+}

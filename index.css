@@ -1,0 +1,9 @@
+/* Bootstrap — the only CSS framework this app loads. */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* App-level resets */
+html,
+body,
+#root {
+  height: 100%;
+}

@@ -1,0 +1,11 @@
+{
+  "refresh": "Refresh",
+  "edit": "Edit",
+  "delete": "Delete",
+  "export": "Export",
+  "create": "Create",
+  "records": "records",
+  "selected": "selected",
+  "failed_to_load": "Failed to Load",
+  "try_again": "Try Again"
+}

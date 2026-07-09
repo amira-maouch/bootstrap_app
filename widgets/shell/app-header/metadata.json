@@ -1,0 +1,65 @@
+{
+  "component": "egret:core:widget",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "header-container",
+      "props": {
+        "className": "d-flex align-items-center justify-content-between border-bottom bg-white flex-shrink-0 px-4",
+        "style": { "height": "48px" }
+      },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "header-left",
+          "props": { "className": "d-flex align-items-center gap-2" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "page-title",
+              "alias": "@pageTitle",
+              "props": { "text": "Dashboard", "className": "fw-semibold mb-0" }
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "header-right",
+          "props": { "className": "d-flex align-items-center gap-3" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "user-badge",
+              "props": { "className": "d-flex align-items-center gap-2" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "avatar",
+                  "props": {
+                    "className": "rounded-circle bg-primary d-flex align-items-center justify-content-center",
+                    "style": { "width": "32px", "height": "32px" }
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "avatar-initials",
+                      "props": { "text": "JD", "className": "text-white fw-bold small" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:text",
+                  "id": "username",
+                  "props": {
+                    "text": "John Doe",
+                    "className": "small d-none d-md-inline"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

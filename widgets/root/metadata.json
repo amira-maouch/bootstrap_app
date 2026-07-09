@@ -1,0 +1,17 @@
+{
+  "component": "egret:core:layout",
+  "id": "app-root",
+  "children": [
+    {
+      "component": "egret:core:app-provider",
+      "id": "app-provider",
+      "props": { "marker": false },
+      "children": [
+        {
+          "component": "egret:core:slot",
+          "id": "page-outlet"
+        }
+      ]
+    }
+  ]
+}

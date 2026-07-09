@@ -1,0 +1,160 @@
+{
+  "component": "egret:core:widget",
+  "id": "settings",
+  "template": "layouts/main-layout",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "settings-root",
+      "props": { "className": "row g-4" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "settings-header",
+          "props": { "className": "col-12 mb-2" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "settings-title",
+              "props": { "text": "Settings", "className": "h4 fw-semibold mb-1 d-block" }
+            },
+            {
+              "component": "egret:core:text",
+              "id": "settings-subtitle",
+              "props": { "text": "Manage your account and preferences.", "className": "text-muted small d-block" }
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "settings-sidebar-col",
+          "props": { "className": "col-12 col-md-3" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "settings-nav",
+              "props": { "className": "nav flex-column nav-pills" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "settings-nav-profile",
+                  "props": { "className": "nav-link active" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "settings-nav-profile-text",
+                      "props": { "text": "Profile" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "settings-nav-account",
+                  "props": { "className": "nav-link" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "settings-nav-account-text",
+                      "props": { "text": "Account" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "settings-nav-notifications",
+                  "props": { "className": "nav-link" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "settings-nav-notif-text",
+                      "props": { "text": "Notifications" }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "settings-content-col",
+          "props": { "className": "col-12 col-md-9" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "profile-card",
+              "props": { "className": "card shadow-sm mb-4" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "profile-card-header",
+                  "props": { "className": "card-header bg-transparent" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "profile-card-title",
+                      "props": { "text": "Profile", "className": "fw-semibold mb-0" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "profile-card-desc",
+                      "props": { "text": "Update your personal information.", "className": "text-muted small d-block" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "profile-card-body",
+                  "props": { "className": "card-body" },
+                  "children": [
+                    {
+                      "component": "egret:core:div",
+                      "id": "profile-form",
+                      "props": { "className": "row g-3" },
+                      "children": [
+                        {
+                          "component": "egret:core:div",
+                          "id": "form-name",
+                          "props": { "className": "col-12 col-sm-6" },
+                          "children": [
+                            {
+                              "component": "egret:core:text",
+                              "id": "form-name-label",
+                              "props": { "text": "Full Name", "className": "form-label small fw-medium d-block" }
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "form-name-value",
+                              "props": { "text": "John Doe", "className": "form-control d-block" }
+                            }
+                          ]
+                        },
+                        {
+                          "component": "egret:core:div",
+                          "id": "form-email",
+                          "props": { "className": "col-12 col-sm-6" },
+                          "children": [
+                            {
+                              "component": "egret:core:text",
+                              "id": "form-email-label",
+                              "props": { "text": "Email", "className": "form-label small fw-medium d-block" }
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "form-email-value",
+                              "props": { "text": "john@example.com", "className": "form-control d-block" }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

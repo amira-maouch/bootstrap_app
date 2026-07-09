@@ -1,0 +1,44 @@
+{
+  "component": "egret:core:widget",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "not-found-root",
+      "props": {
+        "className": "d-flex flex-column align-items-center justify-content-center text-center p-5 min-vh-100"
+      },
+      "children": [
+        {
+          "component": "egret:core:text",
+          "id": "not-found-code",
+          "props": { "text": "404", "className": "display-1 fw-bold text-muted d-block" }
+        },
+        {
+          "component": "egret:core:text",
+          "id": "not-found-title",
+          "props": { "text": "Page not found", "className": "h3 fw-semibold d-block mb-2" }
+        },
+        {
+          "component": "egret:core:text",
+          "id": "not-found-message",
+          "props": {
+            "text": "The page you requested doesn't exist.",
+            "className": "text-muted d-block mb-4"
+          }
+        },
+        {
+          "component": "egret:core:link",
+          "id": "not-found-home",
+          "props": { "href": "/", "className": "btn btn-primary" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "not-found-home-text",
+              "props": { "text": "Back to Home" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

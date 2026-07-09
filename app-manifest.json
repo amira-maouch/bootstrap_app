@@ -1,0 +1,35 @@
+{
+  "routing": {
+    "appPathPrefix": ""
+  },
+  "title": "Bootstrap App",
+  "root": "root",
+  "plugins": [],
+  "errorRoutes": {
+    "404": {
+      "widget": "errors/not-found"
+    }
+  },
+  "routes": {
+    "main": {
+      "widget": "pages/dashboard",
+      "layout": "layouts/main-layout",
+      "title": "Dashboard"
+    },
+    "dashboard": {
+      "widget": "pages/dashboard",
+      "layout": "layouts/main-layout",
+      "title": "Dashboard"
+    },
+    "settings": {
+      "widget": "pages/settings",
+      "layout": "layouts/main-layout",
+      "title": "Settings"
+    },
+    "users": {
+      "widget": "pages/users",
+      "layout": "layouts/main-layout",
+      "title": "Users"
+    }
+  }
+}

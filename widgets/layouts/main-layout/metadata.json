@@ -1,0 +1,40 @@
+{
+  "component": "egret:core:layout",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "app-shell",
+      "props": { "className": "d-flex h-100 overflow-hidden" },
+      "children": [
+        {
+          "component": "egret:core:section-reference",
+          "id": "sidebar-section-ref",
+          "ref": { "path": "shell/sidebar-menu" }
+        },
+        {
+          "component": "egret:core:div",
+          "id": "main-panel",
+          "props": { "className": "d-flex flex-column flex-grow-1 overflow-hidden" },
+          "children": [
+            {
+              "component": "egret:core:section-reference",
+              "id": "header-section-ref",
+              "ref": { "path": "shell/app-header" }
+            },
+            {
+              "component": "egret:core:div",
+              "id": "page-content",
+              "props": { "className": "flex-grow-1 overflow-auto p-4 bg-light" },
+              "children": [
+                {
+                  "component": "egret:core:slot",
+                  "id": "main-content"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

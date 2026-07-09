@@ -1,0 +1,159 @@
+{
+  "component": "egret:core:div",
+  "id": "main",
+  "props": {
+    "className": "container py-5"
+  },
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "hero",
+      "props": {
+        "className": "p-5 mb-4 bg-light rounded-3"
+      },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "hero-body",
+          "props": { "className": "container-fluid py-3" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "hero-title",
+              "props": {
+                "text": "Bootstrap App",
+                "className": "display-5 fw-bold"
+              }
+            },
+            {
+              "component": "egret:core:text",
+              "id": "hero-subtitle",
+              "props": {
+                "text": "This app uses Bootstrap. The heron shell has zero CSS opinion.",
+                "className": "col-md-8 fs-4 mt-2 d-block"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "egret:core:div",
+      "id": "cards-row",
+      "props": { "className": "row g-4 mt-2" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "card-1",
+          "props": { "className": "col-md-4" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "card-1-inner",
+              "props": { "className": "card h-100 shadow-sm" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "card-1-body",
+                  "props": { "className": "card-body" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-1-title",
+                      "props": {
+                        "text": "No Tailwind in the shell",
+                        "className": "card-title h5"
+                      }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-1-text",
+                      "props": {
+                        "text": "app-runtime and page-engine ship with zero CSS. No globals.css, no PostCSS, no Tailwind dependency.",
+                        "className": "card-text d-block mt-2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "card-2",
+          "props": { "className": "col-md-4" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "card-2-inner",
+              "props": { "className": "card h-100 shadow-sm" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "card-2-body",
+                  "props": { "className": "card-body" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-2-title",
+                      "props": {
+                        "text": "CSS is app-owned",
+                        "className": "card-title h5"
+                      }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-2-text",
+                      "props": {
+                        "text": "index.css imports Bootstrap. alefbab_app imports Tailwind. The widget JSON carries Bootstrap utility classes.",
+                        "className": "card-text d-block mt-2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "card-3",
+          "props": { "className": "col-md-4" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "card-3-inner",
+              "props": { "className": "card h-100 shadow-sm" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "card-3-body",
+                  "props": { "className": "card-body" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-3-title",
+                      "props": {
+                        "text": "Same heron shell",
+                        "className": "card-title h5"
+                      }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "card-3-text",
+                      "props": {
+                        "text": "main.tsx is identical: import shell, import index.css. The runtime, page-engine, and component-api are unchanged.",
+                        "className": "card-text d-block mt-2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

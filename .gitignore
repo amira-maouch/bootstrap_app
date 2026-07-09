@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+/dist/
+/build/
+# Egret app build output (compiled widgets, lifecycle) — sibling of /dist/
+/dist-app/ 
+/bundles/
+# Generated plugin/component bundles (egret build:app)
+/plugins/
+/components/*
+**/build/
+
+# Caches
+.turbo/
+.cache/
+*.tsbuildinfo
+
+# Generated type declarations
+next-env.d.ts
+
+# Environment / local config (may contain secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+

@@ -1,0 +1,236 @@
+{
+  "component": "egret:core:widget",
+  "id": "users",
+  "template": "layouts/main-layout",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "users-root",
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "users-header",
+          "props": { "className": "d-flex align-items-center justify-content-between mb-4" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "users-title-group",
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "users-title",
+                  "props": { "text": "Users", "className": "h4 fw-semibold mb-1 d-block" }
+                },
+                {
+                  "component": "egret:core:text",
+                  "id": "users-subtitle",
+                  "props": { "text": "Manage your team members.", "className": "text-muted small d-block" }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:div",
+              "id": "invite-btn",
+              "props": { "className": "btn btn-primary btn-sm" },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "invite-btn-text",
+                  "props": { "text": "Invite User" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "users-table-card",
+          "props": { "className": "card shadow-sm" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "users-table-wrapper",
+              "props": { "className": "table-responsive" },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "users-table-head-row",
+                  "props": { "className": "d-flex border-bottom py-2 px-3 bg-light fw-medium small text-muted" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "col-name",
+                      "props": { "text": "Name", "className": "flex-grow-1" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "col-email",
+                      "props": { "text": "Email", "className": "flex-grow-1 d-none d-sm-block" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "col-role",
+                      "props": { "text": "Role", "className": "flex-grow-1 d-none d-md-block" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "col-status",
+                      "props": { "text": "Status", "className": "flex-grow-1" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "user-row-1",
+                  "props": { "className": "d-flex align-items-center border-bottom py-3 px-3 small" },
+                  "children": [
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-1-name-cell",
+                      "props": { "className": "flex-grow-1 d-flex align-items-center gap-2" },
+                      "children": [
+                        {
+                          "component": "egret:core:div",
+                          "id": "user-1-avatar",
+                          "props": { "className": "rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "children": [
+                            { "component": "egret:core:text", "id": "u1-initials", "props": { "text": "JD" } }
+                          ]
+                        },
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-1-name",
+                          "props": { "text": "John Doe", "className": "fw-medium" }
+                        }
+                      ]
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-1-email",
+                      "props": { "text": "john@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-1-role",
+                      "props": { "text": "Admin", "className": "flex-grow-1 d-none d-md-block" }
+                    },
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-1-status",
+                      "props": { "className": "flex-grow-1" },
+                      "children": [
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-1-badge",
+                          "props": { "text": "Active", "className": "badge bg-success-subtle text-success" }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "user-row-2",
+                  "props": { "className": "d-flex align-items-center border-bottom py-3 px-3 small" },
+                  "children": [
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-2-name-cell",
+                      "props": { "className": "flex-grow-1 d-flex align-items-center gap-2" },
+                      "children": [
+                        {
+                          "component": "egret:core:div",
+                          "id": "user-2-avatar",
+                          "props": { "className": "rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "children": [
+                            { "component": "egret:core:text", "id": "u2-initials", "props": { "text": "SA" } }
+                          ]
+                        },
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-2-name",
+                          "props": { "text": "Sara Ahmed", "className": "fw-medium" }
+                        }
+                      ]
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-2-email",
+                      "props": { "text": "sara@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-2-role",
+                      "props": { "text": "Member", "className": "flex-grow-1 d-none d-md-block" }
+                    },
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-2-status",
+                      "props": { "className": "flex-grow-1" },
+                      "children": [
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-2-badge",
+                          "props": { "text": "Active", "className": "badge bg-success-subtle text-success" }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "user-row-3",
+                  "props": { "className": "d-flex align-items-center py-3 px-3 small" },
+                  "children": [
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-3-name-cell",
+                      "props": { "className": "flex-grow-1 d-flex align-items-center gap-2" },
+                      "children": [
+                        {
+                          "component": "egret:core:div",
+                          "id": "user-3-avatar",
+                          "props": { "className": "rounded-circle bg-warning text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "children": [
+                            { "component": "egret:core:text", "id": "u3-initials", "props": { "text": "MK" } }
+                          ]
+                        },
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-3-name",
+                          "props": { "text": "Mohamed K.", "className": "fw-medium" }
+                        }
+                      ]
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-3-email",
+                      "props": { "text": "mk@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "user-3-role",
+                      "props": { "text": "Viewer", "className": "flex-grow-1 d-none d-md-block" }
+                    },
+                    {
+                      "component": "egret:core:div",
+                      "id": "user-3-status",
+                      "props": { "className": "flex-grow-1" },
+                      "children": [
+                        {
+                          "component": "egret:core:text",
+                          "id": "user-3-badge",
+                          "props": { "text": "Pending", "className": "badge bg-warning-subtle text-warning" }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
