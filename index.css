@@ -1,9 +1,75 @@
 /* Bootstrap — the only CSS framework this app loads. */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-/* App-level resets */
+/* ─── Egret theme → Bootstrap variable bridge ───────────────────────────────
+ * The egret theme engine injects CSS vars (--primary, --background, …) onto
+ * <html class="theme-sky light"> at runtime. This block maps them to the
+ * Bootstrap CSS variable names so Bootstrap utilities and components respond
+ * to theme switches automatically.
+ * ─────────────────────────────────────────────────────────────────────────── */
+:root,
+html[class*="theme-"] {
+  /* Base */
+  --bs-body-bg: var(--background);
+  --bs-body-color: var(--foreground);
+  --bs-border-color: var(--border);
+  --bs-border-radius: var(--radius);
+  --bs-border-radius-sm: calc(var(--radius) * 0.75);
+  --bs-border-radius-lg: calc(var(--radius) * 1.25);
+  --bs-border-radius-xl: calc(var(--radius) * 1.5);
+
+  /* Primary brand colour */
+  --bs-primary: var(--primary);
+  --bs-link-color: var(--primary);
+  --bs-link-hover-color: var(--primary-accent, var(--primary));
+
+  /* Semantic colours */
+  --bs-danger: var(--destructive);
+  --bs-warning: var(--warning);
+  --bs-success: var(--success);
+  --bs-info: var(--info);
+
+  /* Muted / secondary */
+  --bs-secondary-bg: var(--muted);
+  --bs-secondary-color: var(--muted-foreground);
+  --bs-tertiary-bg: var(--card);
+  --bs-tertiary-color: var(--card-foreground);
+  --bs-emphasis-color: var(--foreground);
+
+  /* Card */
+  --bs-card-bg: var(--card);
+  --bs-card-color: var(--card-foreground);
+  --bs-card-border-color: var(--border);
+
+  /* Input */
+  --bs-input-bg: var(--card);
+  --bs-input-border-color: var(--input);
+  --bs-input-focus-border-color: var(--ring);
+
+  /* Navbar */
+  --bs-navbar-color: var(--foreground);
+  --bs-navbar-bg: var(--background);
+
+  /* "Light" background utilities — map to muted/card instead of hardcoded #f8f9fa */
+  --bs-light: var(--muted);
+  --bs-light-bg-subtle: var(--muted);
+  --bs-secondary-bg-subtle: var(--muted);
+  --bs-tertiary-bg: var(--card);
+
+  /* Table */
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: var(--muted);
+  --bs-table-hover-bg: var(--accent, var(--muted));
+}
+
+/* ─── Base resets ──────────────────────────────────────────────────────────── */
 html,
 body,
 #root {
   height: 100%;
+}
+
+body {
+  background-color: var(--background, #fff);
+  color: var(--foreground, #000);
 }
