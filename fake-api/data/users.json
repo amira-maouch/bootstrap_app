@@ -1,0 +1,34 @@
+[
+  {
+    "id": "admin",
+    "name": "Ada Admin",
+    "email": "ada@bootstrap.local",
+    "initials": "AA",
+    "roleId": "admin",
+    "password": "admin"
+  },
+  {
+    "id": "editor",
+    "name": "Ed Editor",
+    "email": "ed@bootstrap.local",
+    "initials": "EE",
+    "roleId": "editor",
+    "password": "editor"
+  },
+  {
+    "id": "viewer",
+    "name": "Vic Viewer",
+    "email": "vic@bootstrap.local",
+    "initials": "VV",
+    "roleId": "viewer",
+    "password": "viewer"
+  },
+  {
+    "id": "viewer2",
+    "name": "Val Viewer",
+    "email": "val@bootstrap.local",
+    "initials": "VA",
+    "roleId": "viewer",
+    "password": "viewer2"
+  }
+]

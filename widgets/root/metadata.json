@@ -9,7 +9,8 @@
       "children": [
         {
           "component": "egret:core:slot",
-          "id": "page-outlet"
+          "id": "page-outlet",
+          "props": { "className": "h-100" }
         }
       ]
     }

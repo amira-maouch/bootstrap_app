@@ -1,0 +1,17 @@
+[
+  {
+    "id": "admin",
+    "name": "Administrator",
+    "description": "Full access — manage all"
+  },
+  {
+    "id": "editor",
+    "name": "Editor",
+    "description": "Dashboard + users + invite; no settings / no purge"
+  },
+  {
+    "id": "viewer",
+    "name": "Viewer",
+    "description": "Dashboard only — sees only their own tasks"
+  }
+]

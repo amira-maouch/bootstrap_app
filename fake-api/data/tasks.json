@@ -1,0 +1,7 @@
+[
+  { "id": "t1", "title": "Prepare Q3 investor update", "assigneeId": "admin", "assigneeName": "Ada Admin", "status": "In progress" },
+  { "id": "t2", "title": "Review pending pull requests", "assigneeId": "editor", "assigneeName": "Ed Editor", "status": "Todo" },
+  { "id": "t3", "title": "Update onboarding checklist", "assigneeId": "viewer", "assigneeName": "Vic Viewer", "status": "Todo" },
+  { "id": "t4", "title": "Audit inactive accounts", "assigneeId": "viewer2", "assigneeName": "Val Viewer", "status": "Blocked" },
+  { "id": "t5", "title": "Plan next sprint", "assigneeId": "admin", "assigneeName": "Ada Admin", "status": "Todo" }
+]

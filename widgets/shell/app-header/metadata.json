@@ -5,7 +5,7 @@
       "component": "egret:core:div",
       "id": "header-container",
       "props": {
-        "className": "d-flex align-items-center justify-content-between border-bottom bg-white flex-shrink-0 px-4",
+        "className": "d-flex align-items-center justify-content-between border-bottom bg-background flex-shrink-0 px-4",
         "style": { "height": "48px" }
       },
       "children": [
@@ -19,39 +19,95 @@
               "id": "page-title",
               "alias": "@pageTitle",
               "props": { "text": "Dashboard", "className": "fw-semibold mb-0" }
+            },
+            {
+              "component": "egret:core:text",
+              "id": "role-label",
+              "alias": "@roleLabel",
+              "props": {
+                "text": "Role: …",
+                "className": "badge text-bg-secondary ms-2"
+              }
             }
           ]
         },
         {
           "component": "egret:core:div",
           "id": "header-right",
-          "props": { "className": "d-flex align-items-center gap-3" },
+          "props": { "className": "d-flex align-items-center gap-2" },
           "children": [
+            {
+              "component": "egret:core:section-reference",
+              "id": "theme-switcher-ref",
+              "ref": { "path": "shell/theme-switcher" }
+            },
+            {
+              "component": "egret:core:div",
+              "id": "switch-role-btn",
+              "alias": "@switchRoleBtn",
+              "props": {
+                "className": "btn btn-sm btn-outline-secondary",
+                "role": "button",
+                "tabIndex": 0,
+                "title": "Cycle admin → editor → viewer"
+              },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "switch-role-text",
+                  "props": { "text": "Switch role" }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:div",
+              "id": "sign-out-btn",
+              "alias": "@signOutBtn",
+              "props": {
+                "className": "btn btn-sm btn-outline-danger",
+                "role": "button",
+                "tabIndex": 0
+              },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "sign-out-text",
+                  "props": { "text": "Sign out" }
+                }
+              ]
+            },
             {
               "component": "egret:core:div",
               "id": "user-badge",
-              "props": { "className": "d-flex align-items-center gap-2" },
+              "props": { "className": "d-flex align-items-center gap-2 ms-1" },
               "children": [
                 {
                   "component": "egret:core:div",
                   "id": "avatar",
                   "props": {
-                    "className": "rounded-circle bg-primary d-flex align-items-center justify-content-center",
-                    "style": { "width": "32px", "height": "32px" }
+                    "className": "rounded-circle d-flex align-items-center justify-content-center",
+                    "style": {
+                      "width": "32px",
+                      "height": "32px",
+                      "background": "var(--primary)",
+                      "color": "var(--primary-foreground)"
+                    }
                   },
                   "children": [
                     {
                       "component": "egret:core:text",
                       "id": "avatar-initials",
-                      "props": { "text": "JD", "className": "text-white fw-bold small" }
+                      "alias": "@avatarInitials",
+                      "props": { "text": "…", "className": "fw-bold small" }
                     }
                   ]
                 },
                 {
                   "component": "egret:core:text",
                   "id": "username",
+                  "alias": "@username",
                   "props": {
-                    "text": "John Doe",
+                    "text": "…",
                     "className": "small d-none d-md-inline"
                   }
                 }

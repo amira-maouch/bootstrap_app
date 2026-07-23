@@ -6,16 +6,23 @@
       "component": "egret:core:div",
       "id": "sidebar",
       "props": {
-        "className": "d-flex flex-column bg-dark text-white flex-shrink-0",
-        "style": { "width": "240px" }
+        "className": "d-flex flex-column flex-shrink-0 h-100",
+        "style": {
+          "width": "240px",
+          "background": "var(--sidebar)",
+          "color": "var(--sidebar-foreground)"
+        }
       },
       "children": [
         {
           "component": "egret:core:div",
           "id": "sidebar-brand",
           "props": {
-            "className": "d-flex align-items-center gap-2 px-3 border-bottom border-secondary",
-            "style": { "height": "48px" }
+            "className": "d-flex align-items-center gap-2 px-3",
+            "style": {
+              "height": "48px",
+              "borderBottom": "1px solid var(--sidebar-border)"
+            }
           },
           "children": [
             {
@@ -23,7 +30,8 @@
               "id": "brand-text",
               "props": {
                 "text": "Bootstrap App",
-                "className": "fw-semibold fs-6 text-white mb-0"
+                "className": "fw-semibold fs-6 mb-0",
+                "style": { "color": "var(--sidebar-foreground)" }
               }
             }
           ]
@@ -43,15 +51,18 @@
                   "id": "nav-group-label",
                   "props": {
                     "text": "NAVIGATION",
-                    "className": "text-secondary px-3 py-1 small fw-medium d-block"
+                    "className": "px-3 py-1 small fw-medium d-block",
+                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.5" }
                   }
                 },
                 {
                   "component": "egret:core:link",
                   "id": "nav-dashboard",
+                  "alias": "@navDashboard",
                   "props": {
-                    "href": "/",
-                    "className": "nav-link text-white-50 d-flex align-items-center gap-2 rounded px-3 py-2 mb-1"
+                    "href": "/dashboard",
+                    "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
+                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
                   },
                   "children": [
                     {
@@ -64,9 +75,19 @@
                 {
                   "component": "egret:core:link",
                   "id": "nav-users",
+                  "alias": "@navUsers",
+                  "can": {
+                    "any": [
+                      { "action": "read", "subject": "User" },
+                      { "action": "write", "subject": "User" },
+                      { "action": "command", "subject": "users.invite" },
+                      { "action": "command", "subject": "users.purge" }
+                    ]
+                  },
                   "props": {
                     "href": "/users",
-                    "className": "nav-link text-white-50 d-flex align-items-center gap-2 rounded px-3 py-2 mb-1"
+                    "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
+                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
                   },
                   "children": [
                     {
@@ -79,9 +100,12 @@
                 {
                   "component": "egret:core:link",
                   "id": "nav-settings",
+                  "alias": "@navSettings",
+                  "can": { "action": "*", "subject": "*" },
                   "props": {
                     "href": "/settings",
-                    "className": "nav-link text-white-50 d-flex align-items-center gap-2 rounded px-3 py-2 mb-1"
+                    "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
+                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
                   },
                   "children": [
                     {
@@ -99,21 +123,28 @@
           "component": "egret:core:div",
           "id": "sidebar-footer",
           "props": {
-            "className": "border-top border-secondary px-3 py-2 d-flex align-items-center gap-2"
+            "className": "px-3 py-2 d-flex align-items-center gap-2",
+            "style": { "borderTop": "1px solid var(--sidebar-border)" }
           },
           "children": [
             {
               "component": "egret:core:div",
               "id": "user-avatar",
               "props": {
-                "className": "rounded-circle bg-secondary d-flex align-items-center justify-content-center flex-shrink-0",
-                "style": { "width": "32px", "height": "32px" }
+                "className": "rounded-circle d-flex align-items-center justify-content-center fw-bold small flex-shrink-0",
+                "style": {
+                  "width": "32px",
+                  "height": "32px",
+                  "background": "var(--sidebar-primary)",
+                  "color": "var(--sidebar-primary-foreground)"
+                }
               },
               "children": [
                 {
                   "component": "egret:core:text",
                   "id": "user-initials",
-                  "props": { "text": "JD", "className": "text-white fw-bold small" }
+                  "alias": "@userInitials",
+                  "props": { "text": "…" }
                 }
               ]
             },
@@ -125,17 +156,21 @@
                 {
                   "component": "egret:core:text",
                   "id": "user-name",
+                  "alias": "@userName",
                   "props": {
-                    "text": "John Doe",
-                    "className": "text-white fw-medium small d-block text-truncate"
+                    "text": "Signing in…",
+                    "className": "fw-medium small d-block text-truncate",
+                    "style": { "color": "var(--sidebar-foreground)" }
                   }
                 },
                 {
                   "component": "egret:core:text",
                   "id": "user-email",
+                  "alias": "@userEmail",
                   "props": {
-                    "text": "john@example.com",
-                    "className": "text-secondary small d-block text-truncate"
+                    "text": "",
+                    "className": "small d-block text-truncate",
+                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.6" }
                   }
                 }
               ]

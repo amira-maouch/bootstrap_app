@@ -4,6 +4,7 @@
   },
   "title": "Bootstrap App",
   "root": "root",
+  "theme": "sky",
   "plugins": [],
   "errorRoutes": {
     "404": {
@@ -11,6 +12,10 @@
     }
   },
   "routes": {
+    "login": {
+      "widget": "pages/login",
+      "title": "Sign in"
+    },
     "main": {
       "widget": "pages/dashboard",
       "layout": "layouts/main-layout",
@@ -24,12 +29,21 @@
     "settings": {
       "widget": "pages/settings",
       "layout": "layouts/main-layout",
-      "title": "Settings"
+      "title": "Settings",
+      "can": { "action": "*", "subject": "*" }
     },
     "users": {
       "widget": "pages/users",
       "layout": "layouts/main-layout",
-      "title": "Users"
+      "title": "Users",
+      "can": {
+        "any": [
+          { "action": "read", "subject": "User" },
+          { "action": "write", "subject": "User" },
+          { "action": "command", "subject": "users.invite" },
+          { "action": "command", "subject": "users.purge" }
+        ]
+      }
     }
   }
 }

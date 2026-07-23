@@ -1,0 +1,26 @@
+[
+  {
+    "id": "u1",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "initials": "JD",
+    "role": "Admin",
+    "status": "Active"
+  },
+  {
+    "id": "u2",
+    "name": "Sara Ahmed",
+    "email": "sara@example.com",
+    "initials": "SA",
+    "role": "Member",
+    "status": "Active"
+  },
+  {
+    "id": "u3",
+    "name": "Mohamed K.",
+    "email": "mk@example.com",
+    "initials": "MK",
+    "role": "Viewer",
+    "status": "Pending"
+  }
+]

@@ -1,0 +1,159 @@
+{
+  "component": "egret:core:widget",
+  "id": "login",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "login-root",
+      "props": {
+        "className": "min-vh-100 d-flex align-items-center justify-content-center p-4",
+        "style": {
+          "background": "linear-gradient(160deg, var(--background) 0%, var(--muted) 100%)"
+        }
+      },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "login-card",
+          "props": {
+            "className": "card shadow-sm border-0",
+            "style": { "width": "100%", "maxWidth": "420px" }
+          },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "login-body",
+              "props": { "className": "card-body p-4" },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "login-title",
+                  "props": {
+                    "text": "Bootstrap App",
+                    "className": "h4 fw-semibold mb-1 d-block"
+                  }
+                },
+                {
+                  "component": "egret:core:text",
+                  "id": "login-subtitle",
+                  "props": {
+                    "text": "Pick a fake persona to demo Heron RBAC authorization.",
+                    "className": "text-muted small d-block mb-4"
+                  }
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "persona-admin",
+                  "alias": "@personaAdmin",
+                  "props": {
+                    "className": "btn btn-outline-primary w-100 text-start mb-2 d-flex flex-column align-items-start",
+                    "role": "button",
+                    "tabIndex": 0
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-admin-name",
+                      "alias": "@personaAdminName",
+                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-admin-desc",
+                      "alias": "@personaAdminDesc",
+                      "props": {
+                        "text": "",
+                        "className": "small text-muted"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "persona-editor",
+                  "alias": "@personaEditor",
+                  "props": {
+                    "className": "btn btn-outline-secondary w-100 text-start mb-2 d-flex flex-column align-items-start",
+                    "role": "button",
+                    "tabIndex": 0
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-editor-name",
+                      "alias": "@personaEditorName",
+                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-editor-desc",
+                      "alias": "@personaEditorDesc",
+                      "props": {
+                        "text": "",
+                        "className": "small text-muted"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "persona-viewer",
+                  "alias": "@personaViewer",
+                  "props": {
+                    "className": "btn btn-outline-secondary w-100 text-start mb-2 d-flex flex-column align-items-start",
+                    "role": "button",
+                    "tabIndex": 0
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-viewer-name",
+                      "alias": "@personaViewerName",
+                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-viewer-desc",
+                      "alias": "@personaViewerDesc",
+                      "props": {
+                        "text": "",
+                        "className": "small text-muted"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "persona-viewer2",
+                  "alias": "@personaViewer2",
+                  "props": {
+                    "className": "btn btn-outline-secondary w-100 text-start d-flex flex-column align-items-start",
+                    "role": "button",
+                    "tabIndex": 0
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-viewer2-name",
+                      "alias": "@personaViewer2Name",
+                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "persona-viewer2-desc",
+                      "alias": "@personaViewer2Desc",
+                      "props": {
+                        "text": "",
+                        "className": "small text-muted"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -22,7 +22,7 @@
           "component": "egret:core:text",
           "id": "not-found-message",
           "props": {
-            "text": "The page you requested doesn't exist.",
+            "text": "The page you requested doesn't exist (no matching route/widget). Access denials redirect elsewhere — check the console.",
             "className": "text-muted d-block mb-4"
           }
         },

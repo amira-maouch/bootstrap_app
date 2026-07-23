@@ -24,7 +24,7 @@
             {
               "component": "egret:core:div",
               "id": "page-content",
-              "props": { "className": "flex-grow-1 overflow-auto p-4 bg-light" },
+              "props": { "className": "flex-grow-1 overflow-auto p-4 bg-background" },
               "children": [
                 {
                   "component": "egret:core:slot",

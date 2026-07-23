@@ -1,0 +1,43 @@
+{
+  "component": "egret:core:widget",
+  "id": "theme-switcher",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "theme-switcher-bar",
+      "props": { "className": "d-flex align-items-center gap-2" },
+      "children": [
+        {
+          "component": "egret:core:select",
+          "id": "theme-select",
+          "alias": "@themeSelect",
+          "props": {
+            "className": "form-select form-select-sm",
+            "style": { "width": "auto" },
+            "options": [
+              { "value": "sky", "label": "🔵 Sky" },
+              { "value": "amber", "label": "🟠 Amber" }
+            ]
+          }
+        },
+        {
+          "component": "egret:core:div",
+          "id": "mode-toggle",
+          "alias": "@modeToggle",
+          "props": {
+            "className": "btn btn-sm btn-outline-secondary",
+            "style": { "cursor": "pointer" }
+          },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "mode-icon",
+              "alias": "@modeIcon",
+              "props": { "text": "☀️" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

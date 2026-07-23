@@ -24,19 +24,49 @@
                 {
                   "component": "egret:core:text",
                   "id": "users-subtitle",
+                  "alias": "@users-subtitle",
                   "props": { "text": "Manage your team members.", "className": "text-muted small d-block" }
                 }
               ]
             },
             {
               "component": "egret:core:div",
-              "id": "invite-btn",
-              "props": { "className": "btn btn-primary btn-sm" },
+              "id": "users-actions",
+              "props": { "className": "d-flex align-items-center gap-2" },
               "children": [
                 {
-                  "component": "egret:core:text",
-                  "id": "invite-btn-text",
-                  "props": { "text": "Invite User" }
+                  "component": "egret:core:div",
+                  "id": "purge-btn",
+                  "alias": "@purgeBtn",
+                  "can": {
+                    "action": "command",
+                    "subject": "users.purge"
+                  },
+                  "props": { "className": "btn btn-outline-danger btn-sm" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "purge-btn-text",
+                      "props": { "text": "Purge inactive" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "invite-btn",
+                  "alias": "@inviteBtn",
+                  "can": {
+                    "action": "command",
+                    "subject": "users.invite"
+                  },
+                  "props": { "className": "btn btn-primary btn-sm" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "invite-btn-text",
+                      "props": { "text": "Invite User" }
+                    }
+                  ]
                 }
               ]
             }
@@ -55,7 +85,7 @@
                 {
                   "component": "egret:core:div",
                   "id": "users-table-head-row",
-                  "props": { "className": "d-flex border-bottom py-2 px-3 bg-light fw-medium small text-muted" },
+                  "props": { "className": "d-flex border-bottom py-2 px-3 fw-medium small", "style": { "background": "var(--muted)", "color": "var(--muted-foreground)" } },
                   "children": [
                     {
                       "component": "egret:core:text",
@@ -92,27 +122,30 @@
                         {
                           "component": "egret:core:div",
                           "id": "user-1-avatar",
-                          "props": { "className": "rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--primary)", "color": "var(--primary-foreground)" } },
                           "children": [
-                            { "component": "egret:core:text", "id": "u1-initials", "props": { "text": "JD" } }
+                            { "component": "egret:core:text", "id": "u1-initials", "alias": "@u1-initials", "props": { "text": "…" } }
                           ]
                         },
                         {
                           "component": "egret:core:text",
                           "id": "user-1-name",
-                          "props": { "text": "John Doe", "className": "fw-medium" }
+                          "alias": "@user-1-name",
+                          "props": { "text": "Loading…", "className": "fw-medium" }
                         }
                       ]
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-1-email",
-                      "props": { "text": "john@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "alias": "@user-1-email",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-1-role",
-                      "props": { "text": "Admin", "className": "flex-grow-1 d-none d-md-block" }
+                      "alias": "@user-1-role",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "egret:core:div",
@@ -122,7 +155,8 @@
                         {
                           "component": "egret:core:text",
                           "id": "user-1-badge",
-                          "props": { "text": "Active", "className": "badge bg-success-subtle text-success" }
+                          "alias": "@user-1-badge",
+                          "props": { "text": "", "className": "badge bg-success-subtle text-success" }
                         }
                       ]
                     }
@@ -141,27 +175,30 @@
                         {
                           "component": "egret:core:div",
                           "id": "user-2-avatar",
-                          "props": { "className": "rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--muted)", "color": "var(--muted-foreground)" } },
                           "children": [
-                            { "component": "egret:core:text", "id": "u2-initials", "props": { "text": "SA" } }
+                            { "component": "egret:core:text", "id": "u2-initials", "alias": "@u2-initials", "props": { "text": "…" } }
                           ]
                         },
                         {
                           "component": "egret:core:text",
                           "id": "user-2-name",
-                          "props": { "text": "Sara Ahmed", "className": "fw-medium" }
+                          "alias": "@user-2-name",
+                          "props": { "text": "Loading…", "className": "fw-medium" }
                         }
                       ]
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-2-email",
-                      "props": { "text": "sara@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "alias": "@user-2-email",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-2-role",
-                      "props": { "text": "Member", "className": "flex-grow-1 d-none d-md-block" }
+                      "alias": "@user-2-role",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "egret:core:div",
@@ -171,7 +208,8 @@
                         {
                           "component": "egret:core:text",
                           "id": "user-2-badge",
-                          "props": { "text": "Active", "className": "badge bg-success-subtle text-success" }
+                          "alias": "@user-2-badge",
+                          "props": { "text": "", "className": "badge bg-success-subtle text-success" }
                         }
                       ]
                     }
@@ -190,27 +228,30 @@
                         {
                           "component": "egret:core:div",
                           "id": "user-3-avatar",
-                          "props": { "className": "rounded-circle bg-warning text-white d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px" } },
+                          "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--warning)", "color": "var(--warning-foreground)" } },
                           "children": [
-                            { "component": "egret:core:text", "id": "u3-initials", "props": { "text": "MK" } }
+                            { "component": "egret:core:text", "id": "u3-initials", "alias": "@u3-initials", "props": { "text": "…" } }
                           ]
                         },
                         {
                           "component": "egret:core:text",
                           "id": "user-3-name",
-                          "props": { "text": "Mohamed K.", "className": "fw-medium" }
+                          "alias": "@user-3-name",
+                          "props": { "text": "Loading…", "className": "fw-medium" }
                         }
                       ]
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-3-email",
-                      "props": { "text": "mk@example.com", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "alias": "@user-3-email",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "user-3-role",
-                      "props": { "text": "Viewer", "className": "flex-grow-1 d-none d-md-block" }
+                      "alias": "@user-3-role",
+                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "egret:core:div",
@@ -220,7 +261,8 @@
                         {
                           "component": "egret:core:text",
                           "id": "user-3-badge",
-                          "props": { "text": "Pending", "className": "badge bg-warning-subtle text-warning" }
+                          "alias": "@user-3-badge",
+                          "props": { "text": "", "className": "badge", "style": { "background": "var(--warning-accent, #fef3c7)", "color": "var(--warning-foreground)" } }
                         }
                       ]
                     }

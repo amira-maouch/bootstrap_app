@@ -9,7 +9,7 @@
       "component": "egret:core:div",
       "id": "hero",
       "props": {
-        "className": "p-5 mb-4 bg-light rounded-3"
+        "className": "p-5 mb-4 rounded-3", "style": { "background": "var(--card)" }
       },
       "children": [
         {
