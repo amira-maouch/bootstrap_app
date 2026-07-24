@@ -9,6 +9,8 @@ const APP_ROOT = path.resolve(__dirname, ".");
 export default defineConfig({
   metadataDir: APP_ROOT,
   middlewaresDir: path.join(APP_ROOT, "middlewares"),
+  // Base URL of the backend API — forwarded to server-side widget loaders via `ctx.egret.apiBase`.
+  apiBase: process.env.EGRET_API_BASE_URL ?? "http://localhost:4001",
   authorization: {
     enabled: true,
     permissions: {

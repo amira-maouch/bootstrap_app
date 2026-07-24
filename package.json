@@ -15,26 +15,27 @@
     "dev": "pnpm build:app && concurrently -k -n api,server,watch -c magenta,blue,yellow \"pnpm dev:fake-api\" \"pnpm dev:server\" \"pnpm dev:watch\"",
     "start": "egret-prod-server",
     "preview": "vite preview"
-  }, 
+  },
   "dependencies": {
-    "@heron-ws/app-runtime": "^1.7.2",
-    "@heron-ws/component-api": "^4.8.0",
+    "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
+    "@heron-ws/component-api": "file:../heron/packages/component-api",
     "bootstrap": "^5.3.8",
     "date-fns": "^4.4.0",
-    "lodash-es": "^4.18.1", 
+    "lodash-es": "^4.18.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "sonner": "^2.0.7"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "concurrently": "^9.2.4",
     "tsx": "^4.23.1",
     "typescript": "^5.9.3",
     "vite": "^6.4.3"
-},
-"pnpm": {       "overrides": {
+  },
+  "pnpm": {
+    "overrides": {
       "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
       "@heron-ws/app-runtime-core": "file:../heron/packages/app-runtime-core",
       "@heron-ws/app-runtime-server": "file:../heron/packages/app-runtime-server",
