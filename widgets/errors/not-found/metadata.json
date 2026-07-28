@@ -29,7 +29,7 @@
         {
           "component": "egret:core:link",
           "id": "not-found-home",
-          "props": { "href": "/", "className": "btn btn-primary" },
+          "props": { "href": "/dashboard", "className": "btn btn-primary" },
           "children": [
             {
               "component": "egret:core:text",
