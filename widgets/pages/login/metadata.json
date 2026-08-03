@@ -1,6 +1,17 @@
 {
   "component": "egret:core:widget",
   "id": "login",
+  "props": {
+    "personas": [],
+    "personaAdminName": "Loading…",
+    "personaAdminDesc": "",
+    "personaEditorName": "Loading…",
+    "personaEditorDesc": "",
+    "personaViewerName": "Loading…",
+    "personaViewerDesc": "",
+    "personaViewer2Name": "Loading…",
+    "personaViewer2Desc": ""
+  },
   "children": [
     {
       "component": "egret:core:div",
@@ -55,14 +66,17 @@
                       "component": "egret:core:text",
                       "id": "persona-admin-name",
                       "alias": "@personaAdminName",
-                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                      "props": {
+                        "text": "{{props.personaAdminName}}",
+                        "className": "fw-semibold"
+                      }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "persona-admin-desc",
                       "alias": "@personaAdminDesc",
                       "props": {
-                        "text": "",
+                        "text": "{{props.personaAdminDesc}}",
                         "className": "small text-muted"
                       }
                     }
@@ -82,14 +96,17 @@
                       "component": "egret:core:text",
                       "id": "persona-editor-name",
                       "alias": "@personaEditorName",
-                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                      "props": {
+                        "text": "{{props.personaEditorName}}",
+                        "className": "fw-semibold"
+                      }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "persona-editor-desc",
                       "alias": "@personaEditorDesc",
                       "props": {
-                        "text": "",
+                        "text": "{{props.personaEditorDesc}}",
                         "className": "small text-muted"
                       }
                     }
@@ -109,14 +126,17 @@
                       "component": "egret:core:text",
                       "id": "persona-viewer-name",
                       "alias": "@personaViewerName",
-                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                      "props": {
+                        "text": "{{props.personaViewerName}}",
+                        "className": "fw-semibold"
+                      }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "persona-viewer-desc",
                       "alias": "@personaViewerDesc",
                       "props": {
-                        "text": "",
+                        "text": "{{props.personaViewerDesc}}",
                         "className": "small text-muted"
                       }
                     }
@@ -136,14 +156,17 @@
                       "component": "egret:core:text",
                       "id": "persona-viewer2-name",
                       "alias": "@personaViewer2Name",
-                      "props": { "text": "Loading…", "className": "fw-semibold" }
+                      "props": {
+                        "text": "{{props.personaViewer2Name}}",
+                        "className": "fw-semibold"
+                      }
                     },
                     {
                       "component": "egret:core:text",
                       "id": "persona-viewer2-desc",
                       "alias": "@personaViewer2Desc",
                       "props": {
-                        "text": "",
+                        "text": "{{props.personaViewer2Desc}}",
                         "className": "small text-muted"
                       }
                     }

@@ -2,6 +2,19 @@
   "component": "egret:core:widget",
   "id": "dashboard",
   "template": "layouts/main-layout",
+  "props": {
+    "task1Title": "…", "task1Assignee": "", "task1Status": "",
+    "task1RowClass": "d-flex align-items-center border-bottom py-2 px-3 small",
+    "task2Title": "…", "task2Assignee": "", "task2Status": "",
+    "task2RowClass": "d-flex align-items-center border-bottom py-2 px-3 small",
+    "task3Title": "…", "task3Assignee": "", "task3Status": "",
+    "task3RowClass": "d-flex align-items-center border-bottom py-2 px-3 small",
+    "task4Title": "…", "task4Assignee": "", "task4Status": "",
+    "task4RowClass": "d-flex align-items-center border-bottom py-2 px-3 small",
+    "task5Title": "…", "task5Assignee": "", "task5Status": "",
+    "task5RowClass": "d-flex align-items-center py-2 px-3 small",
+    "tasksSubtitleText": "Loading tasks…"
+  },
   "children": [
     {
       "component": "egret:core:div",
@@ -401,7 +414,7 @@
                           "component": "egret:core:text",
                           "id": "tasks-subtitle",
                           "alias": "@tasksSubtitle",
-                          "props": { "text": "Loading tasks…", "className": "text-muted small d-block" }
+                          "props": { "text": "{{props.tasksSubtitleText}}", "className": "text-muted small d-block" }
                         }
                       ]
                     },
@@ -424,55 +437,55 @@
                           "component": "egret:core:div",
                           "id": "task-row-1",
                           "alias": "@taskRow1",
-                          "props": { "className": "d-flex align-items-center border-bottom py-2 px-3 small" },
+                          "props": { "className": "{{props.task1RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-1-title", "alias": "@task1-title", "props": { "text": "…", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-1-assignee", "alias": "@task1-assignee", "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-1-status", "alias": "@task1-status", "props": { "text": "", "className": "flex-grow-1" } }
+                            { "component": "egret:core:text", "id": "task-1-title", "alias": "@task1-title", "props": { "text": "{{props.task1Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "egret:core:text", "id": "task-1-assignee", "alias": "@task1-assignee", "props": { "text": "{{props.task1Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "egret:core:text", "id": "task-1-status", "alias": "@task1-status", "props": { "text": "{{props.task1Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
                           "component": "egret:core:div",
                           "id": "task-row-2",
                           "alias": "@taskRow2",
-                          "props": { "className": "d-flex align-items-center border-bottom py-2 px-3 small" },
+                          "props": { "className": "{{props.task2RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-2-title", "alias": "@task2-title", "props": { "text": "…", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-2-assignee", "alias": "@task2-assignee", "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-2-status", "alias": "@task2-status", "props": { "text": "", "className": "flex-grow-1" } }
+                            { "component": "egret:core:text", "id": "task-2-title", "alias": "@task2-title", "props": { "text": "{{props.task2Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "egret:core:text", "id": "task-2-assignee", "alias": "@task2-assignee", "props": { "text": "{{props.task2Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "egret:core:text", "id": "task-2-status", "alias": "@task2-status", "props": { "text": "{{props.task2Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
                           "component": "egret:core:div",
                           "id": "task-row-3",
                           "alias": "@taskRow3",
-                          "props": { "className": "d-flex align-items-center border-bottom py-2 px-3 small" },
+                          "props": { "className": "{{props.task3RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-3-title", "alias": "@task3-title", "props": { "text": "…", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-3-assignee", "alias": "@task3-assignee", "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-3-status", "alias": "@task3-status", "props": { "text": "", "className": "flex-grow-1" } }
+                            { "component": "egret:core:text", "id": "task-3-title", "alias": "@task3-title", "props": { "text": "{{props.task3Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "egret:core:text", "id": "task-3-assignee", "alias": "@task3-assignee", "props": { "text": "{{props.task3Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "egret:core:text", "id": "task-3-status", "alias": "@task3-status", "props": { "text": "{{props.task3Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
                           "component": "egret:core:div",
                           "id": "task-row-4",
                           "alias": "@taskRow4",
-                          "props": { "className": "d-flex align-items-center border-bottom py-2 px-3 small" },
+                          "props": { "className": "{{props.task4RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-4-title", "alias": "@task4-title", "props": { "text": "…", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-4-assignee", "alias": "@task4-assignee", "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-4-status", "alias": "@task4-status", "props": { "text": "", "className": "flex-grow-1" } }
+                            { "component": "egret:core:text", "id": "task-4-title", "alias": "@task4-title", "props": { "text": "{{props.task4Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "egret:core:text", "id": "task-4-assignee", "alias": "@task4-assignee", "props": { "text": "{{props.task4Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "egret:core:text", "id": "task-4-status", "alias": "@task4-status", "props": { "text": "{{props.task4Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
                           "component": "egret:core:div",
                           "id": "task-row-5",
                           "alias": "@taskRow5",
-                          "props": { "className": "d-flex align-items-center py-2 px-3 small" },
+                          "props": { "className": "{{props.task5RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-5-title", "alias": "@task5-title", "props": { "text": "…", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-5-assignee", "alias": "@task5-assignee", "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-5-status", "alias": "@task5-status", "props": { "text": "", "className": "flex-grow-1" } }
+                            { "component": "egret:core:text", "id": "task-5-title", "alias": "@task5-title", "props": { "text": "{{props.task5Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "egret:core:text", "id": "task-5-assignee", "alias": "@task5-assignee", "props": { "text": "{{props.task5Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "egret:core:text", "id": "task-5-status", "alias": "@task5-status", "props": { "text": "{{props.task5Status}}", "className": "flex-grow-1" } }
                           ]
                         }
                       ]

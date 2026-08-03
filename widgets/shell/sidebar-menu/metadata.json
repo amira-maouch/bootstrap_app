@@ -52,7 +52,10 @@
                   "props": {
                     "text": "NAVIGATION",
                     "className": "px-3 py-1 small fw-medium d-block",
-                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.5" }
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.5"
+                    }
                   }
                 },
                 {
@@ -62,7 +65,10 @@
                   "props": {
                     "href": "/dashboard",
                     "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
-                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.75"
+                    }
                   },
                   "children": [
                     {
@@ -87,7 +93,10 @@
                   "props": {
                     "href": "/users",
                     "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
-                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.75"
+                    }
                   },
                   "children": [
                     {
@@ -105,13 +114,54 @@
                   "props": {
                     "href": "/settings",
                     "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
-                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.75" }
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.75"
+                    }
                   },
                   "children": [
                     {
                       "component": "egret:core:text",
                       "id": "nav-settings-text",
                       "props": { "text": "Settings" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:link",
+                  "id": "nav-ssr-boundaries",
+                  "props": {
+                    "href": "/ssr-boundaries",
+                    "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.75"
+                    }
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "nav-ssr-boundaries-text",
+                      "props": { "text": "SSR boundaries" }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:link",
+                  "id": "nav-csr-boundaries",
+                  "props": {
+                    "href": "/csr-boundaries",
+                    "className": "d-flex align-items-center gap-2 rounded px-3 py-2 mb-1 text-decoration-none",
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.75"
+                    }
+                  },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "nav-csr-boundaries-text",
+                      "props": { "text": "CSR baseline" }
                     }
                   ]
                 }
@@ -170,7 +220,10 @@
                   "props": {
                     "text": "",
                     "className": "small d-block text-truncate",
-                    "style": { "color": "var(--sidebar-foreground)", "opacity": "0.6" }
+                    "style": {
+                      "color": "var(--sidebar-foreground)",
+                      "opacity": "0.6"
+                    }
                   }
                 }
               ]

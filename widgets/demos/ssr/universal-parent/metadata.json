@@ -1,0 +1,33 @@
+{
+  "component": "egret:core:widget",
+  "id": "universal-parent",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "universal-parent-card",
+      "props": { "className": "card border-success shadow-sm" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "universal-parent-body",
+          "props": { "className": "card-body" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "universal-parent-title",
+              "props": {
+                "text": "Case 1 — universal widget → universal widget → universal registry component",
+                "className": "h5 text-success d-block mb-3"
+              }
+            },
+            {
+              "component": "egret:core:section-reference",
+              "id": "universal-child-ref",
+              "ref": { "path": "demos/ssr/universal-child" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

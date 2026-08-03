@@ -26,7 +26,7 @@ function usersScript($egret: any, $self: any) {
   }
 
   async function loadUsersFromApi() {
-    const token = localStorage.getItem("auth_token");
+    const token = await $egret?.auth?.getAccessToken?.();
     if (!token) return;
 
     $self.getChild("@users-subtitle")?.setProps({

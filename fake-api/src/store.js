@@ -1,6 +1,7 @@
 /**
- * JSON-backed store for the fake API (no database).
- * Sessions live in memory; restart clears tokens.
+ * JSON-backed fake backend (no database). Authentication sessions belong to
+ * this backend boundary; a production API would persist the same records in a
+ * database or Redis. Restarting this demo API clears them.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -31,18 +32,16 @@ const grantsByRole = readJson("permissions.json");
 /** @type {Array<Record<string, unknown>>} */
 const teamMembers = readJson("team-members.json");
 /**
- * Demo rows for the row-level "conditions" example: each task has an
- * `assigneeId`. This endpoint returns ALL tasks to ANY authenticated user —
- * filtering to "only my rows" is deliberately left to Heron's client-side
- * `read:Task` rule + `conditions` (see permissions.json's "read:Task:own"
- * grant and authorization/permissions-adapter.ts), not this fake backend. A
- * real backend must still re-check this server-side; this demo only shows
- * the client-side half.
+ * Demo rows for the row-level "conditions" example. The API filters these
+ * server-side before returning them; Heron's matching client condition is a
+ * UI projection, not a security boundary.
  * @type {Array<{id:string,title:string,assigneeId:string,assigneeName:string,status:string}>}
  */
 const tasks = readJson("tasks.json");
 
-/** @type {Map<string, { userId: string, createdAt: number }>} */
+const SESSION_LIFETIME_MS = 30 * 60 * 1000;
+
+/** @type {Map<string, { userId: string, createdAt: number, expiresAt: number }>} */
 const sessions = new Map();
 
 export function listPersonas() {
@@ -84,19 +83,26 @@ export function publicUser(user) {
 
 export function createSession(userId) {
   const token = `tok_${randomBytes(16).toString("hex")}`;
-  sessions.set(token, { userId, createdAt: Date.now() });
-  return token;
+  const createdAt = Date.now();
+  const expiresAt = createdAt + SESSION_LIFETIME_MS;
+  sessions.set(token, { userId, createdAt, expiresAt });
+  return { accessToken: token, expiresAt };
 }
 
 export function destroySession(token) {
   if (token) sessions.delete(token);
 }
 
-export function userFromToken(token) {
+export function identityFromToken(token) {
   if (!token) return null;
   const session = sessions.get(token);
   if (!session) return null;
-  return findUserById(session.userId);
+  if (session.expiresAt <= Date.now()) {
+    sessions.delete(token);
+    return null;
+  }
+  const user = findUserById(session.userId);
+  return user ? { user, expiresAt: session.expiresAt } : null;
 }
 
 export function grantsForUser(user) {

@@ -1,0 +1,107 @@
+{
+  "component": "egret:core:widget",
+  "id": "ssr-boundaries",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "boundary-page",
+      "props": { "className": "container-fluid px-0" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "boundary-intro",
+          "props": { "className": "mb-4" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "boundary-title",
+              "props": {
+                "text": "SSR boundary matrix",
+                "className": "h3 fw-bold d-block mb-2"
+              }
+            },
+            {
+              "component": "egret:core:text",
+              "id": "boundary-description",
+              "props": {
+                "text": "Disable JavaScript and inspect the response HTML. Green cases remain visible; amber cases are intentional client-only boundaries.",
+                "className": "text-muted d-block"
+              }
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "boundary-grid",
+          "props": { "className": "row g-4" },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "universal-parent-col",
+              "props": { "className": "col-12" },
+              "children": [
+                {
+                  "component": "egret:core:section-reference",
+                  "id": "universal-parent-ref",
+                  "ref": { "path": "demos/ssr/universal-parent" }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:div",
+              "id": "client-child-col",
+              "props": { "className": "col-12 col-xl-6" },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "client-child-expectation",
+                  "props": {
+                    "text": "Case 2 expectation: the box below is one client-only widget boundary in server HTML.",
+                    "className": "small text-warning-emphasis d-block mb-2"
+                  }
+                },
+                {
+                  "component": "egret:core:section-reference",
+                  "id": "client-child-ref",
+                  "ref": { "path": "demos/ssr/client-child" }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:div",
+              "id": "client-parent-col",
+              "props": { "className": "col-12 col-xl-6" },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "client-parent-expectation",
+                  "props": {
+                    "text": "Case 3 expectation: the client-only parent blocks its universal widget and universal avatar descendants.",
+                    "className": "small text-warning-emphasis d-block mb-2"
+                  }
+                },
+                {
+                  "component": "egret:core:section-reference",
+                  "id": "client-parent-ref",
+                  "ref": { "path": "demos/ssr/client-parent" }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:div",
+              "id": "mixed-col",
+              "props": { "className": "col-12" },
+              "children": [
+                {
+                  "component": "egret:core:section-reference",
+                  "id": "mixed-ref",
+                  "ref": { "path": "demos/ssr/universal-mixed" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

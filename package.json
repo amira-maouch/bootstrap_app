@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && egret-build-app",
+    "build": "vite build && pnpm build:ssr && egret-build-app",
     "build:shell": "vite build",
+    "build:ssr": "node ./node_modules/@heron-ws/app-runtime/bin/build-ssr.js",
     "build:app": "egret-build-app",
     "build:app:steps": "egret-build-plugins && egret-build-components && egret-build-middleware && egret-build-widgets",
     "clean:artifacts": "egret-clean-artifacts",
@@ -14,11 +15,16 @@
     "dev:fake-api": "npm --prefix fake-api start",
     "dev": "pnpm build:app && concurrently -k -n api,server,watch -c magenta,blue,yellow \"pnpm dev:fake-api\" \"pnpm dev:server\" \"pnpm dev:watch\"",
     "start": "egret-prod-server",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "smoke:hydration": "node ./smoke/hydration-browser.mjs",
+    "smoke:auth-isolation": "node ./smoke/auth-isolation-browser.mjs",
+    "smoke:ssr-loader": "node ./smoke/auth-isolation-browser.mjs",
+    "benchmark:ssr": "node ./smoke/ssr-benchmark.mjs"
   },
   "dependencies": {
     "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
     "@heron-ws/component-api": "file:../heron/packages/component-api",
+    "@heron-ws/i18n": "file:../heron/packages/i18n",
     "bootstrap": "^5.3.8",
     "date-fns": "^4.4.0",
     "lodash-es": "^4.18.1",
@@ -27,10 +33,10 @@
     "sonner": "^2.0.7"
   },
   "devDependencies": {
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "concurrently": "^9.2.4",
-    "tsx": "^4.23.1",
+    "tsx": "^4.23.5",
     "typescript": "^5.9.3",
     "vite": "^6.4.3"
   },

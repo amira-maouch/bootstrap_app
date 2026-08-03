@@ -1,0 +1,14 @@
+.card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-color: var(--border);
+}
+
+.text-muted {
+  color: var(--muted-foreground) !important;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  background-color: var(--background);
+}

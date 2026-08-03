@@ -1,0 +1,37 @@
+{
+  "component": "egret:core:widget",
+  "id": "client-child",
+  "renderMode": "client-only",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "client-child-card",
+      "props": { "className": "card border-warning shadow-sm" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "client-child-body",
+          "props": { "className": "card-body" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "client-child-title",
+              "props": {
+                "text": "Case 2 — universal page → client-only widget",
+                "className": "h5 d-block"
+              }
+            },
+            {
+              "component": "egret:core:text",
+              "id": "client-child-detail",
+              "props": {
+                "text": "You see this content only after hydration because the widget root is an opaque client-only boundary.",
+                "className": "small text-muted"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,9 +10,9 @@
  *
  *  2. Row-level conditions (authorization): `read:Task:own` grants are turned
  *     into `{ conditions: { assigneeId } }` rules by `permissions-adapter.ts`.
- *     This script reads the RAW rule via `$egret.auth.getPermission()` (not
- *     `can()`) so it can inspect `conditions` — whatever shape the adapter
- *     produced — and decide for itself how to filter the task list.
+ *     This script reads the RAW rule via `$egret.auth.getPermission()` for the
+ *     UI projection. The fake API independently enforces the same boundary
+ *     before data reaches this script.
  *
  * Role recap:
  *   - admin  -> "*"              -> sees every task (no conditions)
@@ -71,12 +71,21 @@ function dashboardScript($egret: any, $self: any) {
     if (typeof conditions === "object") {
       return tasks.filter((t) => auth?.can?.("read", "Task", t));
     }
-    console.warn("[dashboard] unrecognized conditions shape, denying:", conditions);
+    console.warn(
+      "[dashboard] unrecognized conditions shape, denying:",
+      conditions,
+    );
     return [];
   }
 
-  function describeVisibility(rule: any, visible: number, total: number, source: string): string {
-    const sourceTag = source === "server" ? " (server pre-fetched)" : " (client fetched)";
+  function describeVisibility(
+    rule: any,
+    visible: number,
+    total: number,
+    source: string,
+  ): string {
+    const sourceTag =
+      source === "server" ? " (server pre-fetched)" : " (client fetched)";
     if (!rule) return `You do not have permission to view tasks.${sourceTag}`;
     if (rule.conditions == null) {
       return `Showing all ${total} task(s) — unrestricted "read:Task" grant.${sourceTag}`;
@@ -109,12 +118,17 @@ function dashboardScript($egret: any, $self: any) {
     }
 
     $self.getChild("@tasksSubtitle")?.setProps({
-      text: describeVisibility(rule, visibleTasks.length, allTasks.length, source),
+      text: describeVisibility(
+        rule,
+        visibleTasks.length,
+        allTasks.length,
+        source,
+      ),
     });
   }
 
   async function loadTasksFromApi() {
-    const token = localStorage.getItem("auth_token");
+    const token = await $egret?.auth?.getAccessToken?.();
 
     try {
       const res = await fetch(`${fakeApiBase()}/api/tasks`, {
@@ -143,13 +157,18 @@ function dashboardScript($egret: any, $self: any) {
     // tree, which the server loader merges into before serialisation. When the
     // loader ran successfully, `tasks` is already here — no client fetch needed.
     const props = $self.getProps?.() ?? {};
-    const serverTasks: any[] | undefined = Array.isArray(props.tasks)
-      ? props.tasks
-      : undefined;
+    const loaderProvenance = props.__egretLoader;
+    const hasPreloadedTasks =
+      loaderProvenance?.source === "server-loader" &&
+      Array.isArray(loaderProvenance.keys) &&
+      loaderProvenance.keys.includes("tasks") &&
+      Array.isArray(props.tasks);
 
-    if (serverTasks) {
-      console.log(`[dashboard] using ${serverTasks.length} task(s) from server loader`);
-      renderTasks(serverTasks, "server");
+    if (hasPreloadedTasks) {
+      console.log(
+        `[dashboard] using ${props.tasks.length} task(s) from server loader`,
+      );
+      renderTasks(props.tasks, "server");
     } else {
       // Graceful client-side fallback: loader wasn't available, timed out, or
       // this is a raw/section fetch where server loaders don't run.

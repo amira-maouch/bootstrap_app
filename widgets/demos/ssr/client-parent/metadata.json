@@ -1,0 +1,39 @@
+{
+  "component": "egret:core:widget",
+  "id": "client-parent",
+  "renderMode": "client-only",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "client-parent-card",
+      "props": { "className": "card border-warning shadow-sm" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "client-parent-body",
+          "props": { "className": "card-body" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "client-parent-title",
+              "props": {
+                "text": "Case 3 — client-only widget → universal descendants",
+                "className": "h5 d-block mb-3"
+              }
+            },
+            {
+              "component": "ui:display:avatar",
+              "id": "blocked-universal-avatar",
+              "props": { "name": "Grace Hopper", "size": 48 }
+            },
+            {
+              "component": "egret:core:section-reference",
+              "id": "blocked-universal-widget-ref",
+              "ref": { "path": "demos/ssr/universal-child" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

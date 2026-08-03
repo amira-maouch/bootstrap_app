@@ -1,155 +1,167 @@
 {
-  "component": "egret:core:div",
-  "id": "main",
-  "props": {
-    "className": "container py-5"
-  },
+  "component": "egret:core:widget",
+  "id": "landing",
   "children": [
     {
       "component": "egret:core:div",
-      "id": "hero",
+      "id": "landing-root",
       "props": {
-        "className": "p-5 mb-4 rounded-3", "style": { "background": "var(--card)" }
+        "className": "min-vh-100 d-flex flex-column",
+        "style": {
+          "background": "linear-gradient(145deg, var(--background) 0%, var(--muted) 100%)"
+        }
       },
       "children": [
         {
           "component": "egret:core:div",
-          "id": "hero-body",
-          "props": { "className": "container-fluid py-3" },
+          "id": "landing-nav",
+          "props": {
+            "className": "container d-flex align-items-center justify-content-between py-4"
+          },
           "children": [
             {
               "component": "egret:core:text",
-              "id": "hero-title",
+              "id": "landing-brand",
               "props": {
                 "text": "Bootstrap App",
-                "className": "display-5 fw-bold"
+                "className": "h4 fw-bold mb-0"
               }
             },
             {
-              "component": "egret:core:text",
-              "id": "hero-subtitle",
+              "component": "egret:core:link",
+              "id": "landing-login",
               "props": {
-                "text": "This app uses Bootstrap. The heron shell has zero CSS opinion.",
-                "className": "col-md-8 fs-4 mt-2 d-block"
+                "href": "/login",
+                "className": "btn btn-primary px-4"
+              },
+              "children": [
+                {
+                  "component": "egret:core:text",
+                  "id": "landing-login-label",
+                  "props": { "text": "Log in" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "landing-hero",
+          "props": {
+            "className": "container flex-grow-1 d-flex align-items-center py-5"
+          },
+          "children": [
+            {
+              "component": "egret:core:div",
+              "id": "landing-hero-grid",
+              "props": {
+                "className": "row align-items-center g-5 w-100"
+              },
+              "children": [
+                {
+                  "component": "egret:core:div",
+                  "id": "landing-copy",
+                  "props": { "className": "col-lg-7" },
+                  "children": [
+                    {
+                      "component": "egret:core:text",
+                      "id": "landing-eyebrow",
+                      "props": {
+                        "text": "HERON REFERENCE APPLICATION",
+                        "className": "text-primary fw-semibold small d-block mb-3"
+                      }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "landing-title",
+                      "props": {
+                        "text": "Server-rendered experiences, driven by metadata.",
+                        "className": "display-3 fw-bold lh-sm d-block mb-4"
+                      }
+                    },
+                    {
+                      "component": "egret:core:text",
+                      "id": "landing-description",
+                      "props": {
+                        "text": "Explore a working Heron application with request-scoped rendering, server widget loaders, and permission-aware pages.",
+                        "className": "lead text-muted d-block mb-0"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "component": "egret:core:div",
+                  "id": "landing-summary",
+                  "props": { "className": "col-lg-5" },
+                  "children": [
+                    {
+                      "component": "egret:core:div",
+                      "id": "landing-summary-card",
+                      "props": {
+                        "className": "card border-0 shadow-lg"
+                      },
+                      "children": [
+                        {
+                          "component": "egret:core:div",
+                          "id": "landing-summary-body",
+                          "props": { "className": "card-body p-4 p-lg-5" },
+                          "children": [
+                            {
+                              "component": "egret:core:text",
+                              "id": "landing-summary-title",
+                              "props": {
+                                "text": "Inside the demo",
+                                "className": "h4 fw-semibold d-block mb-4"
+                              }
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "landing-feature-one",
+                              "props": {
+                                "text": "✓ Role-based navigation and actions",
+                                "className": "d-block mb-3"
+                              }
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "landing-feature-two",
+                              "props": {
+                                "text": "✓ Server-loaded widget data",
+                                "className": "d-block mb-3"
+                              }
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "landing-feature-three",
+                              "props": {
+                                "text": "✓ Request-isolated SSR foundations",
+                                "className": "d-block"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "egret:core:div",
+          "id": "landing-footer",
+          "props": {
+            "className": "container py-4 border-top"
+          },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "landing-footer-text",
+              "props": {
+                "text": "Built with Heron and Bootstrap.",
+                "className": "small text-muted"
               }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "component": "egret:core:div",
-      "id": "cards-row",
-      "props": { "className": "row g-4 mt-2" },
-      "children": [
-        {
-          "component": "egret:core:div",
-          "id": "card-1",
-          "props": { "className": "col-md-4" },
-          "children": [
-            {
-              "component": "egret:core:div",
-              "id": "card-1-inner",
-              "props": { "className": "card h-100 shadow-sm" },
-              "children": [
-                {
-                  "component": "egret:core:div",
-                  "id": "card-1-body",
-                  "props": { "className": "card-body" },
-                  "children": [
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-1-title",
-                      "props": {
-                        "text": "No Tailwind in the shell",
-                        "className": "card-title h5"
-                      }
-                    },
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-1-text",
-                      "props": {
-                        "text": "app-runtime and page-engine ship with zero CSS. No globals.css, no PostCSS, no Tailwind dependency.",
-                        "className": "card-text d-block mt-2"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "component": "egret:core:div",
-          "id": "card-2",
-          "props": { "className": "col-md-4" },
-          "children": [
-            {
-              "component": "egret:core:div",
-              "id": "card-2-inner",
-              "props": { "className": "card h-100 shadow-sm" },
-              "children": [
-                {
-                  "component": "egret:core:div",
-                  "id": "card-2-body",
-                  "props": { "className": "card-body" },
-                  "children": [
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-2-title",
-                      "props": {
-                        "text": "CSS is app-owned",
-                        "className": "card-title h5"
-                      }
-                    },
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-2-text",
-                      "props": {
-                        "text": "index.css imports Bootstrap. alefbab_app imports Tailwind. The widget JSON carries Bootstrap utility classes.",
-                        "className": "card-text d-block mt-2"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "component": "egret:core:div",
-          "id": "card-3",
-          "props": { "className": "col-md-4" },
-          "children": [
-            {
-              "component": "egret:core:div",
-              "id": "card-3-inner",
-              "props": { "className": "card h-100 shadow-sm" },
-              "children": [
-                {
-                  "component": "egret:core:div",
-                  "id": "card-3-body",
-                  "props": { "className": "card-body" },
-                  "children": [
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-3-title",
-                      "props": {
-                        "text": "Same heron shell",
-                        "className": "card-title h5"
-                      }
-                    },
-                    {
-                      "component": "egret:core:text",
-                      "id": "card-3-text",
-                      "props": {
-                        "text": "main.tsx is identical: import shell, import index.css. The runtime, page-engine, and component-api are unchanged.",
-                        "className": "card-text d-block mt-2"
-                      }
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }

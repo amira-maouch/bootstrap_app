@@ -15,9 +15,7 @@
  *   GET  /api/authorization/permissions   Bearer → { userId, roleId, grants: string[] } (native format)
  *   GET  /api/users               Bearer (needs "read:User" or "*")
  *   GET  /api/roles               Bearer
- *   GET  /api/tasks                Bearer (returns ALL tasks — see the
- *                                   "read:Task"/"read:Task:own" row-level
- *                                   conditions demo in the Dashboard widget)
+ *   GET  /api/tasks                Bearer (enforces read:Task / own rows)
  *
  * Note: there is no "/api/authorization/check" endpoint. Heron's server
  * resolves a caller's rules ONCE per request via
@@ -35,7 +33,7 @@ import {
   publicUser,
   createSession,
   destroySession,
-  userFromToken,
+  identityFromToken,
   grantsForUser,
   hasGrant,
   listTeamMembers,
@@ -65,13 +63,14 @@ function bearer(req) {
 
 function requireAuth(req, res, next) {
   const token = bearer(req);
-  const user = userFromToken(token);
-  if (!user) {
+  const identity = identityFromToken(token);
+  if (!identity) {
     res.status(401).json({ success: false, error: "Unauthorized" });
     return;
   }
-  req.user = user;
+  req.user = identity.user;
   req.token = token;
+  req.authExpiresAt = identity.expiresAt;
   next();
 }
 
@@ -103,11 +102,12 @@ app.post("/api/auth/login", async (req, res) => {
     return;
   }
 
-  const accessToken = createSession(user.id);
+  const { accessToken, expiresAt } = createSession(user.id);
   res.json({
     success: true,
     data: {
       accessToken,
+      expiresAt,
       user: publicUser(user),
     },
   });
@@ -115,7 +115,13 @@ app.post("/api/auth/login", async (req, res) => {
 
 app.get("/api/auth/me", requireAuth, async (req, res) => {
   await delay();
-  res.json({ success: true, data: publicUser(req.user) });
+  res.json({
+    success: true,
+    data: {
+      ...publicUser(req.user),
+      expiresAt: req.authExpiresAt,
+    },
+  });
 });
 
 app.post("/api/auth/logout", requireAuth, async (req, res) => {
@@ -150,14 +156,22 @@ app.get("/api/roles", requireAuth, async (req, res) => {
   res.json({ success: true, data: listRoles() });
 });
 
-// Deliberately returns ALL tasks, unfiltered, to any authenticated caller —
-// this endpoint has no idea what "own rows" means. Row-level filtering is
-// Heron's `read:Task` rule + `conditions` on the CLIENT (see the Dashboard
-// widget script + authorization/permissions-adapter.ts's "own" grants). A
-// real backend must still enforce this itself; see docs/authorization.md.
-app.get("/api/tasks", requireAuth, async (_req, res) => {
+// The backend enforces the same row boundary as the Heron adapter. Client-side
+// filtering remains useful UX, but is never the data-protection boundary.
+app.get("/api/tasks", requireAuth, async (req, res) => {
   await delay();
-  res.json({ success: true, data: listTasks() });
+  if (hasGrant(req.user, "read:Task")) {
+    res.json({ success: true, data: listTasks() });
+    return;
+  }
+  if (hasGrant(req.user, "read:Task:own")) {
+    res.json({
+      success: true,
+      data: listTasks().filter((task) => task.assigneeId === req.user.id),
+    });
+    return;
+  }
+  res.status(403).json({ success: false, error: "Forbidden" });
 });
 
 app.use((_req, res) => {

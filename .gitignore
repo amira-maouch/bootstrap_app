@@ -5,6 +5,7 @@ node_modules/
 
 # Build output
 /dist/
+/dist-server/
 /build/
 # Egret app build output (compiled widgets, lifecycle) — sibling of /dist/
 /dist-app/ 
@@ -26,6 +27,7 @@ next-env.d.ts
 .env
 .env.*
 !.env.example
+/bundle-manifest.local.json
 
 # Logs
 *.log
@@ -40,4 +42,3 @@ pnpm-debug.log*
 .idea/
 .vscode/*
 !.vscode/extensions.json
-

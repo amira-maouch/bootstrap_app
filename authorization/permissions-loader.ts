@@ -7,15 +7,12 @@
  * That translation is `authorization/permissions-adapter.ts`'s job, not this
  * file's.
  *
- * `token` is fully opaque to Heron — it's whatever value your app put in
- * localStorage under `authorization.tokenKey`, handed here exactly as
- * received on the `Authorization: Bearer …` header. This file is the only
- * place that has to know it happens to be the fake API's session token.
+ * `token` is the backend credential from a verified identity. Browser widget
+ * requests may supply the compatibility browserToken as Bearer; SSR gets the
+ * same credential from Heron's HttpOnly cookie.
  *
- * Loaded once by Heron's runtime server (Node) from
- * `authorization.permissions.loader` in app.config.ts. Never bundled to the
- * browser — the client only ever talks to Heron's own `/api/auth/permissions`,
- * which calls into this file for you.
+ * Composed by `authorization/auth-adapter.ts`'s loadPermissions() method. It
+ * runs only in Node and is never bundled to the browser.
  */
 /**
  * `userId` is the CURRENT caller's own id, as resolved server-side by the

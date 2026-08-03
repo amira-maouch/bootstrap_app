@@ -1,5 +1,11 @@
 {
   "admin": ["*"],
-  "editor": ["read:User", "write:User", "command:users.invite", "read:Task"],
-  "viewer": ["read:Task:own"]
+  "editor": [
+    "access:Workspace",
+    "read:User",
+    "write:User",
+    "command:users.invite",
+    "read:Task"
+  ],
+  "viewer": ["access:Workspace", "read:Task:own"]
 }

@@ -3,37 +3,53 @@
     "appPathPrefix": ""
   },
   "title": "Bootstrap App",
+  "seo": {
+    "description": "Heron SSR bootstrap and production-hardening demonstration.",
+    "robots": "index, follow",
+    "openGraph": { "type": "website" },
+    "twitter": { "card": "summary" }
+  },
   "root": "root",
   "theme": "sky",
   "plugins": [],
   "errorRoutes": {
     "404": {
-      "widget": "errors/not-found"
+      "widget": "errors/not-found",
+      "ssr": true
     }
   },
   "routes": {
     "login": {
       "widget": "pages/login",
-      "title": "Sign in"
+      "ssr": true,
+      "title": "Sign in",
+      "seo": {
+        "description": "Sign in to the Heron bootstrap application.",
+        "canonical": "/login"
+      }
     },
     "main": {
-      "widget": "pages/dashboard",
-      "layout": "layouts/main-layout",
-      "title": "Dashboard"
+      "widget": "pages/main",
+      "ssr": true,
+      "title": "Welcome"
     },
     "dashboard": {
       "widget": "pages/dashboard",
+      "ssr": true,
       "layout": "layouts/main-layout",
-      "title": "Dashboard"
+      "title": "Dashboard",
+      "can": { "action": "access", "subject": "Workspace" }
     },
     "settings": {
       "widget": "pages/settings",
+      "ssr": true,
       "layout": "layouts/main-layout",
       "title": "Settings",
       "can": { "action": "*", "subject": "*" }
     },
     "users": {
       "widget": "pages/users",
+      "ssr": true,
       "layout": "layouts/main-layout",
       "title": "Users",
       "can": {
@@ -44,6 +60,20 @@
           { "action": "command", "subject": "users.purge" }
         ]
       }
+    },
+    "ssr-boundaries": {
+      "widget": "pages/ssr-boundaries",
+      "layout": "layouts/main-layout",
+      "title": "SSR boundary matrix",
+      "ssr": true,
+      "can": { "action": "access", "subject": "Workspace" }
+    },
+    "csr-boundaries": {
+      "widget": "pages/ssr-boundaries",
+      "layout": "layouts/main-layout",
+      "title": "CSR boundary baseline",
+      "ssr": false,
+      "can": { "action": "access", "subject": "Workspace" }
     }
   }
 }

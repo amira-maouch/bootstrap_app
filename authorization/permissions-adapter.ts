@@ -35,8 +35,8 @@
  * producing an array, a list of ids, or any other shape a widget script
  * would read back via `$egret.auth.getPermission()` and interpret itself.
  *
- * Loaded once by Heron's runtime server (Node) from
- * `authorization.permissions.adapter` in app.config.ts.
+ * Composed by `authorization/auth-adapter.ts` after it loads the backend's
+ * native permission response.
  */
 import type { RawPermissions } from "./permissions-loader";
 

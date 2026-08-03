@@ -1,6 +1,8 @@
-# Bootstrap App — Fake Express API + Heron Authorization
+# Bootstrap App — Fake Express API + Heron Authentication/Authorization
 
-Demo app for **Heron Option 2** authorization with a real Express backend (JSON files, no DB).
+Demo app for Heron's server auth-adapter and authorization flow with an
+Express backend (JSON files plus an in-memory stand-in for a backend session
+table).
 
 ## Personas
 
@@ -21,22 +23,26 @@ a `User`, who can run `users.invite` / `users.purge`. See
 ## Architecture
 
 ```
-Login → POST :4001/api/auth/login → opaque tok_* in localStorage
+Login → POST /api/auth/session (Heron)
+   → auth-adapter.authenticate()
+   → POST :4001/api/auth/login
+   → backend-issued tok_* in HttpOnly cookie
+   → optional browserToken copied to auth_token for compatibility
         ↓
-auth middleware → GET /api/auth/me (async session check)
+SSR / browser session check → auth-adapter.verify() → GET :4001/api/auth/me
         ↓
 AppShellClient boot (Heron) → setEnabled/setTokenProvider from app.config.ts
         ↓
 authorization middleware → $egret.auth.ensurePermissionsLoaded(principalKey)
         ↓
 Heron GET /api/auth/permissions
-   → permissions-loader.loadPermissions(token)   (I/O: fetch fake API grants)
-   → permissions-adapter.adaptPermissions(raw)   (pure: grants → Heron rules)
+   → auth-adapter.loadPermissions(identity)
+   → permissions-loader + permissions-adapter helpers
         ↓
 metadata / routes `can` + sidebar + Invite/Purge buttons
         ↓
 Heron /api/widgets & /api/scripts
-   → same loader+adapter, resolved once per request
+   → same verified identity and rule set, resolved once per request
    → Heron itself evaluates every `can` in-memory from those rules
      (no app-supplied "checkAccess" — one rule set, one evaluator,
      used identically by client and server)
@@ -46,6 +52,7 @@ Heron /api/widgets & /api/scripts
 |---|---|
 | Fake API server | [`fake-api/src/server.js`](fake-api/src/server.js) |
 | JSON data (backend-native grants) | [`fake-api/data/`](fake-api/data/) |
+| Stateless app auth adapter | [`authorization/auth-adapter.ts`](authorization/auth-adapter.ts) |
 | Permissions loader (I/O: fetch raw grants) | [`authorization/permissions-loader.ts`](authorization/permissions-loader.ts) |
 | Permissions adapter (pure: grants → Heron rules) | [`authorization/permissions-adapter.ts`](authorization/permissions-adapter.ts) |
 | Client middlewares | [`middlewares/auth.ts`](middlewares/auth.ts), [`middlewares/authorization.ts`](middlewares/authorization.ts) |
@@ -73,7 +80,18 @@ There is no `/api/authorization/check` endpoint — Heron resolves this
 caller's rules once (loader + adapter) and authorizes every `can` in-memory,
 instead of asking the backend one check at a time.
 
-Sessions are **in-memory** — restarting the fake API invalidates all tokens.
+Backend sessions are **in-memory in the fake API** — restarting that fake
+backend invalidates all tokens. A real API would use its database/Redis or a
+verifiable token. The Heron app does not keep a second session map.
+
+New widget scripts obtain the compatibility browser token with:
+
+```ts
+const token = await $egret.auth.getAccessToken();
+```
+
+They should not read `localStorage.auth_token` directly. That key and the
+login response's `browserToken` remain temporarily for older scripts.
 
 ## Page access policy
 

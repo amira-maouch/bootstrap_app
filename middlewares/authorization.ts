@@ -3,7 +3,7 @@
 //
 // `setEnabled` / `setTokenProvider` / the permissions loader are all wired
 // once at app boot from app.config.ts (`authorization.enabled` / `tokenKey` /
-// `authorization.permissions.loader` + `.adapter`) — see AppShellClient in
+// `authorization.auth.adapter`) — see AppShellClient in
 // @heron-ws/app-runtime. This middleware's only job is: tell `$egret.auth`
 // WHEN to (re)load permissions (on login / user change) or drop them (on
 // logout).

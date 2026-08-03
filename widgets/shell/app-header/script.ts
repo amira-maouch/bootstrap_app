@@ -1,12 +1,4 @@
 function appHeaderScript($egret: any, $self: any) {
-  function fakeApiBase(): string {
-    const fromEnv = $egret?.getEnv?.("EGRET_FAKE_API_URL");
-    if (typeof fromEnv === "string" && fromEnv) {
-      return fromEnv.replace(/\/+$/, "");
-    }
-    return "http://localhost:4001";
-  }
-
   function currentRole(): string {
     try {
       const raw = localStorage.getItem("auth_user");
@@ -38,18 +30,36 @@ function appHeaderScript($egret: any, $self: any) {
 
   async function switchRole(userId: string) {
     try {
-      const res = await fetch(`${fakeApiBase()}/api/auth/login`, {
+      const res = await fetch("/api/auth/session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
         body: JSON.stringify({ userId }),
       });
       const json = await res.json();
-      if (!res.ok || !json?.success || !json?.data?.accessToken) {
+      if (!res.ok || !json?.success || !json?.data?.browserToken) {
         console.error("[header] switch role failed", json);
         return;
       }
-      localStorage.setItem("auth_token", json.data.accessToken);
-      localStorage.setItem("auth_user", JSON.stringify(json.data.user));
+      const principal = json.data.principal ?? {};
+      const name = principal.name ?? userId;
+      localStorage.setItem("auth_token", json.data.browserToken);
+      localStorage.setItem(
+        "auth_user",
+        JSON.stringify({
+          id: principal.id ?? principal.key ?? userId,
+          name,
+          role: principal.role ?? "viewer",
+          roleId: principal.role ?? "viewer",
+          initials: String(name)
+            .split(/\s+/)
+            .filter(Boolean)
+            .map((part: string) => part[0])
+            .join("")
+            .slice(0, 2)
+            .toUpperCase(),
+        }),
+      );
       window.location.reload();
     } catch (err) {
       console.error("[header] fake API unreachable:", err);
@@ -57,16 +67,13 @@ function appHeaderScript($egret: any, $self: any) {
   }
 
   async function signOut() {
-    const token = localStorage.getItem("auth_token");
-    if (token) {
-      try {
-        await fetch(`${fakeApiBase()}/api/auth/logout`, {
-          method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
-        });
-      } catch {
-        // ignore network errors on logout
-      }
+    try {
+      await fetch("/api/auth/session", {
+        method: "DELETE",
+        credentials: "same-origin",
+      });
+    } catch {
+      // Local runtime state is still cleared below.
     }
     localStorage.removeItem("auth_token");
     localStorage.removeItem("auth_user");

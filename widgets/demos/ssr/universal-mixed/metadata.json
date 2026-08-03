@@ -1,0 +1,69 @@
+{
+  "component": "egret:core:widget",
+  "id": "universal-mixed",
+  "children": [
+    {
+      "component": "egret:core:div",
+      "id": "mixed-card",
+      "props": { "className": "card border-primary shadow-sm" },
+      "children": [
+        {
+          "component": "egret:core:div",
+          "id": "mixed-body",
+          "props": { "className": "card-body" },
+          "children": [
+            {
+              "component": "egret:core:text",
+              "id": "mixed-title",
+              "props": {
+                "text": "Case 4 — one universal widget with universal and browser-only components",
+                "className": "h5 text-primary d-block mb-3"
+              }
+            },
+            {
+              "component": "egret:core:div",
+              "id": "mixed-components",
+              "props": { "className": "d-flex align-items-center gap-3 mb-3" },
+              "children": [
+                {
+                  "component": "ui:display:avatar",
+                  "id": "mixed-avatar",
+                  "props": { "name": "Katherine Johnson", "size": 52 }
+                },
+                {
+                  "component": "ui:display:badge",
+                  "id": "mixed-browser-badge",
+                  "props": {
+                    "text": "Browser-only badge",
+                    "variant": "warning"
+                  }
+                },
+                {
+                  "component": "egret:core:text",
+                  "id": "mixed-core-text",
+                  "props": {
+                    "text": "Core text remains server-rendered beside both registry modes.",
+                    "className": "small"
+                  }
+                }
+              ]
+            },
+            {
+              "component": "egret:core:text",
+              "id": "mixed-detail",
+              "props": {
+                "text": "With JavaScript disabled, the avatar and core text remain. The badge is a data-heron-render-mode=client-only component boundary.",
+                "className": "small text-muted d-block mb-3"
+              }
+            },
+            {
+              "component": "egret:core:section-reference",
+              "id": "mixed-client-widget-ref",
+              "ref": { "path": "demos/ssr/client-child" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
