@@ -97,9 +97,22 @@ export default async function loader(ctx: ServerContext) {
 
   const json = (await res.json()) as { data?: unknown };
   const tasks: Task[] = Array.isArray(json?.data) ? json.data : [];
+
+  // Layer 3 — dynamic seoSource example.
+  // Heron reads .title, .description (and .image/.name etc.) from this object
+  // using field-name conventions — no explicit seo config needed in the manifest.
+  const seoSource = {
+    title: "My Dashboard",
+    description:
+      tasks.length > 0
+        ? `${tasks.length} active task(s) in your workspace`
+        : "Your workspace dashboard",
+  };
+
   return {
     tasks,
     ...taskRowProps(tasks),
     tasksSubtitleText: tasksSubtitleText(tasks),
+    seoSource,
   };
 }

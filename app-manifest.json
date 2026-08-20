@@ -24,7 +24,11 @@
       "ssr": true,
       "title": "Sign in",
       "seo": {
+        "title": "Sign in — Bootstrap App",
         "description": "Sign in to the Heron bootstrap application.",
+        "keywords": ["heron", "ssr", "login", "sign in"],
+        "image": "/public/og-login.png",
+        "index": false,
         "canonical": "/login"
       }
     },

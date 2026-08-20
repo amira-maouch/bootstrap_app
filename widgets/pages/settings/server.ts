@@ -49,10 +49,27 @@ export default async function (ctx: ServerContext) {
   const json = (await res.json()) as { data?: { name?: string; email?: string; role?: string } };
   const profile = json?.data ?? {};
 
+  // Layer 3 — seoSource: Heron reads .name → title, .description → description.
+  // Because description is derived from the authenticated user's name, this
+  // page should never be indexed — Layer 4 enforces it explicitly below.
+  const seoSource = {
+    name: `${profile.name ?? "Unknown"}'s Settings`,
+    description: `Account settings for ${profile.email ?? "your account"}`,
+  };
+
+  // Layer 4 — explicit seo: custom title format + hard noindex override.
+  // Even if a future route.seo block or manifest.seo sets robots to something
+  // else, this loader value wins (highest priority layer).
+  const seo = {
+    title: `Settings — ${profile.name ?? "Unknown"}`,
+    robots: "noindex, nofollow",
+  };
+
   return {
     profileName: profile.name ?? "Unknown",
     profileEmail: profile.email ?? "",
     profileRole: profile.role ?? "",
+    seoSource,
+    seo,
   };
-
 }
