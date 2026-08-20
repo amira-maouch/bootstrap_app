@@ -1,26 +1,26 @@
 {
   "ui/components/display/avatar": {
-    "contentHash": "79cf26dd22baaf3859ca0883bcb603e568c3f5f0ad23a10d77152f2db0a2fe41",
+    "contentHash": "784dd90499a9fc0db157eeb7bde9028b98bb052085939c43df3d9fb70c9e7568",
     "version": "1.0.0",
-    "bundledAt": "2026-08-03T07:40:18.554Z",
+    "bundledAt": "2026-08-20T12:06:21.846Z",
     "outputFile": "bundles/registries/ui/components/(display)/avatar/index.js",
     "contractFile": "bundles/registries/ui/components/(display)/avatar/contract.json",
     "fetchedFrom": "http://localhost:4100/api/registries/ui/components/avatar/bundle",
-    "etag": "W/\"a4f-19f5a9d226d\"",
+    "etag": "W/\"aa9-1a00eeb02c3\"",
     "bundleScope": "component",
     "environment": [
-      "universal"
-    ],
-    "serverOutputFile": "bundles/registries/ui/components/(display)/avatar/index.node.mjs"
+      "browser",
+      "ssr"
+    ]
   },
   "ui/components/display/badge": {
-    "contentHash": "db4a768f6bdeb2f11197bed95f0f8ac3e2183865a9790e8556c5d1370e85eb90",
+    "contentHash": "c38d86b3a62734a872e56a19915da363ed8ef9b595f959f6443c77da6086b48c",
     "version": "1.0.0",
-    "bundledAt": "2026-08-03T07:40:18.562Z",
+    "bundledAt": "2026-08-20T12:06:22.047Z",
     "outputFile": "bundles/registries/ui/components/(display)/badge/index.js",
     "contractFile": "bundles/registries/ui/components/(display)/badge/contract.json",
     "fetchedFrom": "http://localhost:4100/api/registries/ui/components/badge/bundle",
-    "etag": "W/\"a2d-19f5a9d226c\"",
+    "etag": "W/\"a87-1a00eeb02c3\"",
     "bundleScope": "component",
     "environment": [
       "browser"

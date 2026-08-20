@@ -62,7 +62,7 @@ export default async function (ctx: ServerContext) {
   // else, this loader value wins (highest priority layer).
   const seo = {
     title: `Settings — ${profile.name ?? "Unknown"}`,
-    robots: "noindex, nofollow",
+    robots: "noindex",
   };
 
   return {
