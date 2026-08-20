@@ -2,6 +2,10 @@
   "component": "egret:core:widget",
   "id": "client-parent",
   "renderMode": "client-only",
+  "placeholder": {
+    "className": "card border-warning shadow-sm",
+    "minHeight": 220
+  },
   "children": [
     {
       "component": "egret:core:div",

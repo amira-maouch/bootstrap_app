@@ -2,6 +2,44 @@
   "component": "egret:core:widget",
   "id": "client-child",
   "renderMode": "client-only",
+  "placeholder": {
+    "className": "card border-warning shadow-sm",
+    "minHeight": 132,
+    "children": [
+      {
+        "component": "egret:core:div",
+        "id": "client-child-skeleton-body",
+        "props": { "className": "card-body" },
+        "children": [
+          {
+            "component": "egret:core:div",
+            "id": "client-child-skeleton-title",
+            "props": {
+              "style": {
+                "height": 24,
+                "width": "70%",
+                "borderRadius": 4,
+                "background": "rgba(0,0,0,0.08)",
+                "marginBottom": 12
+              }
+            }
+          },
+          {
+            "component": "egret:core:div",
+            "id": "client-child-skeleton-line",
+            "props": {
+              "style": {
+                "height": 14,
+                "width": "90%",
+                "borderRadius": 4,
+                "background": "rgba(0,0,0,0.08)"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
   "children": [
     {
       "component": "egret:core:div",
