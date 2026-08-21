@@ -72,14 +72,7 @@
               "id": "client-parent-col",
               "props": { "className": "col-12 col-xl-6" },
               "children": [
-                {
-                  "component": "egret:core:text",
-                  "id": "client-parent-expectation",
-                  "props": {
-                    "text": "Case 3 expectation: the client-only parent blocks its universal widget and universal avatar descendants.",
-                    "className": "small text-warning-emphasis d-block mb-2"
-                  }
-                },
+              
                 {
                   "component": "egret:core:section-reference",
                   "id": "client-parent-ref",

@@ -1,65 +1,55 @@
 /**
- * Server-side loader for the Settings widget.
+ * Server-side loader + actions for the Settings widget.
  *
- * MEANINGFUL EXAMPLE + EDGE CASE SHOWCASE
- *
- * Fetches the current user's profile from the fake API so the settings form
- * can be pre-populated with real data instead of the hardcoded "John Doe" /
- * "john@example.com" static props in metadata.json.
- *
- * This file deliberately demonstrates every documented edge case in comments
- * so it doubles as an annotated reference.
+ * `loader` pre-fills first paint. `actions.updateProfile` mutates on the
+ * server after hydration via `$self.actions.updateProfile(...)`.
  */
+import {
+  defineActions,
+  type ActionContext,
+} from "@heron-ws/app-runtime/server-actions";
 import type { ServerContext } from "@heron-ws/app-runtime";
+
+async function loadProfile(ctx: ServerContext) {
+  const { token } = ctx.session;
+  const { apiBase } = ctx.egret;
+  if (!token || !apiBase) return {};
+
+  const res = await fetch(`${apiBase}/api/auth/me`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) return {};
+  const json = (await res.json()) as {
+    data?: { name?: string; email?: string; role?: string };
+  };
+  return json?.data ?? {};
+}
 
 export default async function (ctx: ServerContext) {
   const { token } = ctx.session;
   const { apiBase } = ctx.egret;
 
-  // ── EDGE CASE 1: No token ───────────────────────────────────────────────
-  // The settings page is admin-only (protected by a route `can` in
-  // app-manifest.json), so a request reaching this loader always has a token
-  // in practice. But loaders must never assume that 
   if (!token) {
     console.warn("[settings/server] no token — returning empty props");
     return {};
   }
 
-  // If the app owner forgets to set `apiBase` in app.config.ts, every fetch
-  // would resolve against "" which throws. Bail early with a warning instead.
   if (!apiBase) {
     console.warn("[settings/server] apiBase not configured — skipping pre-fetch");
     return {};
   }
 
-  // ── NORMAL PATH ─────────────────────────────────────────────────────────
-  // Fake-API endpoint: GET /api/auth/me — returns the profile for the bearer.
-  const res = await fetch(`${apiBase}/api/auth/me`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+  const profile = (await loadProfile(ctx)) as {
+    name?: string;
+    email?: string;
+    role?: string;
+  };
 
-  // ── EDGE CASE 3: Non-200 response ───────────────────────────────────────
-  // Never throw on a bad HTTP status — just return {} and let the page render
-  // with its static props. The client can show its own error or retry.
-  if (!res.ok) {
-    console.warn(`[settings/server] /api/auth/me → ${res.status}`);
-    return {};
-  }
-
-  const json = (await res.json()) as { data?: { name?: string; email?: string; role?: string } };
-  const profile = json?.data ?? {};
-
-  // Layer 3 — seoSource: Heron reads .name → title, .description → description.
-  // Because description is derived from the authenticated user's name, this
-  // page should never be indexed — Layer 4 enforces it explicitly below.
   const seoSource = {
     name: `${profile.name ?? "Unknown"}'s Settings`,
     description: `Account settings for ${profile.email ?? "your account"}`,
   };
 
-  // Layer 4 — explicit seo: custom title format + hard noindex override.
-  // Even if a future route.seo block or manifest.seo sets robots to something
-  // else, this loader value wins (highest priority layer).
   const seo = {
     title: `Settings — ${profile.name ?? "Unknown"}`,
     robots: "noindex",
@@ -73,3 +63,37 @@ export default async function (ctx: ServerContext) {
     seo,
   };
 }
+
+export const actions = defineActions({
+  updateProfile: {
+    args: {
+      name: { type: "string", required: true, minLength: 1, maxLength: 80 },
+    },
+    can: { action: "*", subject: "*" },
+    rateLimit: { windowMs: 60_000, max: 10 },
+    async fn(ctx: ActionContext<{ name: string }>) {
+      console.log("updateProfile", ctx.args);
+      const user = ctx.getUser();
+      if (!user) {
+        throw new Error("not authenticated");
+      }
+      const res = await ctx.fetchApi("/api/auth/me", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: ctx.args.name }),
+      });
+      if (!res.ok) {
+        throw new Error("profile update failed");
+      }
+      const json = (await res.json()) as {
+        data?: { name?: string; email?: string; role?: string };
+      };
+      const profile = json.data ?? {};
+      return {
+        profileName: profile.name ?? ctx.args.name,
+        profileEmail: profile.email ?? "",
+        profileRole: profile.role ?? "",
+      };
+    },
+  },
+});

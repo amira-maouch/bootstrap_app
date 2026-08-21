@@ -10,7 +10,7 @@
     {
       "component": "egret:core:div",
       "id": "client-parent-card",
-      "props": { "className": "card border-warning shadow-sm" },
+      "props": { "className": "card border-danger shadow-sm" },
       "children": [
         {
           "component": "egret:core:div",

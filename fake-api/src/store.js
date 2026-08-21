@@ -81,6 +81,21 @@ export function publicUser(user) {
   };
 }
 
+export function updateUserProfile(user, patch) {
+  if (!user) return null;
+  const name = typeof patch?.name === "string" ? patch.name.trim() : "";
+  if (!name) return publicUser(user);
+  user.name = name;
+  user.initials = name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+  return publicUser(user);
+}
+
 export function createSession(userId) {
   const token = `tok_${randomBytes(16).toString("hex")}`;
   const createdAt = Date.now();

@@ -1,8 +1,10 @@
 {
   "registries": {
     "ui": "https://registry.heron.ws/api/registries/ui"
+    
   },
   "components": {
+    "ui/core/input": "*",
     "ui/display/avatar": "*",
     "ui/display/badge": "*"
   },

@@ -123,9 +123,15 @@
                               "props": { "text": "Full Name", "className": "form-label small fw-medium d-block" }
                             },
                             {
-                              "component": "egret:core:text",
+                              "component": "ui:core:input",
                               "id": "form-name-value",
-                              "props": { "text": "John Doe", "className": "form-control d-block" }
+                              "alias": "@form-name-value",
+                              "props": {
+                                "value": "{{props.profileName}}",
+                                "className": "form-control",
+                                "name": "fullName",
+                                "type": "text"
+                              }
                             }
                           ]
                         },
@@ -142,7 +148,33 @@
                             {
                               "component": "egret:core:text",
                               "id": "form-email-value",
-                              "props": { "text": "john@example.com", "className": "form-control d-block" }
+                              "props": { "text": "{{props.profileEmail}}", "className": "form-control d-block" }
+                            }
+                          ]
+                        },
+                        {
+                          "component": "egret:core:div",
+                          "id": "form-actions",
+                          "props": { "className": "col-12 d-flex align-items-center gap-3" },
+                          "children": [
+                            {
+                              "component": "egret:core:div",
+                              "id": "save-profile-btn",
+                              "alias": "@saveProfileBtn",
+                              "props": { "className": "btn btn-primary btn-sm" },
+                              "children": [
+                                {
+                                  "component": "egret:core:text",
+                                  "id": "save-profile-btn-text",
+                                  "props": { "text": "Save profile" }
+                                }
+                              ]
+                            },
+                            {
+                              "component": "egret:core:text",
+                              "id": "profile-status",
+                              "alias": "@profile-status",
+                              "props": { "text": "", "className": "text-muted small" }
                             }
                           ]
                         }

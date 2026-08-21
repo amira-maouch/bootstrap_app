@@ -36,6 +36,7 @@ import {
   identityFromToken,
   grantsForUser,
   hasGrant,
+  updateUserProfile,
   listTeamMembers,
   listRoles,
   listTasks,
@@ -124,6 +125,20 @@ app.get("/api/auth/me", requireAuth, async (req, res) => {
   });
 });
 
+app.patch("/api/auth/me", requireAuth, async (req, res) => {
+  await delay();
+  const updated = updateUserProfile(req.user, {
+    name: req.body?.name,
+  });
+  res.json({
+    success: true,
+    data: {
+      ...updated,
+      expiresAt: req.authExpiresAt,
+    },
+  });
+});
+
 app.post("/api/auth/logout", requireAuth, async (req, res) => {
   await delay(60);
   destroySession(req.token);
@@ -178,10 +193,15 @@ app.use((_req, res) => {
   res.status(404).json({ success: false, error: "Not found" });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`[fake-api] http://localhost:${PORT}`);
   console.log(`[fake-api] personas: GET /api/auth/personas`);
   console.log(
     `[fake-api] login:    POST /api/auth/login { "userId": "admin" }`,
   );
+});
+
+server.on("error", (err) => {
+  console.error(`[fake-api] ${err.message}`);
+  process.exit(1);
 });

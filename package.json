@@ -12,7 +12,7 @@
     "clean:artifacts:dry": "egret-clean-artifacts --dry-run",
     "dev:server": "egret-dev-api",
     "dev:watch": "egret-watch-widgets --no-initial-build",
-    "dev:fake-api": "npm --prefix fake-api start",
+    "dev:fake-api": "node fake-api/src/server.js",
     "dev": "pnpm build:app && concurrently -k -n api,server,watch -c magenta,blue,yellow \"pnpm dev:fake-api\" \"pnpm dev:server\" \"pnpm dev:watch\"",
     "start": "egret-prod-server",
     "preview": "vite preview",
@@ -30,13 +30,13 @@
     "lodash-es": "^4.18.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "sonner": "^2.0.7"
+    "sonner": "^2.0.8"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "concurrently": "^9.2.4",
-    "tsx": "^4.23.5",
+    "tsx": "^4.23.12",
     "typescript": "^5.9.3",
     "vite": "^6.4.3"
   },

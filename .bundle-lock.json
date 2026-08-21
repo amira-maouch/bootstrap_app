@@ -1,4 +1,18 @@
 {
+  "ui/components/core/input": {
+    "contentHash": "a18bab5492ade30a09dbad0be1f6be20489f406311156529445474a286651c3a",
+    "version": "1.0.0",
+    "bundledAt": "2026-08-21T09:35:19.507Z",
+    "outputFile": "bundles/registries/ui/components/(core)/input/index.js",
+    "contractFile": "bundles/registries/ui/components/(core)/input/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/input/bundle",
+    "etag": "W/\"419-1a023ab089a\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "serverOutputFile": "bundles/registries/ui/components/(core)/input/index.node.mjs"
+  },
   "ui/components/display/avatar": {
     "contentHash": "784dd90499a9fc0db157eeb7bde9028b98bb052085939c43df3d9fb70c9e7568",
     "version": "1.0.0",
