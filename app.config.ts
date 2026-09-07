@@ -17,11 +17,13 @@ export default defineConfig({
     unauthorizedPath: "/unauthorized",
     auth: {
       adapter: "./authorization/auth-adapter.ts",
-      cookie: {
-        name: "bootstrap_session",
-        lifetimeSeconds: 1800,
-        sameSite: "lax",
-        secure: "auto",
+      session: {
+        cookie: {
+          name: "bootstrap_session",
+          lifetimeSeconds: 1800,
+          sameSite: "lax",
+          secure: "auto",
+        },
       },
       loginPath: "/login",
       returnToParam: "returnTo",
