@@ -33,6 +33,7 @@
                 {
                   "component": "ui:display:badge",
                   "id": "mixed-browser-badge",
+                  "renderMode": "client-only",
                   "props": {
                     "text": "Browser-only badge",
                     "variant": "warning"

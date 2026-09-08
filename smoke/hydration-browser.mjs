@@ -450,6 +450,9 @@ try {
   throw error;
 } finally {
   client?.close();
-  chrome.kill("SIGTERM");
+  if (chrome.exitCode === null) {
+    chrome.kill("SIGTERM");
+    await new Promise((resolve) => chrome.once("exit", resolve));
+  }
   rmSync(profileDir, { recursive: true, force: true });
 }

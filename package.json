@@ -25,6 +25,7 @@
     "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
     "@heron-ws/component-api": "file:../heron/packages/component-api",
     "@heron-ws/i18n": "file:../heron/packages/i18n",
+    "@heron-ws/page-engine": "file:../heron/packages/page-engine",
     "bootstrap": "^5.3.8",
     "date-fns": "^4.4.0",
     "lodash-es": "^4.18.1",

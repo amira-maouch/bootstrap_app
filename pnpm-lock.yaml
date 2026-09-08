@@ -28,6 +28,9 @@ importers:
       '@heron-ws/i18n':
         specifier: file:../heron/packages/i18n
         version: file:../heron/packages/i18n(react-dom@19.2.3(react@19.2.3))(react-native@0.86.3(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(@types/react@19.2.18)(react@19.2.3))(react@19.2.3)
+      '@heron-ws/page-engine':
+        specifier: file:../heron/packages/page-engine
+        version: file:../heron/packages/page-engine(e34bcbc5ae871e8d575c1b9af5fd212b)
       bootstrap:
         specifier: ^5.3.8
         version: 5.3.8(@popperjs/core@2.11.8)
@@ -4477,9 +4480,7 @@ snapshots:
       metro-runtime: 0.84.6
     transitivePeerDependencies:
       - '@babel/core'
-      - bufferutil
       - supports-color
-      - utf-8-validate
 
   '@react-native/normalize-colors@0.86.3': {}
 
