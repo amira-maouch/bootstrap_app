@@ -1,8 +1,8 @@
 /* Bootstrap — the only CSS framework this app loads. */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-/* ─── Egret theme → Bootstrap variable bridge ───────────────────────────────
- * The egret theme engine injects CSS vars (--primary, --background, …) onto
+/* ─── Heron theme → Bootstrap variable bridge ───────────────────────────────
+ * The Heron theme engine injects CSS vars (--primary, --background, …) onto
  * <html class="theme-sky light"> at runtime. This block maps them to the
  * Bootstrap CSS variable names so Bootstrap utilities and components respond
  * to theme switches automatically.

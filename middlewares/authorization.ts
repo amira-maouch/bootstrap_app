@@ -14,20 +14,20 @@ const initializeAuthorization = async (
   next: any,
   _block: any,
 ) => {
-  const egret = (globalThis as any).$heron;
-  if (!egret?.auth) {
+  const heron = (globalThis as any).$heron;
+  if (!heron?.auth) {
     await next();
     return;
   }
 
   if (!context.user) {
-    egret.auth.clear();
+    heron.auth.clear();
     await next();
     return;
   }
-  console.log("egret.auth", egret.auth);
+  console.log("heron.auth", heron.auth);
   const key = String(context.user.id || context.user.role || "anon");
-  await egret.auth.ensurePermissionsLoaded(key);
+  await heron.auth.ensurePermissionsLoaded(key);
 
   await next();
 };

@@ -1,4 +1,4 @@
-function settingsScript(_egret: any, $self: any) {
+function settingsScript(_heron: any, $self: any) {
   $self.getChild("@saveProfileBtn")?.listen({
     onClick: async () => {
       const field = $self.getChild("@form-name-value");

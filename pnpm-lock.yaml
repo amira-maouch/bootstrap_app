@@ -2724,12 +2724,12 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-konva@19.3.0:
-    resolution: {integrity: sha512-YEDAdM0PUUUJcTzXAKXMRO2+krSE+hhjGsupWjy6UBtzyFI6f2LkwSYQresl7WwvD+j3fbMy0uj3jtnytKqk9Q==}
+  react-konva@19.2.7:
+    resolution: {integrity: sha512-z/mxVITj2W+MQ8+TeD7ONMnMvy99hj4NJ4UfmWbjJcdeUOm8AZR41cCfwRZTryE3/z4r2/nOyckRNlr0GP+G3w==}
     peerDependencies:
       konva: ^8.0.1 || ^7.2.5 || ^9.0.0 || ^10.0.0
-      react: ^19.3.0
-      react-dom: ^19.3.0
+      react: ^19.2.0
+      react-dom: ^19.2.0
 
   react-native-css-interop@0.2.6:
     resolution: {integrity: sha512-uXad6EWqufupnRjrba2De30tiAx26kLEcwSV3eSLVBwpfYeOnrpDc9k6kHk6SBNbmHHlE5sc9vsfKdVRS9msYg==}
@@ -2791,11 +2791,11 @@ packages:
       '@types/react':
         optional: true
 
-  react-reconciler@0.34.0:
-    resolution: {integrity: sha512-eVibvB1fc9j5Qf1KRkiM3GzRPBdjg2P6G6QV2f3P6Eb3OGMxRBhdg2rrUwjbV5JrQaJj8nOa8uajmmJA5tJWjQ==}
+  react-reconciler@0.33.0:
+    resolution: {integrity: sha512-KetWRytFv1epdpJc3J4G75I4WrplZE5jOL7Yq0p34+OVOKF4Se7WrdIdVC45XsSSmUTlht2FM/fM1FZb1mfQeA==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
-      react: ^19.3.0
+      react: ^19.2.0
 
   react-redux@9.3.0:
     resolution: {integrity: sha512-KQopgqFo/p/fgmAs5qz6p5RWaNAzq40WAu7fJIXnQpYxFPbJYtsJPWvGeF2rOBaY/kEuV77AVsX8TsQzKm+A/g==}
@@ -2930,9 +2930,6 @@ packages:
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
-
-  scheduler@0.28.0:
-    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -4059,7 +4056,7 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
       react-i18next: 14.1.3(i18next@23.16.8)(react-dom@19.2.3(react@19.2.3))(react-native@0.86.3(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(@types/react@19.3.0)(react@19.2.3))(react@19.2.3)
-      react-konva: 19.3.0(@types/react@19.3.0)(konva@10.5.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react-konva: 19.2.7(@types/react@19.3.0)(konva@10.5.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-router-dom: 7.18.4(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tsx: 4.23.13
       vite: 6.4.3(@types/node@26.4.1)(jiti@1.21.7)(lightningcss@1.27.0)(terser@5.51.2)(tsx@4.23.13)(yaml@2.9.1)
@@ -4512,7 +4509,9 @@ snapshots:
       metro-runtime: 0.84.6
     transitivePeerDependencies:
       - '@babel/core'
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   '@react-native/normalize-colors@0.86.3': {}
 
@@ -6050,15 +6049,15 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-konva@19.3.0(@types/react@19.3.0)(konva@10.5.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  react-konva@19.2.7(@types/react@19.3.0)(konva@10.5.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@types/react-reconciler': 0.33.0(@types/react@19.3.0)
       its-fine: 2.0.0(@types/react@19.3.0)(react@19.2.3)
       konva: 10.5.0
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      react-reconciler: 0.34.0(react@19.2.3)
-      scheduler: 0.28.0
+      react-reconciler: 0.33.0(react@19.2.3)
+      scheduler: 0.27.0
     transitivePeerDependencies:
       - '@types/react'
 
@@ -6164,10 +6163,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  react-reconciler@0.34.0(react@19.2.3):
+  react-reconciler@0.33.0(react@19.2.3):
     dependencies:
       react: 19.2.3
-      scheduler: 0.28.0
+      scheduler: 0.27.0
 
   react-redux@9.3.0(@types/react@19.3.0)(react@19.2.3)(redux@5.0.1):
     dependencies:
@@ -6321,8 +6320,6 @@ snapshots:
   safer-buffer@2.1.2: {}
 
   scheduler@0.27.0: {}
-
-  scheduler@0.28.0: {}
 
   semver@6.3.1: {}
 

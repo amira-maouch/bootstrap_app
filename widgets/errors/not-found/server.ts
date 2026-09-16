@@ -16,7 +16,7 @@
  *   • The 404 page still renders (tree is served with static props).
  *   • Other widgets on the same page (root layout, sidebar, etc.) are
  *     unaffected — their loaders ran independently.
- *   • A single [egret] error line appears in the server log.
+ *   • A single [heron] error line appears in the server log.
  *   • No HTTP 500 is returned to the browser.
  */
 import type { ServerContext } from "@heron-ws/app-runtime";
@@ -28,7 +28,7 @@ const DEMO_TIMEOUT = false;
 export default async function (ctx: ServerContext) {
   // ── EDGE CASE: Unhandled throw ──────────────────────────────────────────
   // Even if a loader throws, Promise.allSettled catches it, logs:
-  //   [egret] server loader for widget "errors/not-found" failed: Error: demo crash
+  //   [heron] server loader for widget "errors/not-found" failed: Error: demo crash
   // …and the tree is sent without props from this loader only.
   if (DEMO_THROW) {
     throw new Error("demo crash — safe to ignore, testing error isolation");
@@ -37,7 +37,7 @@ export default async function (ctx: ServerContext) {
   // ── EDGE CASE: Hanging / slow loader ────────────────────────────────────
   // The runtime wraps every loader in Promise.race with a 3-second timeout.
   // A loader that never resolves is abandoned. The server log shows:
-  //   [egret] server loader for widget "errors/not-found" failed:
+  //   [heron] server loader for widget "errors/not-found" failed:
   //     Error: server loader timed out after 3000ms: .../not-found/server.js
   // …and again, the page still loads with static props.
   if (DEMO_TIMEOUT) {

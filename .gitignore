@@ -7,10 +7,10 @@ node_modules/
 /dist/
 /dist-server/
 /build/
-# Egret app build output (compiled widgets, lifecycle) — sibling of /dist/
+# Heron app build output (compiled widgets, lifecycle) — sibling of /dist/
 /dist-app/ 
 /bundles/
-# Generated plugin/component bundles (egret build:app)
+# Generated plugin/component bundles (Heron build:app)
 /plugins/
 /components/*
 **/build/
