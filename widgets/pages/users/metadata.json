@@ -25,7 +25,7 @@
                   "component": "heron:core:text",
                   "id": "users-subtitle",
                   "alias": "@users-subtitle",
-                  "props": { "text": "Manage your team members.", "className": "text-muted small d-block" }
+                  "props": { "text": "{{props.usersSubtitleText}}", "className": "text-muted small d-block" }
                 }
               ]
             },
@@ -124,14 +124,14 @@
                           "id": "user-1-avatar",
                           "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--primary)", "color": "var(--primary-foreground)" } },
                           "children": [
-                            { "component": "heron:core:text", "id": "u1-initials", "alias": "@u1-initials", "props": { "text": "…" } }
+                            { "component": "heron:core:text", "id": "u1-initials", "alias": "@u1-initials", "props": { "text": "{{props.user1Initials}}" } }
                           ]
                         },
                         {
                           "component": "heron:core:text",
                           "id": "user-1-name",
                           "alias": "@user-1-name",
-                          "props": { "text": "Loading…", "className": "fw-medium" }
+                          "props": { "text": "{{props.user1Name}}", "className": "fw-medium" }
                         }
                       ]
                     },
@@ -139,13 +139,13 @@
                       "component": "heron:core:text",
                       "id": "user-1-email",
                       "alias": "@user-1-email",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "props": { "text": "{{props.user1Email}}", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "heron:core:text",
                       "id": "user-1-role",
                       "alias": "@user-1-role",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
+                      "props": { "text": "{{props.user1Role}}", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "heron:core:div",
@@ -156,7 +156,7 @@
                           "component": "heron:core:text",
                           "id": "user-1-badge",
                           "alias": "@user-1-badge",
-                          "props": { "text": "", "className": "badge bg-success-subtle text-success" }
+                          "props": { "text": "{{props.user1Status}}", "className": "badge bg-success-subtle text-success" }
                         }
                       ]
                     }
@@ -177,14 +177,14 @@
                           "id": "user-2-avatar",
                           "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--muted)", "color": "var(--muted-foreground)" } },
                           "children": [
-                            { "component": "heron:core:text", "id": "u2-initials", "alias": "@u2-initials", "props": { "text": "…" } }
+                            { "component": "heron:core:text", "id": "u2-initials", "alias": "@u2-initials", "props": { "text": "{{props.user2Initials}}" } }
                           ]
                         },
                         {
                           "component": "heron:core:text",
                           "id": "user-2-name",
                           "alias": "@user-2-name",
-                          "props": { "text": "Loading…", "className": "fw-medium" }
+                          "props": { "text": "{{props.user2Name}}", "className": "fw-medium" }
                         }
                       ]
                     },
@@ -192,13 +192,13 @@
                       "component": "heron:core:text",
                       "id": "user-2-email",
                       "alias": "@user-2-email",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "props": { "text": "{{props.user2Email}}", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "heron:core:text",
                       "id": "user-2-role",
                       "alias": "@user-2-role",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
+                      "props": { "text": "{{props.user2Role}}", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "heron:core:div",
@@ -209,7 +209,7 @@
                           "component": "heron:core:text",
                           "id": "user-2-badge",
                           "alias": "@user-2-badge",
-                          "props": { "text": "", "className": "badge bg-success-subtle text-success" }
+                          "props": { "text": "{{props.user2Status}}", "className": "badge bg-success-subtle text-success" }
                         }
                       ]
                     }
@@ -230,14 +230,14 @@
                           "id": "user-3-avatar",
                           "props": { "className": "rounded-circle d-flex align-items-center justify-content-center flex-shrink-0", "style": { "width": "32px", "height": "32px", "background": "var(--warning)", "color": "var(--warning-foreground)" } },
                           "children": [
-                            { "component": "heron:core:text", "id": "u3-initials", "alias": "@u3-initials", "props": { "text": "…" } }
+                            { "component": "heron:core:text", "id": "u3-initials", "alias": "@u3-initials", "props": { "text": "{{props.user3Initials}}" } }
                           ]
                         },
                         {
                           "component": "heron:core:text",
                           "id": "user-3-name",
                           "alias": "@user-3-name",
-                          "props": { "text": "Loading…", "className": "fw-medium" }
+                          "props": { "text": "{{props.user3Name}}", "className": "fw-medium" }
                         }
                       ]
                     },
@@ -245,13 +245,13 @@
                       "component": "heron:core:text",
                       "id": "user-3-email",
                       "alias": "@user-3-email",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-sm-block text-muted" }
+                      "props": { "text": "{{props.user3Email}}", "className": "flex-grow-1 d-none d-sm-block text-muted" }
                     },
                     {
                       "component": "heron:core:text",
                       "id": "user-3-role",
                       "alias": "@user-3-role",
-                      "props": { "text": "", "className": "flex-grow-1 d-none d-md-block" }
+                      "props": { "text": "{{props.user3Role}}", "className": "flex-grow-1 d-none d-md-block" }
                     },
                     {
                       "component": "heron:core:div",
@@ -262,7 +262,7 @@
                           "component": "heron:core:text",
                           "id": "user-3-badge",
                           "alias": "@user-3-badge",
-                          "props": { "text": "", "className": "badge", "style": { "background": "var(--warning-accent, #fef3c7)", "color": "var(--warning-foreground)" } }
+                          "props": { "text": "{{props.user3Status}}", "className": "badge", "style": { "background": "var(--warning-accent, #fef3c7)", "color": "var(--warning-foreground)" } }
                         }
                       ]
                     }

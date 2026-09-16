@@ -16,6 +16,34 @@
  */
 import type { ServerContext } from "@heron-ws/app-runtime";
 
+interface TeamMember {
+  initials?: string;
+  name?: string;
+  email?: string;
+  role?: string;
+  status?: string;
+}
+
+const USER_ROW_COUNT = 3;
+
+function userDisplayProps(users: TeamMember[]): Record<string, string> {
+  const props: Record<string, string> = {
+    usersSubtitleText: `Loaded ${users.length} member(s) from Express fake API (server pre-fetched).`,
+  };
+
+  for (let i = 0; i < USER_ROW_COUNT; i++) {
+    const row = i + 1;
+    const user = users[i];
+    props[`user${row}Initials`] = user?.initials ?? "";
+    props[`user${row}Name`] = user?.name ?? "";
+    props[`user${row}Email`] = user?.email ?? "";
+    props[`user${row}Role`] = user?.role ?? "";
+    props[`user${row}Status`] = user?.status ?? "";
+  }
+
+  return props;
+}
+
 export default async function (ctx: ServerContext) {
   const { token } = ctx.session;
   const { apiBase } = ctx.heron;
@@ -46,10 +74,15 @@ export default async function (ctx: ServerContext) {
   }
 
   const json = (await res.json()) as { data?: unknown };
-  const users = Array.isArray(json?.data) ? json.data : [];
+  const users: TeamMember[] = Array.isArray(json?.data)
+    ? (json.data as TeamMember[])
+    : [];
 
   // EDGE CASE: return must be a plain object, NOT an array.
   // runWidgetLoaders only merges plain objects — returning an array would be
   // silently ignored. Wrap lists in a named key.
-  return { users };
+  return {
+    users,
+    ...userDisplayProps(users),
+  };
 }
