@@ -33,7 +33,7 @@
  * happens to produce a plain object here, which `can(action, subject,
  * resource)` matches automatically, but nothing stops another adapter from
  * producing an array, a list of ids, or any other shape a widget script
- * would read back via `$egret.auth.getPermission()` and interpret itself.
+ * would read back via `$heron.auth.getPermission()` and interpret itself.
  *
  * Composed by `authorization/auth-adapter.ts` after it loads the backend's
  * native permission response.

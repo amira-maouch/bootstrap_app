@@ -1,8 +1,8 @@
 // @generated
 
-interface ThemeSwitcherSelf extends EgretSelfBase {
+interface ThemeSwitcherSelf extends HeronSelfBase {
   getChild(alias: "@themeSelect"): EgretCoreSelectInstance;
   getChild(alias: "@modeToggle"): EgretCoreDivInstance;
   getChild(alias: "@modeIcon"): EgretCoreTextInstance;
-  getChild(alias: string): EgretBaseInstance;
+  getChild(alias: string): HeronBaseInstance;
 }

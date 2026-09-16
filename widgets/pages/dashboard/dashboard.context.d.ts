@@ -1,6 +1,6 @@
 // @generated
 
-interface DashboardSelf extends EgretSelfBase {
+interface DashboardSelf extends HeronSelfBase {
   getChild(alias: "@title"): EgretCoreTextInstance;
   getChild(alias: "@subtitle"): EgretCoreTextInstance;
   getChild(alias: "@statPipeline"): EgretCoreTextInstance;
@@ -29,5 +29,5 @@ interface DashboardSelf extends EgretSelfBase {
   getChild(alias: "@task5-title"): EgretCoreTextInstance;
   getChild(alias: "@task5-assignee"): EgretCoreTextInstance;
   getChild(alias: "@task5-status"): EgretCoreTextInstance;
-  getChild(alias: string): EgretBaseInstance;
+  getChild(alias: string): HeronBaseInstance;
 }

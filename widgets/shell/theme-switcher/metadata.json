@@ -1,14 +1,14 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "theme-switcher",
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "theme-switcher-bar",
       "props": { "className": "d-flex align-items-center gap-2" },
       "children": [
         {
-          "component": "egret:core:select",
+          "component": "heron:core:select",
           "id": "theme-select",
           "alias": "@themeSelect",
           "props": {
@@ -21,7 +21,7 @@
           }
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "mode-toggle",
           "alias": "@modeToggle",
           "props": {
@@ -30,7 +30,7 @@
           },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "mode-icon",
               "alias": "@modeIcon",
               "props": { "text": "☀️" }

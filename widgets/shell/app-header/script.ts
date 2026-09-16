@@ -1,4 +1,4 @@
-function appHeaderScript($egret: any, $self: any) {
+function appHeaderScript($heron: any, $self: any) {
   function currentRole(): string {
     try {
       const raw = localStorage.getItem("auth_user");
@@ -95,8 +95,8 @@ function appHeaderScript($egret: any, $self: any) {
     onClick: () => void signOut(),
   });
 
-  if (typeof $egret?.auth?.subscribe === "function") {
-    $egret.auth.subscribe(() => refreshBadge());
+  if (typeof $heron?.auth?.subscribe === "function") {
+    $heron.auth.subscribe(() => refreshBadge());
   }
 }
 

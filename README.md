@@ -33,7 +33,7 @@ SSR / browser session check → auth-adapter.verify() → GET :4001/api/auth/me
         ↓
 AppShellClient boot (Heron) → setEnabled/setTokenProvider from app.config.ts
         ↓
-authorization middleware → $egret.auth.ensurePermissionsLoaded(principalKey)
+authorization middleware → $heron.auth.ensurePermissionsLoaded(principalKey)
         ↓
 Heron GET /api/auth/permissions
    → auth-adapter.loadPermissions(identity)
@@ -87,7 +87,7 @@ verifiable token. The Heron app does not keep a second session map.
 New widget scripts obtain the compatibility browser token with:
 
 ```ts
-const token = await $egret.auth.getAccessToken();
+const token = await $heron.auth.getAccessToken();
 ```
 
 They should not read `localStorage.auth_token` directly. That key and the
@@ -137,12 +137,12 @@ grant becomes a DIFFERENT `conditions.assigneeId` for each of them. Log in
 as each and compare what "Team Tasks" shows.
 
 `widgets/pages/dashboard/script.ts` reads this with
-`$egret.auth.getPermission("read", "Task")` — **not** `can()` — to get the
+`$heron.auth.getPermission("read", "Task")` — **not** `can()` — to get the
 raw rule (including its `conditions`, whatever shape they happen to be) and
 decide for itself how to filter the list:
 
 ```ts
-const rule = $egret.auth.getPermission("read", "Task");
+const rule = $heron.auth.getPermission("read", "Task");
 // admin/editor -> conditions == null      -> show everything
 // viewer(s)    -> conditions == {assigneeId} -> filter tasks by it
 ```
@@ -170,7 +170,7 @@ Opens:
 - App: http://localhost:5174/login
 - Fake API: http://localhost:4001/api/health
 
-`pnpm dev` starts **fake-api + egret-dev-api + widget watch** together.
+`pnpm dev` starts **fake-api + heron-dev-api + widget watch** together.
 
 Env (`.env.local`):
 

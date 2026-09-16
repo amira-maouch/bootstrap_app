@@ -1,44 +1,50 @@
 {
   "ui/components/core/input": {
-    "contentHash": "a18bab5492ade30a09dbad0be1f6be20489f406311156529445474a286651c3a",
+    "contentHash": "db73c558cda8e8eb3797dd070e22fad7afd0e9b3db9b164f6943761bc62e317a",
     "version": "1.0.0",
-    "bundledAt": "2026-09-08T16:53:57.408Z",
+    "bundledAt": "2026-09-16T11:30:11.753Z",
     "outputFile": "bundles/registries/ui/components/(core)/input/index.js",
     "contractFile": "bundles/registries/ui/components/(core)/input/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/input/bundle",
-    "etag": "W/\"419-1a081018b36\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/core/input/bundle",
+    "etag": "W/\"419-1a086392cfb\"",
+    "contractEtag": "W/\"64f-QoJZWLhugDT2zL/sN5BfiX7z9RA\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(core)/input/index.node.mjs"
+    "serverOutputFile": "bundles/registries/ui/components/(core)/input/index.node.mjs",
+    "serverEtag": "W/\"1f1-1a082c53e3d\""
   },
   "ui/components/display/avatar": {
-    "contentHash": "784dd90499a9fc0db157eeb7bde9028b98bb052085939c43df3d9fb70c9e7568",
+    "contentHash": "1ccf85bc037e8d635284ac5c2720fda63c17d178d3e069c1db98beca991c88d1",
     "version": "1.0.0",
-    "bundledAt": "2026-09-08T16:53:57.416Z",
+    "bundledAt": "2026-09-16T11:30:11.771Z",
     "outputFile": "bundles/registries/ui/components/(display)/avatar/index.js",
     "contractFile": "bundles/registries/ui/components/(display)/avatar/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/avatar/bundle",
-    "etag": "W/\"aa9-1a081018b36\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/display/avatar/bundle",
+    "etag": "W/\"aa9-1a086392cfe\"",
+    "contractEtag": "W/\"68a-dwH6/WTWhtIDf6exxBtoZsKEMUQ\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(display)/avatar/index.node.mjs"
+    "serverOutputFile": "bundles/registries/ui/components/(display)/avatar/index.node.mjs",
+    "serverEtag": "W/\"30c-1a082c53e3c\""
   },
   "ui/components/display/badge": {
-    "contentHash": "c38d86b3a62734a872e56a19915da363ed8ef9b595f959f6443c77da6086b48c",
+    "contentHash": "014484ab535002024f9bbdc8d09008f71337109e54188cfe9267edbfd46c80e0",
     "version": "1.0.0",
-    "bundledAt": "2026-09-08T16:53:57.428Z",
+    "bundledAt": "2026-09-16T11:30:11.782Z",
     "outputFile": "bundles/registries/ui/components/(display)/badge/index.js",
     "contractFile": "bundles/registries/ui/components/(display)/badge/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/badge/bundle",
-    "etag": "W/\"a87-1a081018b38\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/display/badge/bundle",
+    "etag": "W/\"a87-1a086392cfe\"",
+    "contractEtag": "W/\"40b-xGN6/Aqlc6ATEbPiyGloXBBEfME\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(display)/badge/index.node.mjs"
+    "serverOutputFile": "bundles/registries/ui/components/(display)/badge/index.node.mjs",
+    "serverEtag": "W/\"2ea-1a0830c0758\""
   }
 }

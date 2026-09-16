@@ -61,7 +61,7 @@ const authAdapter: AuthAdapter = {
     return {
       credential,
       // Compatibility for existing direct browser-to-backend script.ts calls.
-      // New scripts should use: await $egret.auth.getAccessToken().
+      // New scripts should use: await $heron.auth.getAccessToken().
       browserToken: credential,
       principal: principalFromUser(user),
       expiresAt,

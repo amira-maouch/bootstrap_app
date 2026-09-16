@@ -1,5 +1,5 @@
-const themeSwitcherScript = ($egret: EgretRuntime, $self: ThemeSwitcherSelf) => {
-  const themeApi = $egret.theme;
+const themeSwitcherScript = ($heron: HeronRuntime, $self: ThemeSwitcherSelf) => {
+  const themeApi = $heron.theme;
   if (!themeApi) return;
 
   const themeSelect = $self.getChild("@themeSelect");

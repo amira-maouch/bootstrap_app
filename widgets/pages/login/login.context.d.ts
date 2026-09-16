@@ -1,6 +1,6 @@
 // @generated
 
-interface LoginSelf extends EgretSelfBase {
+interface LoginSelf extends HeronSelfBase {
   getChild(alias: "@personaAdmin"): EgretCoreDivInstance;
   getChild(alias: "@personaAdminName"): EgretCoreTextInstance;
   getChild(alias: "@personaAdminDesc"): EgretCoreTextInstance;
@@ -13,5 +13,5 @@ interface LoginSelf extends EgretSelfBase {
   getChild(alias: "@personaViewer2"): EgretCoreDivInstance;
   getChild(alias: "@personaViewer2Name"): EgretCoreTextInstance;
   getChild(alias: "@personaViewer2Desc"): EgretCoreTextInstance;
-  getChild(alias: string): EgretBaseInstance;
+  getChild(alias: string): HeronBaseInstance;
 }

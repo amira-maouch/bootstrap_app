@@ -1,14 +1,14 @@
 {
-  "component": "egret:core:layout",
+  "component": "heron:core:layout",
   "id": "app-root",
   "children": [
     {
-      "component": "egret:core:app-provider",
+      "component": "heron:core:app-provider",
       "id": "app-provider",
       "props": { "marker": false },
       "children": [
         {
-          "component": "egret:core:slot",
+          "component": "heron:core:slot",
           "id": "page-outlet",
           "props": { "className": "h-100" }
         }

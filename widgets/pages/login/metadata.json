@@ -1,5 +1,5 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "login",
   "props": {
     "personas": [],
@@ -14,7 +14,7 @@
   },
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "login-root",
       "props": {
         "className": "min-vh-100 d-flex align-items-center justify-content-center p-4",
@@ -24,7 +24,7 @@
       },
       "children": [
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "login-card",
           "props": {
             "className": "card shadow-sm border-0",
@@ -32,12 +32,12 @@
           },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "login-body",
               "props": { "className": "card-body p-4" },
               "children": [
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "login-title",
                   "props": {
                     "text": "Bootstrap App",
@@ -45,7 +45,7 @@
                   }
                 },
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "login-subtitle",
                   "props": {
                     "text": "Pick a fake persona to demo Heron RBAC authorization.",
@@ -53,7 +53,7 @@
                   }
                 },
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "persona-admin",
                   "alias": "@personaAdmin",
                   "props": {
@@ -63,7 +63,7 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-admin-name",
                       "alias": "@personaAdminName",
                       "props": {
@@ -72,7 +72,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-admin-desc",
                       "alias": "@personaAdminDesc",
                       "props": {
@@ -83,7 +83,7 @@
                   ]
                 },
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "persona-editor",
                   "alias": "@personaEditor",
                   "props": {
@@ -93,7 +93,7 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-editor-name",
                       "alias": "@personaEditorName",
                       "props": {
@@ -102,7 +102,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-editor-desc",
                       "alias": "@personaEditorDesc",
                       "props": {
@@ -113,7 +113,7 @@
                   ]
                 },
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "persona-viewer",
                   "alias": "@personaViewer",
                   "props": {
@@ -123,7 +123,7 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-viewer-name",
                       "alias": "@personaViewerName",
                       "props": {
@@ -132,7 +132,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-viewer-desc",
                       "alias": "@personaViewerDesc",
                       "props": {
@@ -143,7 +143,7 @@
                   ]
                 },
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "persona-viewer2",
                   "alias": "@personaViewer2",
                   "props": {
@@ -153,7 +153,7 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-viewer2-name",
                       "alias": "@personaViewer2Name",
                       "props": {
@@ -162,7 +162,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "persona-viewer2-desc",
                       "alias": "@personaViewer2Desc",
                       "props": {

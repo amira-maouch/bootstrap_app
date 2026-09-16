@@ -1,6 +1,6 @@
-function notFoundScript($egret: any, _$self: any) {
+function notFoundScript($heron: any, _$self: any) {
   const path = window.location.pathname;
-  const auth = $egret?.auth;
+  const auth = $heron?.auth;
   const snapshot = auth?.getSnapshot?.() ?? null;
   const rules = snapshot?.rules ?? [];
 

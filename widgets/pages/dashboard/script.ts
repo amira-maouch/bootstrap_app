@@ -10,7 +10,7 @@
  *
  *  2. Row-level conditions (authorization): `read:Task:own` grants are turned
  *     into `{ conditions: { assigneeId } }` rules by `permissions-adapter.ts`.
- *     This script reads the RAW rule via `$egret.auth.getPermission()` for the
+ *     This script reads the RAW rule via `$heron.auth.getPermission()` for the
  *     UI projection. The fake API independently enforces the same boundary
  *     before data reaches this script.
  *
@@ -20,9 +20,9 @@
  *   - viewer / viewer2 -> "read:Task:own" -> each sees ONLY their own row
  *     (same static grant, different `conditions.assigneeId` per caller)
  */
-function dashboardScript($egret: any, $self: any) {
+function dashboardScript($heron: any, $self: any) {
   function fakeApiBase(): string {
-    const fromEnv = $egret?.getEnv?.("EGRET_FAKE_API_URL");
+    const fromEnv = $heron?.getEnv?.("EGRET_FAKE_API_URL");
     if (typeof fromEnv === "string" && fromEnv) {
       return fromEnv.replace(/\/+$/, "");
     }
@@ -94,7 +94,7 @@ function dashboardScript($egret: any, $self: any) {
   }
 
   function renderTasks(allTasks: any[], source: string) {
-    const auth = $egret?.auth;
+    const auth = $heron?.auth;
 
     // The escape hatch this whole demo is about: fetch the RAW rule
     // (with its raw conditions) instead of only asking can()/cannot().
@@ -128,7 +128,7 @@ function dashboardScript($egret: any, $self: any) {
   }
 
   async function loadTasksFromApi() {
-    const token = await $egret?.auth?.getAccessToken?.();
+    const token = await $heron?.auth?.getAccessToken?.();
 
     try {
       const res = await fetch(`${fakeApiBase()}/api/tasks`, {
@@ -157,7 +157,7 @@ function dashboardScript($egret: any, $self: any) {
     // tree, which the server loader merges into before serialisation. When the
     // loader ran successfully, `tasks` is already here — no client fetch needed.
     const props = $self.getProps?.() ?? {};
-    const loaderProvenance = props.__egretLoader;
+    const loaderProvenance = props.__heronLoader;
     const hasPreloadedTasks =
       loaderProvenance?.source === "server-loader" &&
       Array.isArray(loaderProvenance.keys) &&
@@ -181,8 +181,8 @@ function dashboardScript($egret: any, $self: any) {
   // Re-render when auth state changes (e.g. permissions loaded after mount):
   // the task LIST itself doesn't change, but which rows are VISIBLE may change
   // once `getPermission('read', 'Task')` returns the real rule.
-  if (typeof $egret?.auth?.subscribe === "function") {
-    $egret.auth.subscribe(() => void loadTasks());
+  if (typeof $heron?.auth?.subscribe === "function") {
+    $heron.auth.subscribe(() => void loadTasks());
   }
 }
 

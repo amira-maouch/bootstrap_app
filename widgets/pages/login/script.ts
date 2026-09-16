@@ -1,4 +1,4 @@
-function loginScript($egret: any, $self: any) {
+function loginScript($heron: any, $self: any) {
   interface Persona {
     id: string;
     name?: string;
@@ -7,7 +7,7 @@ function loginScript($egret: any, $self: any) {
   }
 
   function fakeApiBase(): string {
-    const fromEnv = $egret?.getEnv?.("EGRET_FAKE_API_URL");
+    const fromEnv = $heron?.getEnv?.("EGRET_FAKE_API_URL");
     if (typeof fromEnv === "string" && fromEnv) {
       return fromEnv.replace(/\/+$/, "");
     }
@@ -89,7 +89,7 @@ function loginScript($egret: any, $self: any) {
         // AuthAdapter.loadPermissions(identity). The demo adapter composes
         // permissions-loader.ts (fetch raw grants) and
         // permissions-adapter.ts (translate to Heron rules). This is what
-        // $egret.auth loads through Heron's GET /api/auth/permissions.
+        // $heron.auth loads through Heron's GET /api/auth/permissions.
         const rulesRes = await fetch("/api/auth/permissions", {
           headers: { Authorization: `Bearer ${accessToken}` },
         });

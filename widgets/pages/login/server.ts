@@ -52,7 +52,7 @@ function personaProps(personas: Persona[]): Record<string, string> {
 }
 
 export default async function (ctx: ServerContext) {
-  const { apiBase } = ctx.egret;
+  const { apiBase } = ctx.heron;
 
   if (!apiBase) {
     console.warn(

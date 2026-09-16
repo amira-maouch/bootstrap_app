@@ -1,9 +1,9 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "universal-child",
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "universal-child-row",
       "props": { "className": "d-flex align-items-center gap-3" },
       "children": [
@@ -13,11 +13,11 @@
           "props": { "name": "Ada Lovelace", "size": 64 }
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "universal-child-copy",
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "universal-child-label",
               "props": {
                 "text": "This text and the purple AL avatar must exist with JavaScript disabled.",
@@ -25,7 +25,7 @@
               }
             },
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "universal-child-detail",
               "props": {
                 "text": "The widget uses the default universal render mode. ui:display:avatar declares environment: [universal].",

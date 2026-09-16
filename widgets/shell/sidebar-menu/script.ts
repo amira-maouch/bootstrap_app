@@ -1,4 +1,4 @@
-function sidebarMenuScript($egret: any, $self: any) {
+function sidebarMenuScript($heron: any, $self: any) {
   // Users page has no dedicated "view" permission — it's a business decision
   // ("can see this if you can do ANYTHING to a User"), not something the
   // backend hands us as a page grant. Mirrors the route `can` in
@@ -11,7 +11,7 @@ function sidebarMenuScript($egret: any, $self: any) {
   ];
 
   function applyNavVisibility() {
-    const auth = $egret?.auth;
+    const auth = $heron?.auth;
     const showUsers = !auth?.enabled || auth.canAny(USERS_PAGE_ACCESS);
     // Settings is admin-only: "*"/"*" as a CHECK means "has the full
     // wildcard grant", not "has any rule" — see compileRules in
@@ -52,8 +52,8 @@ function sidebarMenuScript($egret: any, $self: any) {
   applyNavVisibility();
   applyUserFooter();
 
-  if (typeof $egret?.auth?.subscribe === "function") {
-    $egret.auth.subscribe(() => {
+  if (typeof $heron?.auth?.subscribe === "function") {
+    $heron.auth.subscribe(() => {
       applyNavVisibility();
       applyUserFooter();
     });

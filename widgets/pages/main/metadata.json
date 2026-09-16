@@ -1,9 +1,9 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "landing",
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "landing-root",
       "props": {
         "className": "min-vh-100 d-flex flex-column",
@@ -13,14 +13,14 @@
       },
       "children": [
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "landing-nav",
           "props": {
             "className": "container d-flex align-items-center justify-content-between py-4"
           },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "landing-brand",
               "props": {
                 "text": "Bootstrap App",
@@ -28,7 +28,7 @@
               }
             },
             {
-              "component": "egret:core:link",
+              "component": "heron:core:link",
               "id": "landing-login",
               "props": {
                 "href": "/login",
@@ -36,7 +36,7 @@
               },
               "children": [
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "landing-login-label",
                   "props": { "text": "Log in" }
                 }
@@ -45,26 +45,26 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "landing-hero",
           "props": {
             "className": "container flex-grow-1 d-flex align-items-center py-5"
           },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "landing-hero-grid",
               "props": {
                 "className": "row align-items-center g-5 w-100"
               },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "landing-copy",
                   "props": { "className": "col-lg-7" },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "landing-eyebrow",
                       "props": {
                         "text": "HERON REFERENCE APPLICATION",
@@ -72,7 +72,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "landing-title",
                       "props": {
                         "text": "Server-rendered experiences, driven by metadata.",
@@ -80,7 +80,7 @@
                       }
                     },
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "landing-description",
                       "props": {
                         "text": "Explore a working Heron application with request-scoped rendering, server widget loaders, and permission-aware pages.",
@@ -90,24 +90,24 @@
                   ]
                 },
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "landing-summary",
                   "props": { "className": "col-lg-5" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "landing-summary-card",
                       "props": {
                         "className": "card border-0 shadow-lg"
                       },
                       "children": [
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "landing-summary-body",
                           "props": { "className": "card-body p-4 p-lg-5" },
                           "children": [
                             {
-                              "component": "egret:core:text",
+                              "component": "heron:core:text",
                               "id": "landing-summary-title",
                               "props": {
                                 "text": "Inside the demo",
@@ -115,7 +115,7 @@
                               }
                             },
                             {
-                              "component": "egret:core:text",
+                              "component": "heron:core:text",
                               "id": "landing-feature-one",
                               "props": {
                                 "text": "✓ Role-based navigation and actions",
@@ -123,7 +123,7 @@
                               }
                             },
                             {
-                              "component": "egret:core:text",
+                              "component": "heron:core:text",
                               "id": "landing-feature-two",
                               "props": {
                                 "text": "✓ Server-loaded widget data",
@@ -131,7 +131,7 @@
                               }
                             },
                             {
-                              "component": "egret:core:text",
+                              "component": "heron:core:text",
                               "id": "landing-feature-three",
                               "props": {
                                 "text": "✓ Request-isolated SSR foundations",
@@ -149,14 +149,14 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "landing-footer",
           "props": {
             "className": "container py-4 border-top"
           },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "landing-footer-text",
               "props": {
                 "text": "Built with Heron and Bootstrap.",

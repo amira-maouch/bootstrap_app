@@ -2,7 +2,7 @@
  * Server-side loader for the Dashboard widget.
  *
  * This file is compiled to `dist-app/server/pages/dashboard/server.js` by
- * `egret-build-widgets` and executed on the server during page resolution.
+ * `heron-build-widgets` and executed on the server during page resolution.
  * Its return value is merged into the dashboard widget's `props` before the
  * metadata tree is sent to the browser.
  *
@@ -13,7 +13,7 @@
  *
  * The widget script (`script.ts`) still reads `$self.getProps().tasks` on
  * mount and re-applies the same values (plus the richer, permission-aware
- * subtitle wording once `$egret.auth` resolves) — a graceful client-side
+ * subtitle wording once `$heron.auth` resolves) — a graceful client-side
  * fallback still runs when the loader wasn't available (e.g. when fetching a
  * raw section reference).
  *
@@ -69,11 +69,11 @@ function tasksSubtitleText(tasks: Task[]): string {
 
 export default async function loader(ctx: ServerContext) {
   const { token } = ctx.session;
-  const apiBase = ctx.egret.apiBase;
+  const apiBase = ctx.heron.apiBase;
 
   if (!apiBase) {
     console.warn(
-      "[dashboard/server] ctx.egret.apiBase is empty — set `apiBase` in app.config.ts or EGRET_API_BASE_URL env var",
+      "[dashboard/server] ctx.heron.apiBase is empty — set `apiBase` in app.config.ts or EGRET_API_BASE_URL env var",
     );
     return {};
   }

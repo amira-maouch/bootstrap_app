@@ -12,7 +12,7 @@ import type { ServerContext } from "@heron-ws/app-runtime";
 
 async function loadProfile(ctx: ServerContext) {
   const { token } = ctx.session;
-  const { apiBase } = ctx.egret;
+  const { apiBase } = ctx.heron;
   if (!token || !apiBase) return {};
 
   const res = await fetch(`${apiBase}/api/auth/me`, {
@@ -27,7 +27,7 @@ async function loadProfile(ctx: ServerContext) {
 
 export default async function (ctx: ServerContext) {
   const { token } = ctx.session;
-  const { apiBase } = ctx.egret;
+  const { apiBase } = ctx.heron;
 
   if (!token) {
     console.warn("[settings/server] no token — returning empty props");

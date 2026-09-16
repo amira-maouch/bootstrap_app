@@ -1,5 +1,5 @@
 // @generated
 
-interface SsrBoundariesSelf extends EgretSelfBase {
-  getChild(alias: string): EgretBaseInstance;
+interface SsrBoundariesSelf extends HeronSelfBase {
+  getChild(alias: string): HeronBaseInstance;
 }

@@ -1,5 +1,5 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "dashboard",
   "template": "layouts/main-layout",
   "props": {
@@ -17,17 +17,17 @@
   },
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "dashboard-root",
       "props": { "className": "dashboard-page" },
       "children": [
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "dashboard-header",
           "props": { "className": "mb-4" },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "dashboard-title",
               "alias": "@title",
               "props": {
@@ -36,7 +36,7 @@
               }
             },
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "dashboard-subtitle",
               "alias": "@subtitle",
               "props": {
@@ -47,27 +47,27 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "dashboard-stats",
           "props": { "className": "row g-3 mb-4" },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "stat-col-pipeline",
               "props": { "className": "col-12 col-sm-6 col-lg-3" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "stat-card-pipeline",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "stat-card-pipeline-body",
                       "props": { "className": "card-body" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-pipeline-label",
                           "props": {
                             "text": "PIPELINE",
@@ -75,7 +75,7 @@
                           }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-pipeline-value",
                           "alias": "@statPipeline",
                           "props": {
@@ -90,22 +90,22 @@
               ]
             },
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "stat-col-contacts",
               "props": { "className": "col-12 col-sm-6 col-lg-3" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "stat-card-contacts",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "stat-card-contacts-body",
                       "props": { "className": "card-body" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-contacts-label",
                           "props": {
                             "text": "CONTACTS",
@@ -113,7 +113,7 @@
                           }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-contacts-value",
                           "alias": "@statContacts",
                           "props": {
@@ -128,22 +128,22 @@
               ]
             },
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "stat-col-users",
               "props": { "className": "col-12 col-sm-6 col-lg-3" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "stat-card-users",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "stat-card-users-body",
                       "props": { "className": "card-body" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-users-label",
                           "props": {
                             "text": "USERS",
@@ -151,7 +151,7 @@
                           }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-users-value",
                           "alias": "@statUsers",
                           "props": {
@@ -166,22 +166,22 @@
               ]
             },
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "stat-col-revenue",
               "props": { "className": "col-12 col-sm-6 col-lg-3" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "stat-card-revenue",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "stat-card-revenue-body",
                       "props": { "className": "card-body" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-revenue-label",
                           "props": {
                             "text": "REVENUE",
@@ -189,7 +189,7 @@
                           }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "stat-revenue-value",
                           "alias": "@statRevenue",
                           "props": {
@@ -206,27 +206,27 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "bottom-row",
           "props": { "className": "row g-3" },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "quick-links-col",
               "props": { "className": "col-12 col-lg-5" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "quick-links-card",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "quick-links-card-header",
                       "props": { "className": "card-header bg-transparent" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "quick-links-title",
                           "props": {
                             "text": "Quick Links",
@@ -234,7 +234,7 @@
                           }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "quick-links-desc",
                           "props": {
                             "text": "Jump to frequently used areas",
@@ -244,27 +244,27 @@
                       ]
                     },
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "quick-links-body",
                       "props": { "className": "card-body" },
                       "children": [
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "quick-links-grid",
                           "props": { "className": "row g-2" },
                           "children": [
                             {
-                              "component": "egret:core:div",
+                              "component": "heron:core:div",
                               "id": "ql-1",
                               "props": { "className": "col-6" },
                               "children": [
                                 {
-                                  "component": "egret:core:div",
+                                  "component": "heron:core:div",
                                   "id": "ql-1-item",
                                   "props": { "className": "d-flex align-items-center gap-2 border rounded p-2 small" },
                                   "children": [
                                     {
-                                      "component": "egret:core:text",
+                                      "component": "heron:core:text",
                                       "id": "ql-1-label",
                                       "props": { "text": "Projects", "className": "fw-medium" }
                                     }
@@ -273,17 +273,17 @@
                               ]
                             },
                             {
-                              "component": "egret:core:div",
+                              "component": "heron:core:div",
                               "id": "ql-2",
                               "props": { "className": "col-6" },
                               "children": [
                                 {
-                                  "component": "egret:core:div",
+                                  "component": "heron:core:div",
                                   "id": "ql-2-item",
                                   "props": { "className": "d-flex align-items-center gap-2 border rounded p-2 small" },
                                   "children": [
                                     {
-                                      "component": "egret:core:text",
+                                      "component": "heron:core:text",
                                       "id": "ql-2-label",
                                       "props": { "text": "Contracts", "className": "fw-medium" }
                                     }
@@ -292,17 +292,17 @@
                               ]
                             },
                             {
-                              "component": "egret:core:div",
+                              "component": "heron:core:div",
                               "id": "ql-3",
                               "props": { "className": "col-6" },
                               "children": [
                                 {
-                                  "component": "egret:core:div",
+                                  "component": "heron:core:div",
                                   "id": "ql-3-item",
                                   "props": { "className": "d-flex align-items-center gap-2 border rounded p-2 small" },
                                   "children": [
                                     {
-                                      "component": "egret:core:text",
+                                      "component": "heron:core:text",
                                       "id": "ql-3-label",
                                       "props": { "text": "Reports", "className": "fw-medium" }
                                     }
@@ -311,17 +311,17 @@
                               ]
                             },
                             {
-                              "component": "egret:core:div",
+                              "component": "heron:core:div",
                               "id": "ql-4",
                               "props": { "className": "col-6" },
                               "children": [
                                 {
-                                  "component": "egret:core:div",
+                                  "component": "heron:core:div",
                                   "id": "ql-4-item",
                                   "props": { "className": "d-flex align-items-center gap-2 border rounded p-2 small" },
                                   "children": [
                                     {
-                                      "component": "egret:core:text",
+                                      "component": "heron:core:text",
                                       "id": "ql-4-label",
                                       "props": { "text": "Inventory", "className": "fw-medium" }
                                     }
@@ -338,22 +338,22 @@
               ]
             },
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "highlights-col",
               "props": { "className": "col-12 col-lg-7" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "highlights-card",
                   "props": { "className": "card shadow-sm h-100" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "highlights-card-header",
                       "props": { "className": "card-header bg-transparent" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "highlights-title",
                           "props": {
                             "text": "Highlights",
@@ -363,12 +363,12 @@
                       ]
                     },
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "highlights-body",
                       "props": { "className": "card-body p-0" },
                       "children": [
                         {
-                          "component": "egret:core:image",
+                          "component": "heron:core:image",
                           "id": "highlights-image",
                           "alias": "@Slide1",
                           "props": {
@@ -386,32 +386,32 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "tasks-row",
           "props": { "className": "row g-3 mt-1" },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "tasks-col",
               "props": { "className": "col-12" },
               "children": [
                 {
-                  "component": "egret:core:div",
+                  "component": "heron:core:div",
                   "id": "tasks-card",
                   "props": { "className": "card shadow-sm" },
                   "children": [
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "tasks-card-header",
                       "props": { "className": "card-header bg-transparent" },
                       "children": [
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "tasks-title",
                           "props": { "text": "Team Tasks", "className": "fw-semibold mb-0 d-block" }
                         },
                         {
-                          "component": "egret:core:text",
+                          "component": "heron:core:text",
                           "id": "tasks-subtitle",
                           "alias": "@tasksSubtitle",
                           "props": { "text": "{{props.tasksSubtitleText}}", "className": "text-muted small d-block" }
@@ -419,73 +419,73 @@
                       ]
                     },
                     {
-                      "component": "egret:core:div",
+                      "component": "heron:core:div",
                       "id": "tasks-table-wrapper",
                       "props": { "className": "table-responsive" },
                       "children": [
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "tasks-table-head-row",
                           "props": { "className": "d-flex border-bottom py-2 px-3 fw-medium small", "style": { "background": "var(--muted)", "color": "var(--muted-foreground)" } },
                           "children": [
-                            { "component": "egret:core:text", "id": "tasks-col-title", "props": { "text": "Task", "className": "flex-grow-1" } },
-                            { "component": "egret:core:text", "id": "tasks-col-assignee", "props": { "text": "Assignee", "className": "flex-grow-1 d-none d-sm-block" } },
-                            { "component": "egret:core:text", "id": "tasks-col-status", "props": { "text": "Status", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "tasks-col-title", "props": { "text": "Task", "className": "flex-grow-1" } },
+                            { "component": "heron:core:text", "id": "tasks-col-assignee", "props": { "text": "Assignee", "className": "flex-grow-1 d-none d-sm-block" } },
+                            { "component": "heron:core:text", "id": "tasks-col-status", "props": { "text": "Status", "className": "flex-grow-1" } }
                           ]
                         },
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "task-row-1",
                           "alias": "@taskRow1",
                           "props": { "className": "{{props.task1RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-1-title", "alias": "@task1-title", "props": { "text": "{{props.task1Title}}", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-1-assignee", "alias": "@task1-assignee", "props": { "text": "{{props.task1Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-1-status", "alias": "@task1-status", "props": { "text": "{{props.task1Status}}", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "task-1-title", "alias": "@task1-title", "props": { "text": "{{props.task1Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "heron:core:text", "id": "task-1-assignee", "alias": "@task1-assignee", "props": { "text": "{{props.task1Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "heron:core:text", "id": "task-1-status", "alias": "@task1-status", "props": { "text": "{{props.task1Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "task-row-2",
                           "alias": "@taskRow2",
                           "props": { "className": "{{props.task2RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-2-title", "alias": "@task2-title", "props": { "text": "{{props.task2Title}}", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-2-assignee", "alias": "@task2-assignee", "props": { "text": "{{props.task2Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-2-status", "alias": "@task2-status", "props": { "text": "{{props.task2Status}}", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "task-2-title", "alias": "@task2-title", "props": { "text": "{{props.task2Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "heron:core:text", "id": "task-2-assignee", "alias": "@task2-assignee", "props": { "text": "{{props.task2Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "heron:core:text", "id": "task-2-status", "alias": "@task2-status", "props": { "text": "{{props.task2Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "task-row-3",
                           "alias": "@taskRow3",
                           "props": { "className": "{{props.task3RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-3-title", "alias": "@task3-title", "props": { "text": "{{props.task3Title}}", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-3-assignee", "alias": "@task3-assignee", "props": { "text": "{{props.task3Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-3-status", "alias": "@task3-status", "props": { "text": "{{props.task3Status}}", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "task-3-title", "alias": "@task3-title", "props": { "text": "{{props.task3Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "heron:core:text", "id": "task-3-assignee", "alias": "@task3-assignee", "props": { "text": "{{props.task3Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "heron:core:text", "id": "task-3-status", "alias": "@task3-status", "props": { "text": "{{props.task3Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "task-row-4",
                           "alias": "@taskRow4",
                           "props": { "className": "{{props.task4RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-4-title", "alias": "@task4-title", "props": { "text": "{{props.task4Title}}", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-4-assignee", "alias": "@task4-assignee", "props": { "text": "{{props.task4Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-4-status", "alias": "@task4-status", "props": { "text": "{{props.task4Status}}", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "task-4-title", "alias": "@task4-title", "props": { "text": "{{props.task4Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "heron:core:text", "id": "task-4-assignee", "alias": "@task4-assignee", "props": { "text": "{{props.task4Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "heron:core:text", "id": "task-4-status", "alias": "@task4-status", "props": { "text": "{{props.task4Status}}", "className": "flex-grow-1" } }
                           ]
                         },
                         {
-                          "component": "egret:core:div",
+                          "component": "heron:core:div",
                           "id": "task-row-5",
                           "alias": "@taskRow5",
                           "props": { "className": "{{props.task5RowClass}}" },
                           "children": [
-                            { "component": "egret:core:text", "id": "task-5-title", "alias": "@task5-title", "props": { "text": "{{props.task5Title}}", "className": "flex-grow-1 fw-medium" } },
-                            { "component": "egret:core:text", "id": "task-5-assignee", "alias": "@task5-assignee", "props": { "text": "{{props.task5Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
-                            { "component": "egret:core:text", "id": "task-5-status", "alias": "@task5-status", "props": { "text": "{{props.task5Status}}", "className": "flex-grow-1" } }
+                            { "component": "heron:core:text", "id": "task-5-title", "alias": "@task5-title", "props": { "text": "{{props.task5Title}}", "className": "flex-grow-1 fw-medium" } },
+                            { "component": "heron:core:text", "id": "task-5-assignee", "alias": "@task5-assignee", "props": { "text": "{{props.task5Assignee}}", "className": "flex-grow-1 d-none d-sm-block text-muted" } },
+                            { "component": "heron:core:text", "id": "task-5-status", "alias": "@task5-status", "props": { "text": "{{props.task5Status}}", "className": "flex-grow-1" } }
                           ]
                         }
                       ]

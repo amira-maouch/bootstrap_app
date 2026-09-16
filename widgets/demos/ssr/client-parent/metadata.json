@@ -1,5 +1,5 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "client-parent",
   "renderMode": "client-only",
   "placeholder": {
@@ -8,17 +8,17 @@
   },
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "client-parent-card",
       "props": { "className": "card border-danger shadow-sm" },
       "children": [
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "client-parent-body",
           "props": { "className": "card-body" },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "client-parent-title",
               "props": {
                 "text": "Case 3 — client-only widget → universal descendants",
@@ -31,7 +31,7 @@
               "props": { "name": "Grace Hopper", "size": 48 }
             },
             {
-              "component": "egret:core:section-reference",
+              "component": "heron:core:section-reference",
               "id": "blocked-universal-widget-ref",
               "ref": { "path": "demos/ssr/universal-child" }
             }

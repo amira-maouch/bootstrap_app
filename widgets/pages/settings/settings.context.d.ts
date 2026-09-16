@@ -1,8 +1,8 @@
 // @generated
 
-interface SettingsSelf extends EgretSelfBase {
+interface SettingsSelf extends HeronSelfBase {
   getChild(alias: "@form-name-value"): UiCoreInputInstance;
   getChild(alias: "@saveProfileBtn"): EgretCoreDivInstance;
   getChild(alias: "@profile-status"): EgretCoreTextInstance;
-  getChild(alias: string): EgretBaseInstance;
+  getChild(alias: string): HeronBaseInstance;
 }

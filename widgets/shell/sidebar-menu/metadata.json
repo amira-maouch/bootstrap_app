@@ -1,9 +1,9 @@
 {
-  "component": "egret:core:widget",
+  "component": "heron:core:widget",
   "id": "sidebar-menu",
   "children": [
     {
-      "component": "egret:core:div",
+      "component": "heron:core:div",
       "id": "sidebar",
       "props": {
         "className": "d-flex flex-column flex-shrink-0 h-100",
@@ -15,7 +15,7 @@
       },
       "children": [
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "sidebar-brand",
           "props": {
             "className": "d-flex align-items-center gap-2 px-3",
@@ -26,7 +26,7 @@
           },
           "children": [
             {
-              "component": "egret:core:text",
+              "component": "heron:core:text",
               "id": "brand-text",
               "props": {
                 "text": "Bootstrap App",
@@ -37,17 +37,17 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "nav-section",
           "props": { "className": "flex-grow-1 overflow-auto py-2" },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "nav-group-main",
               "props": { "className": "px-2" },
               "children": [
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "nav-group-label",
                   "props": {
                     "text": "NAVIGATION",
@@ -59,7 +59,7 @@
                   }
                 },
                 {
-                  "component": "egret:core:link",
+                  "component": "heron:core:link",
                   "id": "nav-dashboard",
                   "alias": "@navDashboard",
                   "props": {
@@ -72,14 +72,14 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "nav-dashboard-text",
                       "props": { "text": "Dashboard" }
                     }
                   ]
                 },
                 {
-                  "component": "egret:core:link",
+                  "component": "heron:core:link",
                   "id": "nav-users",
                   "alias": "@navUsers",
                   "can": {
@@ -100,14 +100,14 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "nav-users-text",
                       "props": { "text": "Users" }
                     }
                   ]
                 },
                 {
-                  "component": "egret:core:link",
+                  "component": "heron:core:link",
                   "id": "nav-settings",
                   "alias": "@navSettings",
                   "can": { "action": "*", "subject": "*" },
@@ -121,14 +121,14 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "nav-settings-text",
                       "props": { "text": "Settings" }
                     }
                   ]
                 },
                 {
-                  "component": "egret:core:link",
+                  "component": "heron:core:link",
                   "id": "nav-ssr-boundaries",
                   "props": {
                     "href": "/ssr-boundaries",
@@ -140,14 +140,14 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "nav-ssr-boundaries-text",
                       "props": { "text": "SSR boundaries" }
                     }
                   ]
                 },
                 {
-                  "component": "egret:core:link",
+                  "component": "heron:core:link",
                   "id": "nav-csr-boundaries",
                   "props": {
                     "href": "/csr-boundaries",
@@ -159,7 +159,7 @@
                   },
                   "children": [
                     {
-                      "component": "egret:core:text",
+                      "component": "heron:core:text",
                       "id": "nav-csr-boundaries-text",
                       "props": { "text": "CSR baseline" }
                     }
@@ -170,7 +170,7 @@
           ]
         },
         {
-          "component": "egret:core:div",
+          "component": "heron:core:div",
           "id": "sidebar-footer",
           "props": {
             "className": "px-3 py-2 d-flex align-items-center gap-2",
@@ -178,7 +178,7 @@
           },
           "children": [
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "user-avatar",
               "props": {
                 "className": "rounded-circle d-flex align-items-center justify-content-center fw-bold small flex-shrink-0",
@@ -191,7 +191,7 @@
               },
               "children": [
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "user-initials",
                   "alias": "@userInitials",
                   "props": { "text": "…" }
@@ -199,12 +199,12 @@
               ]
             },
             {
-              "component": "egret:core:div",
+              "component": "heron:core:div",
               "id": "user-info",
               "props": { "className": "overflow-hidden" },
               "children": [
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "user-name",
                   "alias": "@userName",
                   "props": {
@@ -214,7 +214,7 @@
                   }
                 },
                 {
-                  "component": "egret:core:text",
+                  "component": "heron:core:text",
                   "id": "user-email",
                   "alias": "@userEmail",
                   "props": {

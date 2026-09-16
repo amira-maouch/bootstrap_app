@@ -357,7 +357,7 @@ async function main() {
             pathname: location.pathname,
             hydration: window.__HERON_HYDRATION__ ?? null,
             bodyText: document.body?.textContent ?? "",
-            loaderProvenance: dashboardNode?.props?.__egretLoader ?? null
+            loaderProvenance: dashboardNode?.props?.__heronLoader ?? null
           };
         })()`,
         );

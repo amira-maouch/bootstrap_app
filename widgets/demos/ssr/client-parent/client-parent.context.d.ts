@@ -1,5 +1,5 @@
 // @generated
 
-interface ClientParentSelf extends EgretSelfBase {
-  getChild(alias: string): EgretBaseInstance;
+interface ClientParentSelf extends HeronSelfBase {
+  getChild(alias: string): HeronBaseInstance;
 }

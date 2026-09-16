@@ -1,6 +1,6 @@
-function usersScript($egret: any, $self: any) {
+function usersScript($heron: any, $self: any) {
   function fakeApiBase(): string {
-    const fromEnv = $egret?.getEnv?.("EGRET_FAKE_API_URL");
+    const fromEnv = $heron?.getEnv?.("EGRET_FAKE_API_URL");
     if (typeof fromEnv === "string" && fromEnv) {
       return fromEnv.replace(/\/+$/, "");
     }
@@ -26,7 +26,7 @@ function usersScript($egret: any, $self: any) {
   }
 
   async function loadUsersFromApi() {
-    const token = await $egret?.auth?.getAccessToken?.();
+    const token = await $heron?.auth?.getAccessToken?.();
     if (!token) return;
 
     $self.getChild("@users-subtitle")?.setProps({
@@ -76,7 +76,7 @@ function usersScript($egret: any, $self: any) {
   // Admin-only (manage all → users.purge). Hidden for editor/viewer.
   $self.getChild("@purgeBtn")?.listen({
     onClick: () => {
-      const allowed = $egret?.auth?.can?.("command", "users.purge");
+      const allowed = $heron?.auth?.can?.("command", "users.purge");
       console.log("[users] Purge inactive clicked — can(command, users.purge) =", allowed);
       window.alert(
         allowed
@@ -89,7 +89,7 @@ function usersScript($egret: any, $self: any) {
   // Admin + editor.
   $self.getChild("@inviteBtn")?.listen({
     onClick: () => {
-      const allowed = $egret?.auth?.can?.("command", "users.invite");
+      const allowed = $heron?.auth?.can?.("command", "users.invite");
       console.log("[users] Invite clicked — can(command, users.invite) =", allowed);
       window.alert(
         allowed

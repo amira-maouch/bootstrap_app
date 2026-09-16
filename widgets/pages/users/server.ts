@@ -18,7 +18,7 @@ import type { ServerContext } from "@heron-ws/app-runtime";
 
 export default async function (ctx: ServerContext) {
   const { token } = ctx.session;
-  const { apiBase } = ctx.egret;
+  const { apiBase } = ctx.heron;
 
   // No token = unauthenticated request. Return empty so the client's own
   // token-aware fetch runs after the user logs in.
