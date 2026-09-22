@@ -1,5 +1,6 @@
-/* Bootstrap — the only CSS framework this app loads. */
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* Bootstrap is the app's base styling framework. Putting it in heron-base
+ * keeps Registry components and explicit app overrides above its defaults. */
+@import "bootstrap/dist/css/bootstrap.min.css" layer(heron-base);
 
 /* ─── Heron theme → Bootstrap variable bridge ───────────────────────────────
  * The Heron theme engine injects CSS vars (--primary, --background, …) onto

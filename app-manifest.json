@@ -37,6 +37,12 @@
       "ssr": true,
       "title": "Welcome"
     },
+    "portable-styles-demo": {
+      "widget": "pages/portable-styles-demo",
+      "auth": false,
+      "ssr": true,
+      "title": "Portable component styles"
+    },
     "dashboard": {
       "widget": "pages/dashboard",
       "ssr": true,

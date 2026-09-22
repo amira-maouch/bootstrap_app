@@ -1,0 +1,154 @@
+{
+  "component": "heron:core:widget",
+  "id": "portable-styles-demo",
+  "children": [
+    {
+      "component": "heron:core:div",
+      "id": "demo-page",
+      "props": { "className": "container py-5" },
+      "children": [
+        {
+          "component": "heron:core:div",
+          "id": "demo-grid",
+          "props": { "className": "row g-4" },
+          "children": [
+            {
+              "component": "heron:core:div",
+              "id": "headless-case",
+              "props": { "className": "col-12 col-lg-6" },
+              "children": [
+                {
+                  "component": "heron:core:div",
+                  "id": "headless-frame",
+                  "props": { "className": "border rounded-3 p-3 h-100" },
+                  "children": [
+                    {
+                      "component": "heron:core:text",
+                      "id": "headless-note",
+                      "props": {
+                        "text": "HEADLESS · app owns all presentation",
+                        "className": "small fw-semibold text-secondary d-block mb-3"
+                      }
+                    },
+                    {
+                      "component": "ui:demo:headless-control",
+                      "id": "headless",
+                      "props": {
+                        "label": "Bootstrap app-owned button",
+                        "className": "btn btn-success"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "heron:core:div",
+              "id": "tailwind-case",
+              "props": { "className": "col-12 col-lg-6" },
+              "children": [
+                {
+                  "component": "heron:core:div",
+                  "id": "tailwind-frame",
+                  "props": { "className": "border rounded-3 p-3 h-100" },
+                  "children": [
+                    {
+                      "component": "heron:core:text",
+                      "id": "tailwind-note",
+                      "props": {
+                        "text": "HOST-THEMED TAILWIND · Registry CSS; Bootstrap adds border",
+                        "className": "small fw-semibold text-secondary d-block mb-3"
+                      }
+                    },
+                    {
+                      "component": "ui:demo:tailwind-panel",
+                      "id": "tailwind",
+                      "props": { "className": "text-warning" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "heron:core:div",
+              "id": "bootstrap-case",
+              "props": { "className": "col-12 col-lg-6" },
+              "children": [
+                {
+                  "component": "heron:core:div",
+                  "id": "bootstrap-frame",
+                  "props": { "className": "border rounded-3 p-3 h-100" },
+                  "children": [
+                    {
+                      "component": "heron:core:text",
+                      "id": "bootstrap-note",
+                      "props": {
+                        "text": "BOOTSTRAP-AUTHORED · scoped CSS travels; app adds shadow",
+                        "className": "small fw-semibold text-secondary d-block mb-3"
+                      }
+                    },
+                    {
+                      "component": "ui:demo:bootstrap-panel",
+                      "id": "bootstrap",
+                      "props": { "className": "border-success shadow-sm" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "heron:core:div",
+              "id": "css-case",
+              "props": { "className": "col-12 col-lg-6" },
+              "children": [
+                {
+                  "component": "heron:core:div",
+                  "id": "css-frame",
+                  "props": { "className": "border rounded-3 p-3 h-100" },
+                  "children": [
+                    {
+                      "component": "heron:core:text",
+                      "id": "css-note",
+                      "props": {
+                        "text": "SELF-STYLED CSS · component owns look; app selects accent",
+                        "className": "small fw-semibold text-secondary d-block mb-3"
+                      }
+                    },
+                    {
+                      "component": "ui:demo:css-panel",
+                      "id": "css",
+                      "props": { "accent": "#198754", "className": "shadow" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "heron:core:div",
+              "id": "inline-case",
+              "props": { "className": "col-12" },
+              "children": [
+                {
+                  "component": "heron:core:div",
+                  "id": "inline-frame",
+                  "props": { "className": "border rounded-3 p-3" },
+                  "children": [
+                    {
+                      "component": "heron:core:text",
+                      "id": "inline-note",
+                      "props": {
+                        "text": "SELF-STYLED INLINE · component owns presentation; no CSS override hook",
+                        "className": "small fw-semibold text-secondary d-block mb-3"
+                      }
+                    },
+                    { "component": "ui:demo:inline-panel", "id": "inline" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

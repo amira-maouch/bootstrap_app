@@ -1,12 +1,16 @@
 {
   "registries": {
-    "ui": "https://registry.heron.ws/api/registries/ui"
-    
+    "ui": "http://localhost:4100/api/registries/ui"
   },
   "components": {
     "ui/core/input": "*",
     "ui/display/avatar": "*",
-    "ui/display/badge": "*"
+    "ui/display/badge": "*",
+    "ui/demo/headless-control": "*",
+    "ui/demo/tailwind-panel": "*",
+    "ui/demo/bootstrap-panel": "*",
+    "ui/demo/css-panel": "*",
+    "ui/demo/inline-panel": "*"
   },
   "services": {},
   "plugins": {}

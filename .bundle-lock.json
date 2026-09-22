@@ -1,50 +1,646 @@
 {
   "ui/components/core/input": {
-    "contentHash": "db73c558cda8e8eb3797dd070e22fad7afd0e9b3db9b164f6943761bc62e317a",
+    "artifactFormat": "esm",
+    "contentHash": "e776f963836b24389cff9900457206d278c5934e9eabdbdcdf338f779d8bd896",
+    "graphHash": "e776f963836b24389cff9900457206d278c5934e9eabdbdcdf338f779d8bd896",
     "version": "1.0.0",
-    "bundledAt": "2026-09-16T11:30:11.753Z",
-    "outputFile": "bundles/registries/ui/components/(core)/input/index.js",
+    "bundledAt": "2026-09-22T19:21:28.209Z",
     "contractFile": "bundles/registries/ui/components/(core)/input/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/core/input/bundle",
-    "etag": "W/\"419-1a086392cfb\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/core/components/graph",
+    "etag": "W/\"1837-kpksHLSPijmEogGv5KiDAfN8lcU\"",
     "contractEtag": "W/\"64f-QoJZWLhugDT2zL/sN5BfiX7z9RA\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(core)/input/index.node.mjs",
-    "serverEtag": "W/\"1f1-1a082c53e3d\""
+    "componentEnvironments": {
+      "core/input": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "core/input": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "core/input": "bundles/registries/ui/components/esm/(core)/browser/entries/input-7L4O53BN.js"
+    },
+    "serverEntries": {
+      "core/input": "bundles/registries/ui/components/esm/(core)/node/entries/input-GGCTCHK5.mjs"
+    },
+    "componentStyles": {
+      "core/input": []
+    },
+    "graphHashes": {
+      "core": "357bfbc0d1bf24e6b7633ba7d05ebf7d0d18a80f6122c61c0a76b8d47b8eb0a2"
+    },
+    "graphManifestFiles": {
+      "core": "bundles/registries/ui/components/esm/(core)/manifests/357bfbc0d1bf24e6b7633ba7d05ebf7d0d18a80f6122c61c0a76b8d47b8eb0a2.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(core)/browser/chunks/chunk-YD76OE7Y.js": {
+        "sha256": "37d352efe5df5ff926b6f598d235c1b04112aabf15720df28612ad47499d6ba6",
+        "size": 516,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(core)/browser/entries/input-7L4O53BN.js": {
+        "sha256": "d92dc71307241a75af7730c1fb03b587c157b2a7a83c74069b824d5f0fa07502",
+        "size": 425,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(core)/node/chunks/chunk-SLUZDBCJ.mjs": {
+        "sha256": "e9a07a95fd8b271af6cb6f49a70566da82c37704506f7bda70c6526f83af13d0",
+        "size": 1097,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(core)/node/entries/input-GGCTCHK5.mjs": {
+        "sha256": "270079928ea1b91fae7489ebe5d3bb437763c2387cdb1b88d89b29f01d45db16",
+        "size": 550,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
   },
   "ui/components/display/avatar": {
-    "contentHash": "1ccf85bc037e8d635284ac5c2720fda63c17d178d3e069c1db98beca991c88d1",
+    "artifactFormat": "esm",
+    "contentHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
+    "graphHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
     "version": "1.0.0",
-    "bundledAt": "2026-09-16T11:30:11.771Z",
-    "outputFile": "bundles/registries/ui/components/(display)/avatar/index.js",
+    "bundledAt": "2026-09-22T19:21:28.227Z",
     "contractFile": "bundles/registries/ui/components/(display)/avatar/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/display/avatar/bundle",
-    "etag": "W/\"aa9-1a086392cfe\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/display/components/graph",
+    "etag": "W/\"a6bb-ANC82s7Ag4dCMADOkXGEZ/JcRzM\"",
     "contractEtag": "W/\"68a-dwH6/WTWhtIDf6exxBtoZsKEMUQ\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(display)/avatar/index.node.mjs",
-    "serverEtag": "W/\"30c-1a082c53e3c\""
+    "componentEnvironments": {
+      "display/avatar": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "display/avatar": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "display/avatar": "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-KJC2XBIU.js"
+    },
+    "serverEntries": {
+      "display/avatar": "bundles/registries/ui/components/esm/(display)/node/entries/avatar-FH2BEAOW.mjs"
+    },
+    "componentStyles": {
+      "display/avatar": []
+    },
+    "graphHashes": {
+      "display": "4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38"
+    },
+    "graphManifestFiles": {
+      "display": "bundles/registries/ui/components/esm/(display)/manifests/4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-IXIW4BCD.mjs": {
+        "sha256": "cf08d8cb7dbe709c1a9fa2749fcdcd8f8c4042c3b02d8eff0e18b09954e0be68",
+        "size": 1110,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/node/entries/avatar-FH2BEAOW.mjs": {
+        "sha256": "d113c244ac026a176d6703df8587e176f7f7090a039c10b7aa98baeef9ba4d55",
+        "size": 833,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-CZE2UT3N.js": {
+        "sha256": "3cfbc243a185847742358763049c170596f3c22a0dfaa75b9c8e1438f1e1c5f1",
+        "size": 1261,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-KJC2XBIU.js": {
+        "sha256": "d59387417605d2e7b1d5f13bbe4aa397d40080ad9b303c25e7cbe409716840da",
+        "size": 708,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
   },
   "ui/components/display/badge": {
-    "contentHash": "014484ab535002024f9bbdc8d09008f71337109e54188cfe9267edbfd46c80e0",
+    "artifactFormat": "esm",
+    "contentHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
+    "graphHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
     "version": "1.0.0",
-    "bundledAt": "2026-09-16T11:30:11.782Z",
-    "outputFile": "bundles/registries/ui/components/(display)/badge/index.js",
+    "bundledAt": "2026-09-22T19:21:28.239Z",
     "contractFile": "bundles/registries/ui/components/(display)/badge/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/components/display/badge/bundle",
-    "etag": "W/\"a87-1a086392cfe\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/display/components/graph",
+    "etag": "W/\"a6bb-ANC82s7Ag4dCMADOkXGEZ/JcRzM\"",
     "contractEtag": "W/\"40b-xGN6/Aqlc6ATEbPiyGloXBBEfME\"",
     "bundleScope": "component",
     "environment": [
       "universal"
     ],
-    "serverOutputFile": "bundles/registries/ui/components/(display)/badge/index.node.mjs",
-    "serverEtag": "W/\"2ea-1a0830c0758\""
+    "componentEnvironments": {
+      "display/badge": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "display/badge": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "display/badge": "bundles/registries/ui/components/esm/(display)/browser/entries/badge-XHG4K2U3.js"
+    },
+    "serverEntries": {
+      "display/badge": "bundles/registries/ui/components/esm/(display)/node/entries/badge-7EQTTAV2.mjs"
+    },
+    "componentStyles": {
+      "display/badge": []
+    },
+    "graphHashes": {
+      "display": "4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38"
+    },
+    "graphManifestFiles": {
+      "display": "bundles/registries/ui/components/esm/(display)/manifests/4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-CZE2UT3N.js": {
+        "sha256": "3cfbc243a185847742358763049c170596f3c22a0dfaa75b9c8e1438f1e1c5f1",
+        "size": 1261,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-IXIW4BCD.mjs": {
+        "sha256": "cf08d8cb7dbe709c1a9fa2749fcdcd8f8c4042c3b02d8eff0e18b09954e0be68",
+        "size": 1110,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/node/entries/badge-7EQTTAV2.mjs": {
+        "sha256": "915192a36948f23c31fae207d94f34fc581270d7172a3deb7df9e4adb174f386",
+        "size": 801,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/browser/entries/badge-XHG4K2U3.js": {
+        "sha256": "ebd7fd5971324b3bc674e1250c146614414183a616882a394b0dd6164597fee1",
+        "size": 676,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
+  },
+  "ui/components/demo/headless-control": {
+    "artifactFormat": "esm",
+    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "version": "1.0.0",
+    "bundledAt": "2026-09-22T19:21:28.248Z",
+    "contractFile": "bundles/registries/ui/components/(demo)/headless-control/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
+    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
+    "contractEtag": "W/\"1f9-3QqeNosdPMB4Zbx0f935TuPl9pY\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "componentEnvironments": {
+      "demo/headless-control": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "demo/headless-control": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-GHC4V5ZZ.js"
+    },
+    "serverEntries": {
+      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-CRT3T3TA.mjs"
+    },
+    "componentStyles": {
+      "demo/headless-control": []
+    },
+    "graphHashes": {
+      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+    },
+    "graphManifestFiles": {
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-GHC4V5ZZ.js": {
+        "sha256": "22480e719ffc8d460c7bd5c36d34fba863aaf6eff0708a4e7a21cead6c333285",
+        "size": 206,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-CRT3T3TA.mjs": {
+        "sha256": "0b5addb639b4dcb6544dffe5f9403adeda457eac20373d26dd1a1138ec9b00d5",
+        "size": 330,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
+  },
+  "ui/components/demo/tailwind-panel": {
+    "artifactFormat": "esm",
+    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "version": "1.0.0",
+    "bundledAt": "2026-09-22T19:21:28.254Z",
+    "contractFile": "bundles/registries/ui/components/(demo)/tailwind-panel/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
+    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
+    "contractEtag": "W/\"2c4-HC4P/3+66/QjgbSX8G3Pjv2ns24\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "componentEnvironments": {
+      "demo/tailwind-panel": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "demo/tailwind-panel": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-SVH4ROMJ.js"
+    },
+    "serverEntries": {
+      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-RQANUC46.mjs"
+    },
+    "componentStyles": {
+      "demo/tailwind-panel": [
+        "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-cb8c5904a4196ffa.css"
+      ]
+    },
+    "graphHashes": {
+      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+    },
+    "graphManifestFiles": {
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-SVH4ROMJ.js": {
+        "sha256": "510ff71ae37f11d9b31c014fe86c724806b58103c4119c930f19d6f1b7724523",
+        "size": 559,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-cb8c5904a4196ffa.css": {
+        "sha256": "cb8c5904a4196ffa4d29e5373bf2941e76c7b21b42e0243aadd862c7292934f6",
+        "size": 3533,
+        "kind": "style",
+        "mediaType": "text/css; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-RQANUC46.mjs": {
+        "sha256": "1922e3f05223328ba4eeedb204885c7885da18894091332ba59bea717fdd879d",
+        "size": 683,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
+  },
+  "ui/components/demo/bootstrap-panel": {
+    "artifactFormat": "esm",
+    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "version": "1.0.0",
+    "bundledAt": "2026-09-22T19:21:28.259Z",
+    "contractFile": "bundles/registries/ui/components/(demo)/bootstrap-panel/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
+    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
+    "contractEtag": "W/\"2aa-IBD2qJ55fSEOn4Wm/EDYetfr+Aw\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "componentEnvironments": {
+      "demo/bootstrap-panel": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "demo/bootstrap-panel": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-54AEHAAF.js"
+    },
+    "serverEntries": {
+      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-NA36EBCT.mjs"
+    },
+    "componentStyles": {
+      "demo/bootstrap-panel": [
+        "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-VKSKLSP3.css"
+      ]
+    },
+    "graphHashes": {
+      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+    },
+    "graphManifestFiles": {
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-54AEHAAF.js": {
+        "sha256": "a3348f92e16d69efc670bd990480b424ab191984fa66441bf47b8205640641d1",
+        "size": 474,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-VKSKLSP3.css": {
+        "sha256": "5f22c34ae8a4381a483c30f99f9e21a173a6860c449abd5ecec2b3991df2b17b",
+        "size": 459,
+        "kind": "style",
+        "mediaType": "text/css; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-NA36EBCT.mjs": {
+        "sha256": "67097c89da208fb26c7478ad4f89ad805b7b58756c3d34dcabed54650229a862",
+        "size": 598,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
+  },
+  "ui/components/demo/css-panel": {
+    "artifactFormat": "esm",
+    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "version": "1.0.0",
+    "bundledAt": "2026-09-22T19:21:28.268Z",
+    "contractFile": "bundles/registries/ui/components/(demo)/css-panel/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
+    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
+    "contractEtag": "W/\"27f-QYRfqbfTZgGZ1Oi7l6oNIfbjOck\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "componentEnvironments": {
+      "demo/css-panel": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "demo/css-panel": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-OXJB56QF.js"
+    },
+    "serverEntries": {
+      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-OSZGKA2I.mjs"
+    },
+    "componentStyles": {
+      "demo/css-panel": [
+        "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-6VEUFZ6M.css"
+      ]
+    },
+    "graphHashes": {
+      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+    },
+    "graphManifestFiles": {
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-6VEUFZ6M.css": {
+        "sha256": "fcafe5425cb045432ace9b9f4654fe3ba93b6fab9c4ccbc7fe902277f9de3e4a",
+        "size": 582,
+        "kind": "style",
+        "mediaType": "text/css; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-OXJB56QF.js": {
+        "sha256": "8e7838d925c83fffcdccb40580de01e103c2ba3c3b84d56c77e8b190c42c4e99",
+        "size": 520,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-OSZGKA2I.mjs": {
+        "sha256": "e5ee1d13c7129024b70cbf982f7c2cdcaeac0be4c3495a38e100d0b0b6ce4cc2",
+        "size": 644,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
+  },
+  "ui/components/demo/inline-panel": {
+    "artifactFormat": "esm",
+    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
+    "version": "1.0.0",
+    "bundledAt": "2026-09-22T19:21:28.271Z",
+    "contractFile": "bundles/registries/ui/components/(demo)/inline-panel/contract.json",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
+    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
+    "contractEtag": "W/\"21a-NvWOlI8+mU0S1hLgkDPcJ7UX3pU\"",
+    "bundleScope": "component",
+    "environment": [
+      "universal"
+    ],
+    "componentEnvironments": {
+      "demo/inline-panel": [
+        "universal"
+      ]
+    },
+    "componentVersions": {
+      "demo/inline-panel": "1.0.0"
+    },
+    "componentFamilies": {},
+    "browserEntries": {
+      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-MCP5BB2G.js"
+    },
+    "serverEntries": {
+      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-GJCWHIHM.mjs"
+    },
+    "componentStyles": {
+      "demo/inline-panel": []
+    },
+    "graphHashes": {
+      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+    },
+    "graphManifestFiles": {
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+    },
+    "graphFiles": {
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-MCP5BB2G.js": {
+        "sha256": "c7fcb9db6aebd126db5c9350c11ac235a317513d330f42ef5fa5da48a5da5704",
+        "size": 588,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-GJCWHIHM.mjs": {
+        "sha256": "8784fdbda497114b500c8c8e4fd6a5f197079be2119690a6cb2e736f40d42415",
+        "size": 712,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      }
+    },
+    "browserRuntime": {
+      "type": "import-map",
+      "protocolVersion": 1,
+      "specifiers": [
+        "@heron-ws/component-api",
+        "@heron-ws/component-registry",
+        "@heron-ws/i18n",
+        "@heron-ws/page-engine",
+        "@heron-ws/page-engine-components",
+        "konva",
+        "react",
+        "react-dom",
+        "react-dom/client",
+        "react-i18next",
+        "react-konva",
+        "react-router-dom",
+        "react/jsx-dev-runtime",
+        "react/jsx-runtime"
+      ]
+    }
   }
 }
