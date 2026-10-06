@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && pnpm build:ssr && heron-build-app",
+    "build": "pnpm lint && vite build && pnpm build:ssr && heron-build-app",
+    "lint": "eslint widgets",
     "build:shell": "vite build",
     "build:ssr": "node ./node_modules/@heron-ws/app-runtime/bin/build-ssr.js",
     "build:app": "heron-build-app",
@@ -34,9 +35,12 @@
     "sonner": "^2.0.8"
   },
   "devDependencies": {
+    "@heron-ws/eslint-config": "file:../heron/packages/eslint-config-heron",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@typescript-eslint/parser": "^8.24.0",
     "concurrently": "^9.2.4",
+    "eslint": "^9.39.0",
     "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "vite": "^6.4.3"
@@ -45,6 +49,7 @@
     "overrides": {
       "@heron-ws/app-runtime": "file:../heron/packages/app-runtime",
       "@heron-ws/app-runtime-core": "file:../heron/packages/app-runtime-core",
+      "@heron-ws/eslint-config": "file:../heron/packages/eslint-config-heron",
       "@heron-ws/app-runtime-server": "file:../heron/packages/app-runtime-server",
       "@heron-ws/component-api": "file:../heron/packages/component-api",
       "@heron-ws/component-registry": "file:../heron/packages/component-registry",
