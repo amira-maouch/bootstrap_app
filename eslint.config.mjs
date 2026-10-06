@@ -1,4 +1,4 @@
-import tsParser from "@typescript-eslint/parser";
+import tseslint from "typescript-eslint";
 import { security } from "@heron-ws/eslint-config";
 
 /**
@@ -11,9 +11,16 @@ export default [
   {
     files: ["widgets/**/*.{ts,tsx}"],
     languageOptions: {
-      parser: tsParser,
+      parser: tseslint.parser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    // Register the TS plugin so pre-existing `// eslint-disable
+    // @typescript-eslint/*` comments in widget code resolve to a known rule
+    // instead of erroring. We enable none of its rules here.
+    plugins: { "@typescript-eslint": tseslint.plugin },
   },
+  // This lint runs only the security rules, so directives for other rules are
+  // "unused" — don't report them (that is their own repo's lint's job).
+  { linterOptions: { reportUnusedDisableDirectives: "off" } },
   ...security,
 ];
