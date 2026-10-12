@@ -1,14 +1,13 @@
 {
   "ui/components/core/input": {
     "artifactFormat": "esm",
-    "contentHash": "e776f963836b24389cff9900457206d278c5934e9eabdbdcdf338f779d8bd896",
-    "graphHash": "e776f963836b24389cff9900457206d278c5934e9eabdbdcdf338f779d8bd896",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.209Z",
+    "contentHash": "d6a94c7d4ad902e2fca54145d39c7f481d913a765d534d07aaf4f91afd9dc783",
+    "graphHash": "d6a94c7d4ad902e2fca54145d39c7f481d913a765d534d07aaf4f91afd9dc783",
+    "version": "1.1.0",
     "contractFile": "bundles/registries/ui/components/(core)/input/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/core/components/graph",
-    "etag": "W/\"1837-kpksHLSPijmEogGv5KiDAfN8lcU\"",
-    "contractEtag": "W/\"64f-QoJZWLhugDT2zL/sN5BfiX7z9RA\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/core/5b16e485924baca97869ada0f76ba68b1c3c7a4c3b2bd4a676ac04557b88403f",
+    "etag": "W/\"275b-nSMXMTUmKVqj6XQWGBNJ5rMN2hA\"",
+    "contractEtag": "W/\"69b-E6gPX3zgTBnhLRAQe+OpWg/uiW0\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -19,52 +18,51 @@
       ]
     },
     "componentVersions": {
-      "core/input": "1.0.0"
+      "core/input": "1.1.0"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "core/input": "bundles/registries/ui/components/esm/(core)/browser/entries/input-7L4O53BN.js"
+      "core/input": "bundles/registries/ui/components/esm/(core)/browser/entries/input-6CFPU6UA.js"
     },
     "serverEntries": {
-      "core/input": "bundles/registries/ui/components/esm/(core)/node/entries/input-GGCTCHK5.mjs"
+      "core/input": "bundles/registries/ui/components/esm/(core)/node/entries/input-QI6ZHKGL.mjs"
     },
     "componentStyles": {
       "core/input": []
     },
     "graphHashes": {
-      "core": "357bfbc0d1bf24e6b7633ba7d05ebf7d0d18a80f6122c61c0a76b8d47b8eb0a2"
+      "core": "5b16e485924baca97869ada0f76ba68b1c3c7a4c3b2bd4a676ac04557b88403f"
     },
     "graphManifestFiles": {
-      "core": "bundles/registries/ui/components/esm/(core)/manifests/357bfbc0d1bf24e6b7633ba7d05ebf7d0d18a80f6122c61c0a76b8d47b8eb0a2.json"
+      "core": "bundles/registries/ui/components/esm/(core)/manifests/5b16e485924baca97869ada0f76ba68b1c3c7a4c3b2bd4a676ac04557b88403f.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(core)/browser/chunks/chunk-YD76OE7Y.js": {
-        "sha256": "37d352efe5df5ff926b6f598d235c1b04112aabf15720df28612ad47499d6ba6",
-        "size": 516,
+      "bundles/registries/ui/components/esm/(core)/browser/chunks/chunk-XCTJOYJQ.js": {
+        "sha256": "799bb92cb93222efbfb66c2379146cb0b49130003b46f69c68afbfd7290284ed",
+        "size": 2014,
         "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(core)/browser/entries/input-7L4O53BN.js": {
-        "sha256": "d92dc71307241a75af7730c1fb03b587c157b2a7a83c74069b824d5f0fa07502",
-        "size": 425,
+      "bundles/registries/ui/components/esm/(core)/browser/entries/input-6CFPU6UA.js": {
+        "sha256": "0985aac96fef2a56add0e746859fe441f8109710946a1988bc0d36becf5223f5",
+        "size": 469,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(core)/node/chunks/chunk-SLUZDBCJ.mjs": {
-        "sha256": "e9a07a95fd8b271af6cb6f49a70566da82c37704506f7bda70c6526f83af13d0",
-        "size": 1097,
+      "bundles/registries/ui/components/esm/(core)/node/chunks/chunk-4SQ57D6O.mjs": {
+        "sha256": "1cd18ad270af639400ee690c6bc77f9c13435bfe9f0516e8ea2434d987599d22",
+        "size": 1521,
         "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(core)/node/entries/input-GGCTCHK5.mjs": {
-        "sha256": "270079928ea1b91fae7489ebe5d3bb437763c2387cdb1b88d89b29f01d45db16",
-        "size": 550,
+      "bundles/registries/ui/components/esm/(core)/node/entries/input-QI6ZHKGL.mjs": {
+        "sha256": "242d2fada97ad6942f398bf6bc63e42d77637da5252e3f0e65c804a4933fd713",
+        "size": 594,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -81,19 +79,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/core/input/releases/*",
+    "releaseManifestHash": "e793777bd5f0b806c9834f8aa9a526ee1e8d3e6c0ac0bd3a12a95080db53a2c0"
   },
   "ui/components/display/avatar": {
     "artifactFormat": "esm",
-    "contentHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
-    "graphHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.227Z",
+    "contentHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
+    "graphHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
+    "version": "2.0.0",
     "contractFile": "bundles/registries/ui/components/(display)/avatar/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/display/components/graph",
-    "etag": "W/\"a6bb-ANC82s7Ag4dCMADOkXGEZ/JcRzM\"",
-    "contractEtag": "W/\"68a-dwH6/WTWhtIDf6exxBtoZsKEMUQ\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
+    "etag": "W/\"bd59-ktybV9n4RzTTn13+vYPUsSZYSvM\"",
+    "contractEtag": "W/\"726-odOrS9anClOP5ojnOCKywffeMb8\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -104,52 +105,51 @@
       ]
     },
     "componentVersions": {
-      "display/avatar": "1.0.0"
+      "display/avatar": "2.0.0"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "display/avatar": "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-KJC2XBIU.js"
+      "display/avatar": "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-T6IHBKVL.js"
     },
     "serverEntries": {
-      "display/avatar": "bundles/registries/ui/components/esm/(display)/node/entries/avatar-FH2BEAOW.mjs"
+      "display/avatar": "bundles/registries/ui/components/esm/(display)/node/entries/avatar-IVZUETVJ.mjs"
     },
     "componentStyles": {
       "display/avatar": []
     },
     "graphHashes": {
-      "display": "4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38"
+      "display": "65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65"
     },
     "graphManifestFiles": {
-      "display": "bundles/registries/ui/components/esm/(display)/manifests/4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38.json"
+      "display": "bundles/registries/ui/components/esm/(display)/manifests/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-IXIW4BCD.mjs": {
-        "sha256": "cf08d8cb7dbe709c1a9fa2749fcdcd8f8c4042c3b02d8eff0e18b09954e0be68",
-        "size": 1110,
+      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-JRRB6WF5.js": {
+        "sha256": "c61e451aa1b8d9a4962a4045f45ed62fc0ee35db39a011f4a7bdc842e25f1af7",
+        "size": 1817,
         "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(display)/node/entries/avatar-FH2BEAOW.mjs": {
-        "sha256": "d113c244ac026a176d6703df8587e176f7f7090a039c10b7aa98baeef9ba4d55",
-        "size": 833,
+      "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-T6IHBKVL.js": {
+        "sha256": "ae099372536f633adb5a01a85e6eedc2ebddeaf0ff51648d46763c4a80f47b3e",
+        "size": 917,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-CZE2UT3N.js": {
-        "sha256": "3cfbc243a185847742358763049c170596f3c22a0dfaa75b9c8e1438f1e1c5f1",
-        "size": 1261,
+      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-3BXISREJ.mjs": {
+        "sha256": "14c4906a34fefc0eb90ea4d787282d2b9dc6b3962cfaf0d49721c1ecbafa396b",
+        "size": 1534,
         "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(display)/browser/entries/avatar-KJC2XBIU.js": {
-        "sha256": "d59387417605d2e7b1d5f13bbe4aa397d40080ad9b303c25e7cbe409716840da",
-        "size": 708,
+      "bundles/registries/ui/components/esm/(display)/node/entries/avatar-IVZUETVJ.mjs": {
+        "sha256": "b955c3395b060b99f555ec1a0df25f2f78ed378deb2fcd326b38b84436e8b333",
+        "size": 1042,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -166,19 +166,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/display/avatar/releases/*",
+    "releaseManifestHash": "a768c6659cf9773b9172f74ab1840920ac14d1ec8d2abcc2684257c302f6601d"
   },
   "ui/components/display/badge": {
     "artifactFormat": "esm",
-    "contentHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
-    "graphHash": "05c60b8fae77ad11bcf7f7315ee6d6b78eac45b1bde30c648923f7ea0e034620",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.239Z",
+    "contentHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
+    "graphHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
+    "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(display)/badge/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/display/components/graph",
-    "etag": "W/\"a6bb-ANC82s7Ag4dCMADOkXGEZ/JcRzM\"",
-    "contractEtag": "W/\"40b-xGN6/Aqlc6ATEbPiyGloXBBEfME\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
+    "etag": "W/\"bd59-ktybV9n4RzTTn13+vYPUsSZYSvM\"",
+    "contractEtag": "W/\"469-sYZphAKJIU4bW2MgruF3JPaK0CM\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -189,52 +192,51 @@
       ]
     },
     "componentVersions": {
-      "display/badge": "1.0.0"
+      "display/badge": "1.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "display/badge": "bundles/registries/ui/components/esm/(display)/browser/entries/badge-XHG4K2U3.js"
+      "display/badge": "bundles/registries/ui/components/esm/(display)/browser/entries/badge-FBMKWV4F.js"
     },
     "serverEntries": {
-      "display/badge": "bundles/registries/ui/components/esm/(display)/node/entries/badge-7EQTTAV2.mjs"
+      "display/badge": "bundles/registries/ui/components/esm/(display)/node/entries/badge-LWMJ4ESO.mjs"
     },
     "componentStyles": {
       "display/badge": []
     },
     "graphHashes": {
-      "display": "4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38"
+      "display": "65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65"
     },
     "graphManifestFiles": {
-      "display": "bundles/registries/ui/components/esm/(display)/manifests/4b102ef8716f6a6f9d685dc0679fbc1d0cb3f81dda9e825c54a87280bcd4ec38.json"
+      "display": "bundles/registries/ui/components/esm/(display)/manifests/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-CZE2UT3N.js": {
-        "sha256": "3cfbc243a185847742358763049c170596f3c22a0dfaa75b9c8e1438f1e1c5f1",
-        "size": 1261,
+      "bundles/registries/ui/components/esm/(display)/browser/chunks/chunk-JRRB6WF5.js": {
+        "sha256": "c61e451aa1b8d9a4962a4045f45ed62fc0ee35db39a011f4a7bdc842e25f1af7",
+        "size": 1817,
         "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-IXIW4BCD.mjs": {
-        "sha256": "cf08d8cb7dbe709c1a9fa2749fcdcd8f8c4042c3b02d8eff0e18b09954e0be68",
-        "size": 1110,
-        "kind": "chunk",
-        "mediaType": "application/javascript; charset=utf-8"
-      },
-      "bundles/registries/ui/components/esm/(display)/node/entries/badge-7EQTTAV2.mjs": {
-        "sha256": "915192a36948f23c31fae207d94f34fc581270d7172a3deb7df9e4adb174f386",
-        "size": 801,
+      "bundles/registries/ui/components/esm/(display)/browser/entries/badge-FBMKWV4F.js": {
+        "sha256": "747a11666a603ec75d61ea54976b42e617ac70bce9fbaefd952b6c8a9fc125f4",
+        "size": 723,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(display)/browser/entries/badge-XHG4K2U3.js": {
-        "sha256": "ebd7fd5971324b3bc674e1250c146614414183a616882a394b0dd6164597fee1",
-        "size": 676,
+      "bundles/registries/ui/components/esm/(display)/node/chunks/chunk-3BXISREJ.mjs": {
+        "sha256": "14c4906a34fefc0eb90ea4d787282d2b9dc6b3962cfaf0d49721c1ecbafa396b",
+        "size": 1534,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(display)/node/entries/badge-LWMJ4ESO.mjs": {
+        "sha256": "86d31cab23d7613f7beb736ac5cef7bdc9d620c2b6709ccf9fa378e7ce0a760a",
+        "size": 848,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -251,19 +253,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/display/badge/releases/*",
+    "releaseManifestHash": "dacb21642d9cddfa426db848ccef274c55b2c06969c10684bb40b903b1aaecbb"
   },
   "ui/components/demo/headless-control": {
     "artifactFormat": "esm",
-    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.248Z",
+    "contentHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/headless-control/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
-    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
-    "contractEtag": "W/\"1f9-3QqeNosdPMB4Zbx0f935TuPl9pY\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
+    "contractEtag": "W/\"1f9-qL/wX4aEBsRBeLFm82fZVQlRhbg\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -274,40 +279,51 @@
       ]
     },
     "componentVersions": {
-      "demo/headless-control": "1.0.0"
+      "demo/headless-control": "1.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-GHC4V5ZZ.js"
+      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-DEASTHDR.js"
     },
     "serverEntries": {
-      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-CRT3T3TA.mjs"
+      "demo/headless-control": "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-V74KWN3E.mjs"
     },
     "componentStyles": {
       "demo/headless-control": []
     },
     "graphHashes": {
-      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+      "demo": "3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef"
     },
     "graphManifestFiles": {
-      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-GHC4V5ZZ.js": {
-        "sha256": "22480e719ffc8d460c7bd5c36d34fba863aaf6eff0708a4e7a21cead6c333285",
-        "size": 206,
+      "bundles/registries/ui/components/esm/(demo)/browser/chunks/chunk-VAWIQJDC.js": {
+        "sha256": "56e14f9c54eee59407a01fbca40a5091850c169b4ef53476b1ee55e2cc0f0d9b",
+        "size": 429,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/headless-control-DEASTHDR.js": {
+        "sha256": "a6f1e61e7796b456233dfc26c62c8981f536dcc0770cfb6bf9bac3c263d23286",
+        "size": 298,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-CRT3T3TA.mjs": {
-        "sha256": "0b5addb639b4dcb6544dffe5f9403adeda457eac20373d26dd1a1138ec9b00d5",
-        "size": 330,
+      "bundles/registries/ui/components/esm/(demo)/node/chunks/chunk-BS226ZR2.mjs": {
+        "sha256": "c37b4f61aa86e3f4aef6325eeb04f25d6107b30fbd4afa0741121f5e344a2a61",
+        "size": 553,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/headless-control-V74KWN3E.mjs": {
+        "sha256": "c3b3a0155b12edae429df1e2de456174596f4788402ef262ac94949b885d0a58",
+        "size": 423,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -324,19 +340,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/headless-control/releases/*",
+    "releaseManifestHash": "7dc965eac38df7599062fb5ddf00f1a43e065038fc1119f14508b69e88825b2a"
   },
   "ui/components/demo/tailwind-panel": {
     "artifactFormat": "esm",
-    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.254Z",
+    "contentHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "version": "2.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/tailwind-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
-    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
-    "contractEtag": "W/\"2c4-HC4P/3+66/QjgbSX8G3Pjv2ns24\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
+    "contractEtag": "W/\"2bb-eZAZGdIezfYeUeIZD+qUOiNZ8Fw\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -347,48 +366,59 @@
       ]
     },
     "componentVersions": {
-      "demo/tailwind-panel": "1.0.0"
+      "demo/tailwind-panel": "2.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-SVH4ROMJ.js"
+      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-XH3X4QXF.js"
     },
     "serverEntries": {
-      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-RQANUC46.mjs"
+      "demo/tailwind-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-AQ4ZIWN2.mjs"
     },
     "componentStyles": {
       "demo/tailwind-panel": [
-        "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-cb8c5904a4196ffa.css"
+        "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-ec68de5847bb1c4d.css"
       ]
     },
     "graphHashes": {
-      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+      "demo": "3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef"
     },
     "graphManifestFiles": {
-      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-SVH4ROMJ.js": {
-        "sha256": "510ff71ae37f11d9b31c014fe86c724806b58103c4119c930f19d6f1b7724523",
-        "size": 559,
+      "bundles/registries/ui/components/esm/(demo)/browser/chunks/chunk-VAWIQJDC.js": {
+        "sha256": "56e14f9c54eee59407a01fbca40a5091850c169b4ef53476b1ee55e2cc0f0d9b",
+        "size": 429,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/tailwind-panel-XH3X4QXF.js": {
+        "sha256": "de4a1d7006e9ef287ad71eec3f569c4286b3470796ed3e9cadece569dda37547",
+        "size": 781,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-cb8c5904a4196ffa.css": {
-        "sha256": "cb8c5904a4196ffa4d29e5373bf2941e76c7b21b42e0243aadd862c7292934f6",
-        "size": 3533,
+      "bundles/registries/ui/components/esm/(demo)/browser/styles/tailwind-panel-ec68de5847bb1c4d.css": {
+        "sha256": "ec68de5847bb1c4d4f7f7ce26c3d484f5f1c26f0431bc8e4fb5af438968e553e",
+        "size": 2906,
         "kind": "style",
         "mediaType": "text/css; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-RQANUC46.mjs": {
-        "sha256": "1922e3f05223328ba4eeedb204885c7885da18894091332ba59bea717fdd879d",
-        "size": 683,
+      "bundles/registries/ui/components/esm/(demo)/node/chunks/chunk-BS226ZR2.mjs": {
+        "sha256": "c37b4f61aa86e3f4aef6325eeb04f25d6107b30fbd4afa0741121f5e344a2a61",
+        "size": 553,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/tailwind-panel-AQ4ZIWN2.mjs": {
+        "sha256": "d2a9e051ece63b15977dff9a5513cfe0c9f7289c953e63cd741c7bd218fd92e9",
+        "size": 906,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -405,19 +435,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/tailwind-panel/releases/*",
+    "releaseManifestHash": "cc0c30ee47c85ec92f06575db9ea3d3caca8401f43cddddd5cc7698569fb06c9"
   },
   "ui/components/demo/bootstrap-panel": {
     "artifactFormat": "esm",
-    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.259Z",
+    "contentHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/bootstrap-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
-    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
-    "contractEtag": "W/\"2aa-IBD2qJ55fSEOn4Wm/EDYetfr+Aw\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
+    "contractEtag": "W/\"2e9-j4696i1nd5DbyXHBQNTzFJRXXJU\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -428,48 +461,59 @@
       ]
     },
     "componentVersions": {
-      "demo/bootstrap-panel": "1.0.0"
+      "demo/bootstrap-panel": "1.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-54AEHAAF.js"
+      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-QFNK7JSM.js"
     },
     "serverEntries": {
-      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-NA36EBCT.mjs"
+      "demo/bootstrap-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-ACLXJFCC.mjs"
     },
     "componentStyles": {
       "demo/bootstrap-panel": [
-        "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-VKSKLSP3.css"
+        "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-517cb801c508.css"
       ]
     },
     "graphHashes": {
-      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+      "demo": "3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef"
     },
     "graphManifestFiles": {
-      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-54AEHAAF.js": {
-        "sha256": "a3348f92e16d69efc670bd990480b424ab191984fa66441bf47b8205640641d1",
-        "size": 474,
-        "kind": "entry",
+      "bundles/registries/ui/components/esm/(demo)/browser/chunks/chunk-VAWIQJDC.js": {
+        "sha256": "56e14f9c54eee59407a01fbca40a5091850c169b4ef53476b1ee55e2cc0f0d9b",
+        "size": 429,
+        "kind": "chunk",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-VKSKLSP3.css": {
-        "sha256": "5f22c34ae8a4381a483c30f99f9e21a173a6860c449abd5ecec2b3991df2b17b",
-        "size": 459,
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-517cb801c508.css": {
+        "sha256": "517cb801c508b1e6afaa4e4db2fad1cacb08c40160bea74cfa68947713886e74",
+        "size": 610,
         "kind": "style",
         "mediaType": "text/css; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-NA36EBCT.mjs": {
-        "sha256": "67097c89da208fb26c7478ad4f89ad805b7b58756c3d34dcabed54650229a862",
-        "size": 598,
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/bootstrap-panel-QFNK7JSM.js": {
+        "sha256": "03d3c1b85f1fa3c9d0316f9964833d99b30a2a509773c4349041bf9115ebc2b5",
+        "size": 565,
+        "kind": "entry",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/chunks/chunk-BS226ZR2.mjs": {
+        "sha256": "c37b4f61aa86e3f4aef6325eeb04f25d6107b30fbd4afa0741121f5e344a2a61",
+        "size": 553,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/bootstrap-panel-ACLXJFCC.mjs": {
+        "sha256": "b28cb8fe99e671127034f5c1814a048fb225f7903f8859de7e7b6b98280ceab1",
+        "size": 690,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -486,19 +530,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/bootstrap-panel/releases/*",
+    "releaseManifestHash": "92e1ef4d233379365954015a7d3400716efdca158cbdaaa01d884fb39460506e"
   },
   "ui/components/demo/css-panel": {
     "artifactFormat": "esm",
-    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.268Z",
+    "contentHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/css-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
-    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
-    "contractEtag": "W/\"27f-QYRfqbfTZgGZ1Oi7l6oNIfbjOck\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
+    "contractEtag": "W/\"2ca-LnO6FjFBEBQorM98ZD7zXs32M60\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -509,48 +556,59 @@
       ]
     },
     "componentVersions": {
-      "demo/css-panel": "1.0.0"
+      "demo/css-panel": "1.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-OXJB56QF.js"
+      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-JIJ6X2WF.js"
     },
     "serverEntries": {
-      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-OSZGKA2I.mjs"
+      "demo/css-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-M2KEKJLV.mjs"
     },
     "componentStyles": {
       "demo/css-panel": [
-        "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-6VEUFZ6M.css"
+        "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-be4c0fdada41.css"
       ]
     },
     "graphHashes": {
-      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+      "demo": "3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef"
     },
     "graphManifestFiles": {
-      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-6VEUFZ6M.css": {
-        "sha256": "fcafe5425cb045432ace9b9f4654fe3ba93b6fab9c4ccbc7fe902277f9de3e4a",
-        "size": 582,
-        "kind": "style",
-        "mediaType": "text/css; charset=utf-8"
+      "bundles/registries/ui/components/esm/(demo)/browser/chunks/chunk-VAWIQJDC.js": {
+        "sha256": "56e14f9c54eee59407a01fbca40a5091850c169b4ef53476b1ee55e2cc0f0d9b",
+        "size": 429,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-OXJB56QF.js": {
-        "sha256": "8e7838d925c83fffcdccb40580de01e103c2ba3c3b84d56c77e8b190c42c4e99",
-        "size": 520,
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-JIJ6X2WF.js": {
+        "sha256": "d486172220e22aff9932788c3cdafe6df3cc86f89c491501cff9634d72eecbc1",
+        "size": 600,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-OSZGKA2I.mjs": {
-        "sha256": "e5ee1d13c7129024b70cbf982f7c2cdcaeac0be4c3495a38e100d0b0b6ce4cc2",
-        "size": 644,
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/css-panel-be4c0fdada41.css": {
+        "sha256": "be4c0fdada41be0fc4cbaed8a19c8848043f0b5ce4c6e91deed570ac8ff3a68c",
+        "size": 721,
+        "kind": "style",
+        "mediaType": "text/css; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/chunks/chunk-BS226ZR2.mjs": {
+        "sha256": "c37b4f61aa86e3f4aef6325eeb04f25d6107b30fbd4afa0741121f5e344a2a61",
+        "size": 553,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/css-panel-M2KEKJLV.mjs": {
+        "sha256": "50e598705ddd3b86d382a11a9e2c92bc1e0d71a9cf653b050c5a0be7b82e037e",
+        "size": 730,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -567,19 +625,22 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/css-panel/releases/*",
+    "releaseManifestHash": "c5f494ef24891acb82932c9b351f7fca49968b7691a20a9a1a37c75bc23bc006"
   },
   "ui/components/demo/inline-panel": {
     "artifactFormat": "esm",
-    "contentHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "graphHash": "f6990e80374be65ded4050b1f7eeba90d90af262ff7a6ae9e4625ff9f9c41daa",
-    "version": "1.0.0",
-    "bundledAt": "2026-09-22T19:21:28.271Z",
+    "contentHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
+    "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/inline-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/namespaces/demo/components/graph",
-    "etag": "W/\"131f-6CEGIYFlJeyOX/huvTK4rD3erL8\"",
-    "contractEtag": "W/\"21a-NvWOlI8+mU0S1hLgkDPcJ7UX3pU\"",
+    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
+    "contractEtag": "W/\"264-BqbhdOVcRoCB8ZsnKTSHu4zfv4w\"",
     "bundleScope": "component",
     "environment": [
       "universal"
@@ -590,40 +651,51 @@
       ]
     },
     "componentVersions": {
-      "demo/inline-panel": "1.0.0"
+      "demo/inline-panel": "1.0.1"
     },
     "componentFamilies": {},
     "browserEntries": {
-      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-MCP5BB2G.js"
+      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-55CCF4KX.js"
     },
     "serverEntries": {
-      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-GJCWHIHM.mjs"
+      "demo/inline-panel": "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-WZQBMIF6.mjs"
     },
     "componentStyles": {
       "demo/inline-panel": []
     },
     "graphHashes": {
-      "demo": "3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a"
+      "demo": "3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef"
     },
     "graphManifestFiles": {
-      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3f8f70cd46ae452c97cca0f6dce21ed7e6dbd30fe564dc467626b6c3b6e1d20a.json"
+      "demo": "bundles/registries/ui/components/esm/(demo)/manifests/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef.json"
     },
     "graphFiles": {
-      "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-MCP5BB2G.js": {
-        "sha256": "c7fcb9db6aebd126db5c9350c11ac235a317513d330f42ef5fa5da48a5da5704",
-        "size": 588,
+      "bundles/registries/ui/components/esm/(demo)/browser/chunks/chunk-VAWIQJDC.js": {
+        "sha256": "56e14f9c54eee59407a01fbca40a5091850c169b4ef53476b1ee55e2cc0f0d9b",
+        "size": 429,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/browser/entries/inline-panel-55CCF4KX.js": {
+        "sha256": "f71bd0190b5ae88fa1589c2246f192dee22ef2ab2e911cdfeb0feabba33b962f",
+        "size": 676,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       },
-      "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-GJCWHIHM.mjs": {
-        "sha256": "8784fdbda497114b500c8c8e4fd6a5f197079be2119690a6cb2e736f40d42415",
-        "size": 712,
+      "bundles/registries/ui/components/esm/(demo)/node/chunks/chunk-BS226ZR2.mjs": {
+        "sha256": "c37b4f61aa86e3f4aef6325eeb04f25d6107b30fbd4afa0741121f5e344a2a61",
+        "size": 553,
+        "kind": "chunk",
+        "mediaType": "application/javascript; charset=utf-8"
+      },
+      "bundles/registries/ui/components/esm/(demo)/node/entries/inline-panel-WZQBMIF6.mjs": {
+        "sha256": "9c031c0780d84d9614c61df93a7464043bb94a209648024e2715ebc40bd70be8",
+        "size": 801,
         "kind": "entry",
         "mediaType": "application/javascript; charset=utf-8"
       }
     },
     "browserRuntime": {
-      "type": "import-map",
       "protocolVersion": 1,
       "specifiers": [
         "@heron-ws/component-api",
@@ -640,7 +712,11 @@
         "react-router-dom",
         "react/jsx-dev-runtime",
         "react/jsx-runtime"
-      ]
-    }
+      ],
+      "type": "import-map"
+    },
+    "requestedVersion": "*",
+    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/inline-panel/releases/*",
+    "releaseManifestHash": "2eb52e223c643949c51a5b973fc8f82dab2a02694c7c0c75c1d1de1fcda98bcc"
   }
 }

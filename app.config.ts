@@ -13,11 +13,13 @@ export default defineConfig({
   apiBase: process.env.EGRET_API_BASE_URL ?? "http://localhost:4001",
   authorization: {
     enabled: true,
-    tokenKey: "auth_token",
     unauthorizedPath: "/unauthorized",
     auth: {
       adapter: "./authorization/auth-adapter.ts",
       session: {
+        // The short-lived access token lives only in browser memory and is
+        // restored from the HttpOnly cookie through POST /api/auth/token.
+        browserToken: "memory",
         cookie: {
           name: "bootstrap_session",
           lifetimeSeconds: 1800,

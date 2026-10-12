@@ -127,13 +127,25 @@ function dashboardScript($heron: any, $self: any) {
     });
   }
 
-  async function loadTasksFromApi() {
-    const token = await $heron?.auth?.getAccessToken?.();
-
-    try {
-      const res = await fetch(`${fakeApiBase()}/api/tasks`, {
+  // Bearer is fetched just in time from Heron's memory slot. On the first
+  // 401 the memory token is dropped, restored once from the HttpOnly session,
+  // and the request retried once; a second 401 is returned as-is.
+  async function authorizedFetch(url: string): Promise<Response> {
+    const send = async () => {
+      const token = await $heron?.auth?.getAccessToken?.();
+      return fetch(url, {
         headers: token ? { Authorization: `Bearer ${token}` } : undefined,
       });
+    };
+    const res = await send();
+    if (res.status !== 401 || !$heron?.auth?.clearAccessToken) return res;
+    $heron.auth.clearAccessToken();
+    return send();
+  }
+
+  async function loadTasksFromApi() {
+    try {
+      const res = await authorizedFetch(`${fakeApiBase()}/api/tasks`);
       if (!res.ok) {
         $self.getChild("@tasksSubtitle")?.setProps({
           text: `Failed to load tasks (${res.status}).`,

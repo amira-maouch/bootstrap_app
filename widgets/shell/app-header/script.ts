@@ -43,7 +43,10 @@ function appHeaderScript($heron: any, $self: any) {
       }
       const principal = json.data.principal ?? {};
       const name = principal.name ?? userId;
-      localStorage.setItem("auth_token", json.data.browserToken);
+      $heron?.auth?.setAccessToken?.(
+        json.data.browserToken,
+        json.data.expiresAt,
+      );
       localStorage.setItem(
         "auth_user",
         JSON.stringify({
@@ -75,6 +78,9 @@ function appHeaderScript($heron: any, $self: any) {
     } catch {
       // Local runtime state is still cleared below.
     }
+    // Drops rules and the in-memory access token, including any in-flight
+    // restore, so it cannot repopulate memory after logout.
+    $heron?.auth?.clear?.();
     localStorage.removeItem("auth_token");
     localStorage.removeItem("auth_user");
     window.location.href = "/login";

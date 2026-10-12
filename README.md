@@ -27,7 +27,10 @@ Login → POST /api/auth/session (Heron)
    → auth-adapter.authenticate()
    → POST :4001/api/auth/login
    → backend-issued tok_* in HttpOnly cookie
-   → optional browserToken copied to auth_token for compatibility
+   → browserToken seeded into memory with $heron.auth.setAccessToken()
+        ↓
+Reload → $heron.auth.getAccessToken() → POST /api/auth/token (Heron)
+   → auth-adapter.verify(cookie) → short-lived token kept in memory only
         ↓
 SSR / browser session check → auth-adapter.verify() → GET :4001/api/auth/me
         ↓
@@ -84,14 +87,18 @@ Backend sessions are **in-memory in the fake API** — restarting that fake
 backend invalidates all tokens. A real API would use its database/Redis or a
 verifiable token. The Heron app does not keep a second session map.
 
-New widget scripts obtain the compatibility browser token with:
+The app runs in Heron's memory-token mode (`session.browserToken: "memory"`).
+Widget scripts obtain the bearer just in time with:
 
 ```ts
 const token = await $heron.auth.getAccessToken();
 ```
 
-They should not read `localStorage.auth_token` directly. That key and the
-login response's `browserToken` remain temporarily for older scripts.
+The access token is never written to browser storage; the legacy
+`localStorage.auth_token` key is removed on boot. On the first backend `401`,
+scripts call `$heron.auth.clearAccessToken()` and retry once. Sign-out calls
+`DELETE /api/auth/session` and `$heron.auth.clear()`. `localStorage.auth_user`
+is only a UI profile cache (name/role) and is not proof of authentication.
 
 ## Page access policy
 

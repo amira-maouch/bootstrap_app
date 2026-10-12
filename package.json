@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm lint && vite build && pnpm build:ssr && heron-build-app",
-    "lint": "eslint widgets",
+    "lint": "eslint widgets authorization middlewares",
+    "test": "tsx --test \"tests/*.test.ts\"",
     "build:shell": "vite build",
     "build:ssr": "node ./node_modules/@heron-ws/app-runtime/bin/build-ssr.js",
     "build:app": "heron-build-app",

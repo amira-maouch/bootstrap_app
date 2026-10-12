@@ -3,13 +3,18 @@ import { security } from "@heron-ws/eslint-config";
 
 /**
  * Minimal lint: the shared Heron security rules (XSS / code-injection sinks).
- * Rules live in @heron-ws/eslint-config; this only wires them to the TS widget
- * sources. The safe path is html/setHTML/sanitize from @heron-ws/utils.
+ * Rules live in @heron-ws/eslint-config; this only wires them to the TS
+ * widget, authorization and middleware sources. The safe path is
+ * html/setHTML/sanitize from @heron-ws/utils.
  */
 export default [
   { ignores: ["dist/**", "dist-app/**", "bundles/**", "node_modules/**", "**/*.d.ts"] },
   {
-    files: ["widgets/**/*.{ts,tsx}"],
+    files: [
+      "widgets/**/*.{ts,tsx}",
+      "authorization/**/*.ts",
+      "middlewares/**/*.ts",
+    ],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: { ecmaFeatures: { jsx: true } },

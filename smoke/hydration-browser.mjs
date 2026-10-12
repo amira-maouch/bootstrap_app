@@ -336,10 +336,11 @@ try {
       `Could not create the boundary smoke session: ${JSON.stringify(login)}`,
     );
   }
-  await evaluate(
-    client,
-    `localStorage.setItem("auth_token", ${JSON.stringify(login.data.browserToken)})`,
-  );
+  // Memory-token mode: the access token is restored from the HttpOnly cookie
+  // on demand and must never be persisted in browser storage.
+  if (await evaluate(client, `localStorage.getItem("auth_token")`)) {
+    throw new Error("Memory-token login persisted auth_token in localStorage");
+  }
 
   requests = [];
   consoleFailures = [];

@@ -68,7 +68,9 @@ function loginScript($heron: any, $self: any) {
           .slice(0, 2)
           .toUpperCase(),
       };
-      localStorage.setItem("auth_token", accessToken);
+      // Seed the short-lived access token into Heron's memory slot only. The
+      // session credential stays in the HttpOnly cookie set by Heron.
+      $heron?.auth?.setAccessToken?.(accessToken, json.data.expiresAt);
       localStorage.setItem("auth_user", JSON.stringify(user));
 
       console.log("[login] signed in as", user);

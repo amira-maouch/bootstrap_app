@@ -31,6 +31,10 @@ function principalFromUser(user: BackendUser): AuthPrincipal {
   };
 }
 
+// The fake backend issues one opaque, fixed-lifetime token with no refresh
+// endpoint, so it is both the access credential and the HttpOnly session
+// credential. Without `resume`/`revokeSession`, Heron restores the session
+// through `verify()` and logs out through `revoke()`.
 const authAdapter: AuthAdapter = {
   async authenticate(credentials) {
     const response = await fetch(`${apiBase()}/api/auth/login`, {
@@ -60,9 +64,6 @@ const authAdapter: AuthAdapter = {
     }
     return {
       credential,
-      // Compatibility for existing direct browser-to-backend script.ts calls.
-      // New scripts should use: await $heron.auth.getAccessToken().
-      browserToken: credential,
       principal: principalFromUser(user),
       expiresAt,
     };

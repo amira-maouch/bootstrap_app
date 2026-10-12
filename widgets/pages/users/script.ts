@@ -25,6 +25,22 @@ function usersScript($heron: any, $self: any) {
     }
   }
 
+  // Bearer is fetched just in time from Heron's memory slot. On the first
+  // 401 the memory token is dropped, restored once from the HttpOnly session,
+  // and the request retried once; a second 401 is returned as-is.
+  async function authorizedFetch(url: string): Promise<Response> {
+    const send = async () => {
+      const token = await $heron?.auth?.getAccessToken?.();
+      return fetch(url, {
+        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+      });
+    };
+    const res = await send();
+    if (res.status !== 401 || !$heron?.auth?.clearAccessToken) return res;
+    $heron.auth.clearAccessToken();
+    return send();
+  }
+
   async function loadUsersFromApi() {
     const token = await $heron?.auth?.getAccessToken?.();
     if (!token) return;
@@ -34,9 +50,7 @@ function usersScript($heron: any, $self: any) {
     });
 
     try {
-      const res = await fetch(`${fakeApiBase()}/api/users`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await authorizedFetch(`${fakeApiBase()}/api/users`);
       if (!res.ok) {
         $self.getChild("@users-subtitle")?.setProps({
           text:

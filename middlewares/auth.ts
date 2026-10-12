@@ -4,9 +4,10 @@
 // as the first statement after the @Middleware comment (transformer quirk).
 const authGuard = async (context: any, next: any, block: any) => {
   const PUBLIC_PAGES = new Set(["main", "login"]);
-  const TOKEN_KEY = "auth_token";
+  // UI-only profile cache (id/name/role) for the header and sidebar. It holds
+  // no credential and is never treated as proof of authentication.
   const USER_KEY = "auth_user";
-  const token = readToken(TOKEN_KEY);
+  removeLegacyCredentials();
 
   if (PUBLIC_PAGES.has(context.pageName)) {
     // The landing page remains public for everyone, including signed-in users.
@@ -15,11 +16,11 @@ const authGuard = async (context: any, next: any, block: any) => {
     if (context.pageName === "login") {
       const user = await fetchSession();
       if (user) {
-        writeSession(TOKEN_KEY, USER_KEY, token, user);
+        writeProfile(USER_KEY, user);
         block("Already authenticated", "/dashboard");
         return;
       }
-      clearSession(TOKEN_KEY, USER_KEY);
+      clearProfile(USER_KEY);
     }
     await next();
     return;
@@ -27,43 +28,42 @@ const authGuard = async (context: any, next: any, block: any) => {
 
   const user = await fetchSession();
   if (!user) {
-    clearSession(TOKEN_KEY, USER_KEY);
+    clearProfile(USER_KEY);
     block("Not authenticated", loginRedirect());
     return;
   }
 
-  writeSession(TOKEN_KEY, USER_KEY, token, user);
+  writeProfile(USER_KEY, user);
   await next({ user });
 };
 
-function readToken(TOKEN_KEY: string): string | null {
+// Memory-token mode: the access token lives only in $heron.auth memory and the
+// session credential only in the HttpOnly cookie. Heron removes the configured
+// `tokenKey` at boot; this also covers sessions created before the migration.
+function removeLegacyCredentials() {
   try {
-    return localStorage.getItem(TOKEN_KEY);
+    localStorage.removeItem("auth_token");
   } catch {
-    return null;
+    // ignore
   }
 }
 
-function clearSession(TOKEN_KEY: string, USER_KEY: string) {
+function clearProfile(USER_KEY: string) {
   try {
-    localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(USER_KEY);
   } catch {
     // ignore
   }
 }
 
-function writeSession(
-  TOKEN_KEY: string,
-  USER_KEY: string,
-  token: string | null,
-  user: unknown,
-) {
+function writeProfile(USER_KEY: string, user: unknown) {
   // The HttpOnly cookie, verified through /api/auth/session, is the browser
-  // route-auth source of truth. Keep an existing compatibility token for
-  // script.ts calls, but do not require or manufacture one here.
-  if (token) localStorage.setItem(TOKEN_KEY, token);
-  localStorage.setItem(USER_KEY, JSON.stringify(user));
+  // route-auth source of truth.
+  try {
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
+  } catch {
+    // ignore
+  }
 }
 
 function loginRedirect(): string {

@@ -241,11 +241,10 @@ async function signIn(session, userId) {
       `${session.label} sign-in as ${userId} failed: ${JSON.stringify(result)}`,
     );
   }
-  if (typeof result.data?.browserToken === "string") {
-    await evaluate(
-      session.client,
-      `localStorage.setItem("auth_token", ${JSON.stringify(result.data.browserToken)})`,
-    );
+  // Memory-token mode: the access token is restored from the HttpOnly cookie
+  // on demand and must never be persisted in browser storage.
+  if (await evaluate(session.client, `localStorage.getItem("auth_token")`)) {
+    throw new Error(`${session.label} persisted auth_token in localStorage`);
   }
   return result.data;
 }
