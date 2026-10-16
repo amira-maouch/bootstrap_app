@@ -5,7 +5,7 @@
     "graphHash": "d6a94c7d4ad902e2fca54145d39c7f481d913a765d534d07aaf4f91afd9dc783",
     "version": "1.1.0",
     "contractFile": "bundles/registries/ui/components/(core)/input/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/core/5b16e485924baca97869ada0f76ba68b1c3c7a4c3b2bd4a676ac04557b88403f",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/core/5b16e485924baca97869ada0f76ba68b1c3c7a4c3b2bd4a676ac04557b88403f",
     "etag": "W/\"275b-nSMXMTUmKVqj6XQWGBNJ5rMN2hA\"",
     "contractEtag": "W/\"69b-E6gPX3zgTBnhLRAQe+OpWg/uiW0\"",
     "bundleScope": "component",
@@ -83,8 +83,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/core/input/releases/*",
-    "releaseManifestHash": "e793777bd5f0b806c9834f8aa9a526ee1e8d3e6c0ac0bd3a12a95080db53a2c0"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/core/input/releases/*",
+    "releaseManifestHash": "e793777bd5f0b806c9834f8aa9a526ee1e8d3e6c0ac0bd3a12a95080db53a2c0",
+    "releaseContractHash": "8ad06f4faf10b063bc5b964027db37bd3dd8d978fe554973d4c741fc888438d6",
+    "releaseContractSize": 2209,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/display/avatar": {
     "artifactFormat": "esm",
@@ -92,7 +95,7 @@
     "graphHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
     "version": "2.0.0",
     "contractFile": "bundles/registries/ui/components/(display)/avatar/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
     "etag": "W/\"bd59-ktybV9n4RzTTn13+vYPUsSZYSvM\"",
     "contractEtag": "W/\"726-odOrS9anClOP5ojnOCKywffeMb8\"",
     "bundleScope": "component",
@@ -170,8 +173,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/display/avatar/releases/*",
-    "releaseManifestHash": "a768c6659cf9773b9172f74ab1840920ac14d1ec8d2abcc2684257c302f6601d"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/display/avatar/releases/*",
+    "releaseManifestHash": "a768c6659cf9773b9172f74ab1840920ac14d1ec8d2abcc2684257c302f6601d",
+    "releaseContractHash": "ef029abd36137d7485d3899714e756fff2251d86365b125736875ac52be60214",
+    "releaseContractSize": 2477,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/display/badge": {
     "artifactFormat": "esm",
@@ -179,7 +185,7 @@
     "graphHash": "879f304cec8739ec27ebe340574e1ea3671310d4259f2e8bcd7c692d6f533c9a",
     "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(display)/badge/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/display/65add2b10641355de2aac25f20b3a00770b022f3f25eae7bcd6bf33df0da9c65",
     "etag": "W/\"bd59-ktybV9n4RzTTn13+vYPUsSZYSvM\"",
     "contractEtag": "W/\"469-sYZphAKJIU4bW2MgruF3JPaK0CM\"",
     "bundleScope": "component",
@@ -257,8 +263,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/display/badge/releases/*",
-    "releaseManifestHash": "dacb21642d9cddfa426db848ccef274c55b2c06969c10684bb40b903b1aaecbb"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/display/badge/releases/*",
+    "releaseManifestHash": "dacb21642d9cddfa426db848ccef274c55b2c06969c10684bb40b903b1aaecbb",
+    "releaseContractHash": "2f227bef1892cf7a426f3e345b5bd3bdbae128d37016fe47b6055e3913e25ccb",
+    "releaseContractSize": 1595,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/demo/headless-control": {
     "artifactFormat": "esm",
@@ -266,7 +275,7 @@
     "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
     "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/headless-control/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
     "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
     "contractEtag": "W/\"1f9-qL/wX4aEBsRBeLFm82fZVQlRhbg\"",
     "bundleScope": "component",
@@ -344,8 +353,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/headless-control/releases/*",
-    "releaseManifestHash": "7dc965eac38df7599062fb5ddf00f1a43e065038fc1119f14508b69e88825b2a"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/demo/headless-control/releases/*",
+    "releaseManifestHash": "7dc965eac38df7599062fb5ddf00f1a43e065038fc1119f14508b69e88825b2a",
+    "releaseContractHash": "3073722ce31aa90621c8739365cf312e911dbf8b22b3f90b9e7eff99c6b014fc",
+    "releaseContractSize": 634,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/demo/tailwind-panel": {
     "artifactFormat": "esm",
@@ -353,7 +365,7 @@
     "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
     "version": "2.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/tailwind-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
     "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
     "contractEtag": "W/\"2bb-eZAZGdIezfYeUeIZD+qUOiNZ8Fw\"",
     "bundleScope": "component",
@@ -439,8 +451,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/tailwind-panel/releases/*",
-    "releaseManifestHash": "cc0c30ee47c85ec92f06575db9ea3d3caca8401f43cddddd5cc7698569fb06c9"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/demo/tailwind-panel/releases/*",
+    "releaseManifestHash": "cc0c30ee47c85ec92f06575db9ea3d3caca8401f43cddddd5cc7698569fb06c9",
+    "releaseContractHash": "7224d9422d50fc7b3e78528812dd973705bb2eb10bae574f8e023db1e93fcb1f",
+    "releaseContractSize": 905,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/demo/bootstrap-panel": {
     "artifactFormat": "esm",
@@ -448,7 +463,7 @@
     "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
     "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/bootstrap-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
     "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
     "contractEtag": "W/\"2e9-j4696i1nd5DbyXHBQNTzFJRXXJU\"",
     "bundleScope": "component",
@@ -534,8 +549,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/bootstrap-panel/releases/*",
-    "releaseManifestHash": "92e1ef4d233379365954015a7d3400716efdca158cbdaaa01d884fb39460506e"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/demo/bootstrap-panel/releases/*",
+    "releaseManifestHash": "92e1ef4d233379365954015a7d3400716efdca158cbdaaa01d884fb39460506e",
+    "releaseContractHash": "fd9cb956c1ec8037069ea6d41fae73fa6501f7a8f5ebd4904431a90ee6ee99c0",
+    "releaseContractSize": 958,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/demo/css-panel": {
     "artifactFormat": "esm",
@@ -543,7 +561,7 @@
     "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
     "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/css-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
     "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
     "contractEtag": "W/\"2ca-LnO6FjFBEBQorM98ZD7zXs32M60\"",
     "bundleScope": "component",
@@ -629,8 +647,11 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/css-panel/releases/*",
-    "releaseManifestHash": "c5f494ef24891acb82932c9b351f7fca49968b7691a20a9a1a37c75bc23bc006"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/demo/css-panel/releases/*",
+    "releaseManifestHash": "c5f494ef24891acb82932c9b351f7fca49968b7691a20a9a1a37c75bc23bc006",
+    "releaseContractHash": "c2c04b35199017a5d1f784be2101e4a32c942c9025d6c286b2d29b2ae014faff",
+    "releaseContractSize": 922,
+    "releaseSignatureKeyId": "registry-release-2026"
   },
   "ui/components/demo/inline-panel": {
     "artifactFormat": "esm",
@@ -638,7 +659,7 @@
     "graphHash": "29acad27e3255ed2f05788cf7d947449f027383418e37c4661f63652efa0374c",
     "version": "1.0.1",
     "contractFile": "bundles/registries/ui/components/(demo)/inline-panel/contract.json",
-    "fetchedFrom": "http://localhost:4100/api/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
+    "fetchedFrom": "https://registry.heron.ws/api/v2/registries/ui/component-graphs/demo/3c76cee01e61b4267f61639333da3917e78b1b058a56cb86c57d46a353b312ef",
     "etag": "W/\"1680-KW+LlMa0UEIgqedM5puZ+F91nrE\"",
     "contractEtag": "W/\"264-BqbhdOVcRoCB8ZsnKTSHu4zfv4w\"",
     "bundleScope": "component",
@@ -716,7 +737,10 @@
       "type": "import-map"
     },
     "requestedVersion": "*",
-    "releaseManifestUrl": "http://localhost:4100/api/registries/ui/components/demo/inline-panel/releases/*",
-    "releaseManifestHash": "2eb52e223c643949c51a5b973fc8f82dab2a02694c7c0c75c1d1de1fcda98bcc"
+    "releaseManifestUrl": "https://registry.heron.ws/api/v2/registries/ui/components/demo/inline-panel/releases/*",
+    "releaseManifestHash": "2eb52e223c643949c51a5b973fc8f82dab2a02694c7c0c75c1d1de1fcda98bcc",
+    "releaseContractHash": "aefdb75cdef83d1b5ea896519cee0c98ca85850c9e8f8fc79d30b2946ca6b83b",
+    "releaseContractSize": 747,
+    "releaseSignatureKeyId": "registry-release-2026"
   }
 }

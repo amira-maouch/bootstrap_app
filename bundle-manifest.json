@@ -1,7 +1,14 @@
 {
   "registries": {
-    "ui": "http://localhost:4100/api/registries/ui"
+    "ui": "https://registry.heron.ws/api/v2/registries/ui"
   },
+  "trustedReleaseKeys": [
+    {
+      "keyId": "registry-release-2026",
+      "publicKey": "MCowBQYDK2VwAyEA9ZAe7tQchbaF4v4FlLoiasoUBjBOX+UCBwZqBjlVZjs=",
+      "registries": ["ui"]
+    }
+  ],
   "components": {
     "ui/core/input": "*",
     "ui/display/avatar": "*",
